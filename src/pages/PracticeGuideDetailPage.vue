@@ -19,14 +19,16 @@ const md = new MarkdownIt({
   typographer: true,
 })
 
-// Transform YouTube links to embed-friendly format
+// Transform guide content for rendering
 const renderedContent = computed(() => {
   if (!guide.value) return ''
   let content = guide.value.content
-  // Replace YouTube links with clickable styled links
+  // Strip "Recommended Video Sequence" section — already shown via videoReferences card above
+  content = content.replace(/## Recommended Video Sequence\n\n[\s\S]*?(?=\n## |\n*$)/, '')
+  // Replace any remaining YouTube links with clickable internal links
   content = content.replace(
     /https:\/\/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/g,
-    '[$1](/#/videos/$1)'
+    '[Watch ▶](#/videos/$1)'
   )
   return md.render(content)
 })

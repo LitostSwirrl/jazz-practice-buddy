@@ -5,7 +5,7 @@ import { useProgressStore } from '@/stores/progress'
 import { useVideosStore } from '@/stores/videos'
 import BaseCard from '@/components/shared/BaseCard.vue'
 import type { Video } from '@/types'
-import { Search, List, BookOpen } from 'lucide-vue-next'
+import { BookOpen } from 'lucide-vue-next'
 
 const props = defineProps<{ moduleId: string; unitId: string }>()
 const syllabus = useSyllabusStore()
@@ -115,44 +115,26 @@ function formatDuration(secs: number): string {
     </BaseCard>
 
     <!-- Recommended Videos -->
-    <BaseCard class="mb-6">
+    <BaseCard v-if="relatedVideos.length > 0" class="mb-6">
       <h2 class="text-lg font-heading font-bold mb-3">Recommended Videos</h2>
-      <div class="space-y-2 mb-4">
-        <div
-          v-for="ref in unit.recommendedVideos"
-          :key="ref.query"
-          class="flex items-center gap-2 text-sm"
+      <div class="grid sm:grid-cols-2 gap-2">
+        <router-link
+          v-for="v in relatedVideos"
+          :key="v.id"
+          :to="{ name: 'video-detail', params: { videoId: v.id } }"
+          class="flex items-center gap-2 p-2 rounded-lg hover:bg-jazz-cream transition-colors"
         >
-          <span class="px-1.5 py-0.5 rounded bg-jazz-cream-dark text-jazz-smoke flex items-center">
-            <Search v-if="ref.type === 'search'" class="w-3 h-3" />
-            <List v-else class="w-3 h-3" />
-          </span>
-          <span class="text-jazz-espresso">{{ ref.query }}</span>
-        </div>
-      </div>
-
-      <!-- Related videos from catalog -->
-      <div v-if="relatedVideos.length > 0" class="mt-4">
-        <h3 class="text-sm font-semibold text-jazz-smoke mb-2">From the catalog:</h3>
-        <div class="grid sm:grid-cols-2 gap-2">
-          <router-link
-            v-for="v in relatedVideos"
-            :key="v.id"
-            :to="{ name: 'video-detail', params: { videoId: v.id } }"
-            class="flex items-center gap-2 p-2 rounded-lg hover:bg-jazz-cream transition-colors"
+          <img
+            :src="`https://img.youtube.com/vi/${v.id}/default.jpg`"
+            :alt="v.title"
+            class="w-16 h-12 object-cover rounded"
+            loading="lazy"
           >
-            <img
-              :src="`https://img.youtube.com/vi/${v.id}/default.jpg`"
-              :alt="v.title"
-              class="w-16 h-12 object-cover rounded"
-              loading="lazy"
-            >
-            <div class="flex-1 min-w-0">
-              <p class="text-xs font-medium text-jazz-espresso truncate">{{ v.title }}</p>
-              <p class="text-[10px] text-jazz-smoke">{{ formatDuration(v.duration) }}</p>
-            </div>
-          </router-link>
-        </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-xs font-medium text-jazz-espresso truncate">{{ v.title }}</p>
+            <p class="text-[10px] text-jazz-smoke">{{ formatDuration(v.duration) }}</p>
+          </div>
+        </router-link>
       </div>
     </BaseCard>
 
