@@ -25,6 +25,11 @@ const renderedContent = computed(() => {
   let content = guide.value.content
   // Strip "Recommended Video Sequence" section — already shown via videoReferences card above
   content = content.replace(/## Recommended Video Sequence\n\n[\s\S]*?(?=\n## |\n*$)/, '')
+  // Replace guide cross-links (.md files) with app routes
+  content = content.replace(
+    /\((\d{2}-[\w-]+)\.md\)/g,
+    '(#/guides/$1)'
+  )
   // Replace any remaining YouTube links with clickable internal links
   content = content.replace(
     /https:\/\/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/g,
