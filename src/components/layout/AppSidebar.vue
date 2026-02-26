@@ -35,7 +35,7 @@ const levelColors: Record<string, string> = {
   />
 
   <aside
-    class="fixed top-16 left-0 z-40 h-[calc(100vh-4rem)] w-64 bg-jazz-cream/50 border-r border-jazz-cream-dark overflow-y-auto transition-transform lg:translate-x-0 flex flex-col"
+    class="fixed top-16 left-0 z-40 h-[calc(100vh-4rem)] w-64 bg-jazz-cream lg:bg-jazz-cream/50 border-r border-jazz-cream-dark overflow-y-auto transition-transform lg:translate-x-0 flex flex-col"
     :class="open ? 'translate-x-0' : '-translate-x-full'"
   >
     <div class="p-4 flex-1">
