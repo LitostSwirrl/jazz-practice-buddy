@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useVideosStore } from '@/stores/videos'
 import { useProgressStore } from '@/stores/progress'
 import BaseCard from '@/components/shared/BaseCard.vue'
@@ -9,6 +9,36 @@ const videosStore = useVideosStore()
 const progress = useProgressStore()
 
 const displayCount = ref(48)
+
+// Reset pagination when result-affecting filters change
+watch(
+  () => [
+    videosStore.filters.searchQuery,
+    videosStore.filters.categoryId,
+    videosStore.filters.subCategoryId,
+    videosStore.filters.difficulty,
+  ],
+  () => { displayCount.value = 48 },
+)
+
+const difficultySelectValue = computed(() => {
+  const [min, max] = videosStore.filters.difficulty
+  if (min === 1 && max === 5) return 'all'
+  if (min === max) return String(min)
+  return 'all'
+})
+
+const isDifficultyFiltered = computed(() => {
+  const [min, max] = videosStore.filters.difficulty
+  return !(min === 1 && max === 5)
+})
+
+const difficultyLabel = computed(() => {
+  const labels: Record<number, string> = { 1: 'Beginner', 2: 'Easy', 3: 'Intermediate', 4: 'Advanced', 5: 'Expert' }
+  const [min, max] = videosStore.filters.difficulty
+  if (min === max) return labels[min] ?? `Level ${min}`
+  return `Level ${min}-${max}`
+})
 
 const displayedVideos = computed(() =>
   videosStore.filteredVideos.slice(0, displayCount.value)
@@ -31,6 +61,14 @@ function formatDuration(secs: number): string {
 function clearCategory() {
   videosStore.setFilter('categoryId', null)
   videosStore.setFilter('subCategoryId', null)
+}
+
+function clearDifficulty() {
+  videosStore.setFilter('difficulty', [1, 5])
+}
+
+function clearSearch() {
+  videosStore.setFilter('searchQuery', '')
 }
 </script>
 
@@ -86,6 +124,7 @@ function clearCategory() {
 
         <!-- Difficulty -->
         <select
+          :value="difficultySelectValue"
           @change="
             const v = ($event.target as HTMLSelectElement).value;
             if (v === 'all') videosStore.setFilter('difficulty', [1, 5]);
@@ -104,8 +143,10 @@ function clearCategory() {
         <!-- Sort -->
         <select
           :value="videosStore.filters.sortBy"
+          :disabled="!!videosStore.filters.searchQuery"
           @change="videosStore.setFilter('sortBy', ($event.target as HTMLSelectElement).value as 'title')"
-          class="px-3 py-2 rounded-lg border border-jazz-cream-dark bg-white text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50"
+          class="px-3 py-2 rounded-lg border border-jazz-cream-dark bg-white text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50 disabled:opacity-50 disabled:cursor-not-allowed"
+          :title="videosStore.filters.searchQuery ? 'Sorted by relevance during search' : ''"
         >
           <option value="title">Sort by Title</option>
           <option value="views">Sort by Views</option>
@@ -115,11 +156,19 @@ function clearCategory() {
       </div>
 
       <!-- Active filters -->
-      <div v-if="videosStore.filters.searchQuery || videosStore.filters.categoryId" class="flex items-center gap-2 mt-3 text-xs">
+      <div v-if="videosStore.filters.searchQuery || videosStore.filters.categoryId || isDifficultyFiltered" class="flex items-center gap-2 mt-3 text-xs flex-wrap">
         <span class="text-jazz-smoke">Active:</span>
+        <span v-if="videosStore.filters.searchQuery" class="px-2 py-0.5 bg-jazz-blue/10 text-jazz-blue rounded-full flex items-center gap-1">
+          "{{ videosStore.filters.searchQuery }}"
+          <button @click="clearSearch" class="hover:text-jazz-red">&times;</button>
+        </span>
         <span v-if="videosStore.filters.categoryId" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass rounded-full flex items-center gap-1">
           {{ videosStore.categories.find(c => c.id === videosStore.filters.categoryId)?.name }}
           <button @click="clearCategory" class="hover:text-jazz-red">&times;</button>
+        </span>
+        <span v-if="isDifficultyFiltered" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass rounded-full flex items-center gap-1">
+          {{ difficultyLabel }}
+          <button @click="clearDifficulty" class="hover:text-jazz-red">&times;</button>
         </span>
         <span class="text-jazz-smoke">{{ videosStore.filteredVideos.length }} results</span>
       </div>

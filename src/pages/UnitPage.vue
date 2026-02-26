@@ -4,6 +4,7 @@ import { useSyllabusStore } from '@/stores/syllabus'
 import { useProgressStore } from '@/stores/progress'
 import { useVideosStore } from '@/stores/videos'
 import BaseCard from '@/components/shared/BaseCard.vue'
+import type { Video } from '@/types'
 
 const props = defineProps<{ moduleId: string; unitId: string }>()
 const syllabus = useSyllabusStore()
@@ -13,16 +14,26 @@ const videosStore = useVideosStore()
 const mod = computed(() => syllabus.getModuleById(props.moduleId))
 const unit = computed(() => syllabus.getUnitById(props.moduleId, props.unitId))
 
-// Find related videos by matching search queries to video titles
+// Find related videos using fuzzy search for all recommended video queries
 const relatedVideos = computed(() => {
-  if (!unit.value) return []
-  const queries = unit.value.recommendedVideos
-    .filter(v => v.type === 'search')
-    .map(v => v.query.toLowerCase())
+  if (!unit.value || !videosStore.isLoaded) return []
 
-  return videosStore.videos
-    .filter(v => queries.some(q => { const parts = q.split(' '); const last = parts[parts.length - 1]; return last && v.title.toLowerCase().includes(last) }))
-    .slice(0, 8)
+  const seen = new Set<string>()
+  const results: Video[] = []
+
+  for (const recVideo of unit.value.recommendedVideos) {
+    const matches = videosStore.searchVideos(recVideo.query, 6)
+    for (const video of matches) {
+      if (!seen.has(video.id)) {
+        seen.add(video.id)
+        results.push(video)
+      }
+      if (results.length >= 8) break
+    }
+    if (results.length >= 8) break
+  }
+
+  return results
 })
 
 // Find all units for navigation

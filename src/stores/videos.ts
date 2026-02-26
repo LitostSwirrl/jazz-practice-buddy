@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { ref, computed, shallowRef } from 'vue'
 import Fuse from 'fuse.js'
 import type { Video, TopCategory, VideoFilters, TranscriptSummary } from '@/types'
 
@@ -8,7 +8,7 @@ export const useVideosStore = defineStore('videos', () => {
   const categories = ref<TopCategory[]>([])
   const transcriptSummaries = ref<Record<string, TranscriptSummary>>({})
   const isLoaded = ref(false)
-  let fuseIndex: Fuse<Video> | null = null
+  const fuseIndex = shallowRef<Fuse<Video> | null>(null)
 
   const filters = ref<VideoFilters>({
     searchQuery: '',
@@ -22,8 +22,8 @@ export const useVideosStore = defineStore('videos', () => {
   const filteredVideos = computed(() => {
     let result = videos.value
 
-    if (filters.value.searchQuery && fuseIndex) {
-      const searchResults = fuseIndex.search(filters.value.searchQuery)
+    if (filters.value.searchQuery && fuseIndex.value) {
+      const searchResults = fuseIndex.value.search(filters.value.searchQuery)
       result = searchResults.map(r => r.item)
     }
 
@@ -78,6 +78,11 @@ export const useVideosStore = defineStore('videos', () => {
     }
   }
 
+  function searchVideos(query: string, limit = 10): Video[] {
+    if (!fuseIndex.value) return []
+    return fuseIndex.value.search(query, { limit }).map(r => r.item)
+  }
+
   async function loadVideos() {
     if (isLoaded.value) return
     const [videosData, catsData, transcriptsData] = await Promise.all([
@@ -89,7 +94,7 @@ export const useVideosStore = defineStore('videos', () => {
     categories.value = catsData as TopCategory[]
     transcriptSummaries.value = transcriptsData as Record<string, TranscriptSummary>
 
-    fuseIndex = new Fuse(videos.value, {
+    fuseIndex.value = new Fuse(videos.value, {
       keys: ['title', 'categoryName'],
       threshold: 0.3,
       includeScore: true,
@@ -100,6 +105,6 @@ export const useVideosStore = defineStore('videos', () => {
   return {
     videos, categories, transcriptSummaries, isLoaded, filters,
     filteredVideos, videoById, videosByCategory, hasTranscript,
-    setFilter, resetFilters, loadVideos,
+    setFilter, resetFilters, searchVideos, loadVideos,
   }
 })
