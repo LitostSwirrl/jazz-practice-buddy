@@ -1,0 +1,3334 @@
+[
+  {
+    "id": "1",
+    "title": "Jazz Guitar Foundations",
+    "level": "Beginner",
+    "duration": "10--12 weeks",
+    "prerequisites": "Basic guitar playing ability",
+    "description": "The goal of this module is to give you the minimum toolkit to start playing jazz: the right chord voicings, one scale system, one standard, and the ability to hear and play swing rhythm. By the end, you will be able to sit in on a simple jazz jam.",
+    "units": [
+      {
+        "id": "1.1",
+        "title": "Basic Music Theory for Jazz",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Identify and construct all interval types (minor 2nd through octave)",
+          "Build major, minor, diminished, and augmented triads from any root",
+          "Build four-note chord types: maj7, dom7, min7, min7(b5), dim7",
+          "Understand the difference between chord symbols and Roman numeral analysis",
+          "Spell the diatonic seventh chords of any major key"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Intervals",
+            "description": "half steps, whole steps, the 12 intervals and their sound"
+          },
+          {
+            "term": "Triads",
+            "description": "major, minor, diminished, augmented -- construction and sound"
+          },
+          {
+            "term": "Seventh chords",
+            "description": "the five basic types and how they're built by stacking thirds"
+          },
+          {
+            "term": "Diatonic harmony",
+            "description": "the seven chords that come from harmonizing a major scale (I maj7, II min7, III min7, IV maj7, V dom7, VI min7, VII min7b5)"
+          },
+          {
+            "term": "Key signatures",
+            "description": "how to identify and work in all 12 major keys"
+          },
+          {
+            "term": "Chord symbol reading",
+            "description": "interpreting jazz lead sheets and chord charts"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "music theory for jazz guitar beginners"
+          },
+          {
+            "type": "search",
+            "query": "diatonic chords and arpeggios"
+          },
+          {
+            "type": "search",
+            "query": "jazz guitar theory beginners"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Guitar Theory - Beginners"
+          },
+          {
+            "type": "playlist",
+            "query": "Practical Music Theory For Jazz Guitar"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Spell intervals from random notes (flash cards or mental drill)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Build triads and seventh chords on paper, then find them on fretboard",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Harmonize the major scale in 3 keys (write out all seven diatonic chords)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play diatonic seventh chord arpeggios up one string (any key)",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Given any note, spell all interval types above it without hesitation",
+          "Given any root and chord type (maj7, min7, dom7, min7b5), spell the chord",
+          "Write out the diatonic seventh chords of C, F, Bb, G, and Eb major",
+          "Identify chord types by ear (play a chord, name the quality)"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "1.2",
+        "title": "The Major Scale and Its Modes",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play the major scale in at least 3 positions across the fretboard",
+          "Understand and name all 7 modes of the major scale",
+          "Know which mode corresponds to which diatonic chord",
+          "Connect scale positions to create continuous fretboard coverage",
+          "Play scales with a metronome in eighth notes at 80--100 BPM"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Major scale positions",
+            "description": "CAGED-based or 3-note-per-string positions"
+          },
+          {
+            "term": "The 7 modes",
+            "description": "Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian"
+          },
+          {
+            "term": "Mode-chord relationship",
+            "description": "Dorian = min7, Mixolydian = dom7, etc."
+          },
+          {
+            "term": "Fretboard visualization",
+            "description": "seeing scales as interconnected patterns, not isolated boxes"
+          },
+          {
+            "term": "Practice methodology",
+            "description": "Jens's approach of practicing scales in musical ways (intervals, sequences, not just running up and down)"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "major scale positions guitar"
+          },
+          {
+            "type": "search",
+            "query": "how to practice scales for jazz"
+          },
+          {
+            "type": "search",
+            "query": "fretboard visualization"
+          },
+          {
+            "type": "search",
+            "query": "dorian mode jazz guitar"
+          },
+          {
+            "type": "playlist",
+            "query": "The RIGHT Way To Practice Scales For Jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "How To Learn and Practice Scales"
+          },
+          {
+            "type": "playlist",
+            "query": "Fretboard Visualization"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Major scale in 3 positions, ascending/descending with metronome",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Scale in thirds (1-3, 2-4, 3-5...) in one position",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play the Dorian mode over a min7 backing track",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play the Mixolydian mode over a dom7 backing track",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Connect two adjacent positions smoothly",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play the major scale in 3 positions, any key, with metronome at 90 BPM (eighth notes)",
+          "Name the mode for each diatonic chord degree",
+          "Play Dorian from any fretboard position when given a minor 7th chord",
+          "Navigate between positions without stopping"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "1.3",
+        "title": "Shell Voicings - Your First Jazz Chords",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play shell voicings (root, 3rd, 7th) for maj7, min7, dom7, and min7(b5) chords",
+          "Voice these chords on two string sets: roots on string 6, and roots on string 5",
+          "Play a chord progression using only shell voicings with smooth voice leading",
+          "Understand why the 3rd and 7th define a chord's quality",
+          "Comp through a simple standard (Autumn Leaves) using shells"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Shell voicings defined",
+            "description": "root + 3rd + 7th (omitting the 5th)"
+          },
+          {
+            "term": "Why shells work",
+            "description": "the 3rd and 7th carry the chord quality; the 5th is often redundant"
+          },
+          {
+            "term": "Two string sets",
+            "description": "6th-string root voicings and 5th-string root voicings"
+          },
+          {
+            "term": "Voice leading",
+            "description": "moving the minimum distance between chords (the 7th of one chord resolves down to the 3rd of the next)"
+          },
+          {
+            "term": "Freddie Green style simplicity",
+            "description": "sometimes less is more in comping"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "shell voicings"
+          },
+          {
+            "type": "search",
+            "query": "3 note jazz chords"
+          },
+          {
+            "type": "search",
+            "query": "getting started with jazz chords"
+          },
+          {
+            "type": "playlist",
+            "query": "Shell Voicings"
+          },
+          {
+            "type": "playlist",
+            "query": "Getting Started With Jazz Chords"
+          },
+          {
+            "type": "playlist",
+            "query": "3-Note Jazz Chords"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Memorize all 4 shell voicing shapes on 6th-string root",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Memorize all 4 shell voicing shapes on 5th-string root",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play II-V-I in 5 keys using shell voicings (voice lead smoothly)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Comp through Autumn Leaves changes with shells, metronome at 100 BPM",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Play any shell voicing type from any root on strings 6 and 5 without hesitation",
+          "Demonstrate smooth voice leading through a II-V-I in at least 4 keys",
+          "Comp through all the changes of Autumn Leaves using only shell voicings",
+          "Explain why the 3rd and 7th are the most important notes in a chord"
+        ],
+        "relatedGuideSlug": "01-shell-voicings"
+      },
+      {
+        "id": "1.4",
+        "title": "Your First Jazz Standard - Autumn Leaves",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play the melody of Autumn Leaves by memory",
+          "Comp through the entire form with shell voicings",
+          "Understand the harmonic structure: II-V-I in major and relative minor",
+          "Play a basic solo using chord tones (arpeggios) over the changes",
+          "Perform all three roles (melody, comping, basic solo) with a backing track"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Lead sheet reading",
+            "description": "melody + chord symbols"
+          },
+          {
+            "term": "Form",
+            "description": "32-bar AABA (or the specific form of Autumn Leaves)"
+          },
+          {
+            "term": "Harmonic analysis",
+            "description": "identifying the II-V-I progressions in both major and minor"
+          },
+          {
+            "term": "Melody and phrasing",
+            "description": "playing the melody with a jazz feel"
+          },
+          {
+            "term": "Chord-tone soloing",
+            "description": "using the 1, 3, 5, 7 of each chord as your primary note choices"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "Autumn Leaves"
+          },
+          {
+            "type": "search",
+            "query": "Autumn Leaves beginner"
+          },
+          {
+            "type": "search",
+            "query": "how to learn jazz standards"
+          },
+          {
+            "type": "playlist",
+            "query": "Autumn Leaves"
+          },
+          {
+            "type": "playlist",
+            "query": "Easy Jazz Standards for Beginners"
+          },
+          {
+            "type": "playlist",
+            "query": "How To Learn Jazz Standards"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn the melody by ear (or from a lead sheet), phrase by phrase",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Comp through changes with shells, focusing on form awareness",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Arpeggiate each chord in time (quarter notes), following the changes",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Solo using only chord tones over a backing track",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Play melody, then comp, then solo -- full run-through",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play the Autumn Leaves melody from memory with good phrasing",
+          "Comp through the form without losing your place",
+          "Solo for one chorus using chord tones, staying in time",
+          "Name the key centers and identify all II-V-I progressions in the tune"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "1.5",
+        "title": "Swing Feel and Jazz Rhythm",
+        "estimatedTime": "1--2 weeks",
+        "learningObjectives": [
+          "Play with a swing eighth-note feel (long-short subdivision)",
+          "Comp with jazz rhythmic patterns (the \"Charleston\" rhythm, anticipations)",
+          "Use the metronome on beats 2 and 4 (jazz standard practice)",
+          "Understand and play basic syncopation patterns",
+          "Differentiate between swing, straight, and shuffle feels"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Swing feel",
+            "description": "the triplet-based subdivision that defines jazz rhythm"
+          },
+          {
+            "term": "Comping rhythms",
+            "description": "syncopated patterns that interact with the soloist and drummer"
+          },
+          {
+            "term": "Metronome on 2 and 4",
+            "description": "building an internalized sense of the jazz pulse"
+          },
+          {
+            "term": "Rhythmic vocabulary",
+            "description": "common comping patterns (Charleston, Bossa rhythms, quarter-note comping)"
+          },
+          {
+            "term": "Listening",
+            "description": "developing your ear for how great jazz players phrase rhythmically"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "swing feel jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "comping rhythms"
+          },
+          {
+            "type": "search",
+            "query": "jazz rhythm"
+          },
+          {
+            "type": "search",
+            "query": "metronome practice jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "Swing Feel and Jazz Phrasing"
+          },
+          {
+            "type": "playlist",
+            "query": "Comping Rhythms"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Rhythm"
+          },
+          {
+            "type": "playlist",
+            "query": "Metronome Practice"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Play a major scale in swing eighth notes with metronome",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice metronome on 2 and 4 -- start by snapping on 2 and 4",
+            "dailyTime": "5 min"
+          },
+          {
+            "description": "Comp through Autumn Leaves with varied rhythmic patterns",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Listen to a classic jazz recording and tap along to the ride cymbal",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice the Charleston rhythm and variations on a single chord",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play a scale in swing feel that sounds natural (not mechanical triplets)",
+          "Comp through a tune with rhythmic variety, not just whole notes or quarter notes",
+          "Keep time with the metronome on 2 and 4 without losing the beat",
+          "Identify swing vs. straight feel in recordings"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "1.6",
+        "title": "First Steps in Improvisation - Chord Tones",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Solo over a II-V-I progression using chord tone arpeggios",
+          "Connect chord tones smoothly using stepwise motion",
+          "Create simple melodies that outline the harmony",
+          "Develop awareness of where chord tones fall on the fretboard in real time",
+          "Begin hearing the chord changes while soloing (not just reading them)"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Arpeggios as melody",
+            "description": "using 1-3-5-7 of each chord as your primary soloing material"
+          },
+          {
+            "term": "Arpeggio shapes",
+            "description": "basic maj7, min7, dom7 arpeggio fingerings in at least 2 positions"
+          },
+          {
+            "term": "Guide tones",
+            "description": "the 3rd and 7th as melodic anchors"
+          },
+          {
+            "term": "Connecting arpeggios",
+            "description": "filling in between chord tones with scale notes"
+          },
+          {
+            "term": "The \"target note\" concept",
+            "description": "aiming for a strong chord tone on beat 1 of each new chord"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "chord tone soloing"
+          },
+          {
+            "type": "search",
+            "query": "arpeggios for jazz improvisation"
+          },
+          {
+            "type": "search",
+            "query": "target notes"
+          },
+          {
+            "type": "search",
+            "query": "begin playing over changes"
+          },
+          {
+            "type": "playlist",
+            "query": "How To Use Arpeggios in Jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "Target Notes"
+          },
+          {
+            "type": "playlist",
+            "query": "Begin Playing Over Changes"
+          },
+          {
+            "type": "playlist",
+            "query": "Improvising with Arpeggios"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Play 7th chord arpeggios (all types) in 2 fretboard positions",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Arpeggiate the II-V-I changes in time (quarter notes, then eighth notes)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo on Autumn Leaves using chord tones + passing tones (scale notes connecting them)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Record yourself and listen back critically",
+            "dailyTime": "5 min"
+          }
+        ],
+        "assessment": [
+          "Play arpeggios for min7, dom7, and maj7 in two positions, any key",
+          "Solo over Autumn Leaves for 2 choruses, clearly outlining the chord changes with chord tones",
+          "Demonstrate the target note concept: show how you aim for a specific tone on the downbeat of a new chord",
+          "A listener should be able to hear the chord changes in your solo even without accompaniment"
+        ],
+        "relatedGuideSlug": "03-chord-tone-soloing"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Building Your Jazz Vocabulary",
+    "level": "Early Intermediate",
+    "duration": "10--14 weeks",
+    "prerequisites": "Completion of Module 1",
+    "description": "This module expands your chord voicing palette, introduces the most important progression in jazz, and gives you your first real jazz vocabulary through licks, arpeggios, and two new standards. By the end, you can comp and solo through a blues and several standards with confidence.",
+    "units": [
+      {
+        "id": "2.1",
+        "title": "Drop 2 Voicings Across All String Sets",
+        "estimatedTime": "2--3 weeks",
+        "learningObjectives": [
+          "Construct Drop 2 voicings from any seventh chord type",
+          "Play Drop 2 voicings on the top 4 string sets (strings 1-2-3-4 and 2-3-4-5)",
+          "Voice lead Drop 2 voicings through II-V-I progressions",
+          "Use inversions to stay in one area of the fretboard",
+          "Apply Drop 2 voicings to comp through a standard"
+        ],
+        "coreConcepts": [
+          {
+            "term": "What \"Drop 2\" means",
+            "description": "taking a close-position chord and dropping the second voice from the top down an octave"
+          },
+          {
+            "term": "Four inversions",
+            "description": "root position, 1st inversion, 2nd inversion, 3rd inversion"
+          },
+          {
+            "term": "String sets",
+            "description": "the practical voicings on strings 1-2-3-4 and strings 2-3-4-5"
+          },
+          {
+            "term": "Voice leading with Drop 2",
+            "description": "smooth movement between chords by moving each voice the minimum distance"
+          },
+          {
+            "term": "Comparison with shell voicings",
+            "description": "when to use each"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "drop 2 voicings"
+          },
+          {
+            "type": "search",
+            "query": "drop 2 voicings II V I"
+          },
+          {
+            "type": "search",
+            "query": "jazz chords efficient practice"
+          },
+          {
+            "type": "playlist",
+            "query": "Drop2 Voicings"
+          },
+          {
+            "type": "playlist",
+            "query": "Solid Drop2 Voicing videos"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Chords - An Efficient Practice Approach"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn all 4 inversions of Cmaj7 Drop 2 on strings 1-2-3-4",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Learn all 4 inversions for min7, dom7, min7b5 on one string set",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Voice lead II-V-I in 4 keys (Dm7-G7-Cmaj7, etc.) using Drop 2",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Comp through Autumn Leaves using Drop 2 voicings",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice the same voicings on strings 2-3-4-5",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play all 4 inversions of each chord type (maj7, min7, dom7, min7b5) on one string set",
+          "Voice lead a II-V-I in any key using Drop 2, choosing inversions that minimize hand movement",
+          "Comp through a full standard using predominantly Drop 2 voicings",
+          "Explain the Drop 2 construction method"
+        ],
+        "relatedGuideSlug": "02-drop2-voicings"
+      },
+      {
+        "id": "2.2",
+        "title": "The II-V-I Progression - Backbone of Jazz",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Recognize II-V-I progressions in major and minor keys by ear and on paper",
+          "Solo over the II-V-I using arpeggios and scale fragments",
+          "Apply 3--5 jazz licks over the II-V-I",
+          "Play the II-V-I in all 12 keys (chords and basic soloing)",
+          "Understand the minor II-V-I (min7b5 -- dom7b9 -- min)"
+        ],
+        "coreConcepts": [
+          {
+            "term": "The II-V-I defined",
+            "description": "the most common chord progression in jazz harmony"
+          },
+          {
+            "term": "Major II-V-I",
+            "description": "min7 -- dom7 -- maj7"
+          },
+          {
+            "term": "Minor II-V-I",
+            "description": "min7(b5) -- dom7(b9) -- min(maj7) or min7"
+          },
+          {
+            "term": "Scale choices",
+            "description": "Dorian over IIm7, Mixolydian over V7, Ionian over Imaj7"
+          },
+          {
+            "term": "Connecting the sounds",
+            "description": "treating II-V-I as one harmonic unit, not three separate chords"
+          },
+          {
+            "term": "Vocabulary",
+            "description": "learning classic II-V-I licks from the jazz tradition"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "II V I jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "minor II V I"
+          },
+          {
+            "type": "search",
+            "query": "II V I licks"
+          },
+          {
+            "type": "search",
+            "query": "how to solo over II V I"
+          },
+          {
+            "type": "playlist",
+            "query": "II V I Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Minor II V I Guitar Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "How To Solo Over Chord Changes"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Play II-V-I chord voicings (shells + Drop 2) in all 12 keys",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Arpeggiate II-V-I in 4 keys, connecting tones smoothly",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Learn 2 classic II-V-I licks, transpose to 4 keys",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Solo over a II-V-I backing track focusing on resolution to the I chord",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice minor II-V-I voicings and arpeggios in 4 keys",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Comp through a II-V-I in all 12 keys without stopping",
+          "Solo over a II-V-I backing track for 8 bars, clearly resolving to the I chord",
+          "Play 3 different II-V-I licks in at least 3 keys",
+          "Identify II-V-I progressions by ear in a jazz recording"
+        ],
+        "relatedGuideSlug": "07-ii-v-i"
+      },
+      {
+        "id": "2.3",
+        "title": "Jazz Blues in F - Comping and Basic Soloing",
+        "estimatedTime": "2--3 weeks",
+        "learningObjectives": [
+          "Play the jazz blues form (with the I-VI-II-V turnaround)",
+          "Comp through an F blues with appropriate voicings and rhythms",
+          "Solo over a jazz blues using the blues scale, mixolydian, and chord tones",
+          "Understand how the jazz blues differs from a basic 12-bar blues",
+          "Apply jazz vocabulary (licks) in a blues context"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Jazz blues form",
+            "description": "the 12-bar blues with jazz chord substitutions (the IV7 in bar 5, the II-V turnarounds, the I-VI-II-V in the last 4 bars)"
+          },
+          {
+            "term": "F blues specifically",
+            "description": "F7 | Bb7 | F7 | Cm7 F7 | Bb7 | Bdim7 | F7 | Am7 D7 | Gm7 | C7 | F7 D7 | Gm7 C7"
+          },
+          {
+            "term": "Blues scale in jazz",
+            "description": "when and how to use it"
+          },
+          {
+            "term": "Mixing blues and jazz",
+            "description": "combining the minor pentatonic/blues scale with arpeggios and bebop vocabulary"
+          },
+          {
+            "term": "Jazz blues comping",
+            "description": "the Freddie Green quarter-note approach vs. rhythmic comping"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "jazz blues F"
+          },
+          {
+            "type": "search",
+            "query": "jazz blues comping"
+          },
+          {
+            "type": "search",
+            "query": "jazz blues soloing beginner"
+          },
+          {
+            "type": "search",
+            "query": "F jazz blues study guide"
+          },
+          {
+            "type": "playlist",
+            "query": "F Jazz Blues"
+          },
+          {
+            "type": "playlist",
+            "query": "F Jazz Blues Study Guide"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Blues - Chords and Licks"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Comping on a Blues"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Memorize the jazz blues form in F (chord changes, 12 bars)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Comp through the F blues with shell voicings, then Drop 2",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Solo using the F blues scale over the entire form",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo using chord tones/arpeggios, switching with each chord change",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Learn 2 jazz blues licks and apply them in context",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Comp through an F jazz blues from memory with good rhythm and voice leading",
+          "Solo for 3 choruses of F blues, demonstrating both blues scale and chord-tone approaches",
+          "Play the head of a simple blues head (e.g., Billie's Bounce or a blues melody from Jens)",
+          "Navigate the turnaround (I-VI-II-V) confidently in your solo"
+        ],
+        "relatedGuideSlug": "06-jazz-blues"
+      },
+      {
+        "id": "2.4",
+        "title": "Arpeggios for Improvisation",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play 7th chord arpeggios (maj7, min7, dom7, min7b5) in at least 3 positions",
+          "Use arpeggios as the foundation of jazz lines (not just as exercises)",
+          "Connect arpeggios to scale patterns on the fretboard",
+          "Begin using arpeggio \"superimposition\" (playing a related arpeggio over a chord)",
+          "Integrate arpeggios into your soloing on standards and blues"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Arpeggio shapes",
+            "description": "systematic fingerings across the fretboard (CAGED or position-based)"
+          },
+          {
+            "term": "Arpeggios as melodies",
+            "description": "thinking of arpeggio notes as strong melodic targets"
+          },
+          {
+            "term": "Arpeggio superimposition introduction",
+            "description": "e.g., playing Em7 arpeggio over Cmaj7 to get the 3-5-7-9 sound"
+          },
+          {
+            "term": "Practicing in context",
+            "description": "running arpeggios through chord changes in time"
+          },
+          {
+            "term": "Rhythmic variety with arpeggios",
+            "description": "not just running up and down -- use different rhythms, start on different notes"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "arpeggios jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "7th chord arpeggios"
+          },
+          {
+            "type": "search",
+            "query": "arpeggios creative patterns"
+          },
+          {
+            "type": "search",
+            "query": "10 arpeggios for a chord"
+          },
+          {
+            "type": "playlist",
+            "query": "How To Use Arpeggios in Jazz - Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Arpeggios - Creative and Patterns"
+          },
+          {
+            "type": "playlist",
+            "query": "Diatonic Chords And Arpeggios"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn arpeggio shapes for all chord types in 3 positions",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Play diatonic arpeggios through a key (Imaj7, IIm7, IIIm7...)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Arpeggiate through Autumn Leaves and F blues changes in eighth notes",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Create short melodic phrases that start from arpeggio tones",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play all four arpeggio types from any root in 3 positions",
+          "Arpeggiate cleanly through the changes of Autumn Leaves or the F blues at 120 BPM",
+          "Demonstrate arpeggio superimposition: play Em7 over Cmaj7 and explain the resulting intervals",
+          "Solo for 1 chorus on a standard, using arpeggios as the primary melodic material"
+        ],
+        "relatedGuideSlug": "04-arpeggios"
+      },
+      {
+        "id": "2.5",
+        "title": "Jazz Licks and Vocabulary Building",
+        "estimatedTime": "1--2 weeks",
+        "learningObjectives": [
+          "Learn 8--10 classic jazz licks (from Jens Larsen's lessons and transcriptions)",
+          "Transpose licks to multiple keys",
+          "Understand the anatomy of a jazz lick (approach notes, chord tones, resolution)",
+          "Begin integrating licks into your improvisation naturally",
+          "Start a personal \"lick library\" (written or recorded)"
+        ],
+        "coreConcepts": [
+          {
+            "term": "What makes a lick \"jazz\"",
+            "description": "chromatic approach notes, bebop rhythms, chord-tone resolution"
+          },
+          {
+            "term": "Learning licks the right way",
+            "description": "understand the harmony underneath, don't just memorize finger patterns"
+          },
+          {
+            "term": "Transposition",
+            "description": "the key to making licks useful in any musical situation"
+          },
+          {
+            "term": "Integration",
+            "description": "weaving licks into your own phrases vs. just inserting them mechanically"
+          },
+          {
+            "term": "Building vocabulary over time",
+            "description": "a lifelong process"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "jazz licks"
+          },
+          {
+            "type": "search",
+            "query": "how to make better jazz licks"
+          },
+          {
+            "type": "search",
+            "query": "10 jazz licks"
+          },
+          {
+            "type": "search",
+            "query": "bebop licks"
+          },
+          {
+            "type": "playlist",
+            "query": "10 Jazz Licks"
+          },
+          {
+            "type": "playlist",
+            "query": "How To Make Better Jazz Licks"
+          },
+          {
+            "type": "playlist",
+            "query": "Quick Jazz Licks And Examples"
+          },
+          {
+            "type": "playlist",
+            "query": "Bebop Licks - Short Videos"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn 2 new licks from Jens Larsen videos (write them down or use tabs)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Transpose each lick to 3 other keys",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice inserting licks into a solo over a backing track",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Analyze each lick: which notes are chord tones? approach notes? passing tones?",
+            "dailyTime": "5 min"
+          },
+          {
+            "description": "Review and play all previously learned licks",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play 8 jazz licks from memory in their original key",
+          "Transpose any of those licks to at least 2 other keys on demand",
+          "Solo for 2 choruses incorporating learned licks naturally alongside your own ideas",
+          "Explain the harmonic function of the notes in at least 3 of your licks"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "2.6",
+        "title": "New Standards - Solar and Blue Bossa",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Learn the melody, harmony, and form of Solar and Blue Bossa",
+          "Comp and solo over both tunes",
+          "Understand Solar's unique non-repeating 12-bar form and its chain of II-V progressions",
+          "Understand Blue Bossa's use of major and minor key areas",
+          "Apply all Module 1 and 2 skills on new repertoire"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Solar",
+            "description": "a Cm minor jazz standard with a series of II-V-Is moving through different keys -- excellent for practicing II-V-I vocabulary"
+          },
+          {
+            "term": "Blue Bossa",
+            "description": "a bossa nova standard mixing Cm and Db major areas -- introduces the bossa nova feel and key changes"
+          },
+          {
+            "term": "Form awareness",
+            "description": "never losing your place in the form"
+          },
+          {
+            "term": "Applying skills to new tunes",
+            "description": "the real test of whether you've internalized the material"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "Solar jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "Blue Bossa"
+          },
+          {
+            "type": "search",
+            "query": "learning jazz standards"
+          },
+          {
+            "type": "playlist",
+            "query": "Solar"
+          },
+          {
+            "type": "playlist",
+            "query": "Blue Bossa Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Learning Jazz Standards"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn Solar melody and analyze the chord changes (identify all II-V-Is)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Comp through Solar with Drop 2 and shell voicings",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo over Solar using arpeggios and licks",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Learn Blue Bossa melody and feel the bossa nova rhythm",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Comp and solo over Blue Bossa, paying attention to the key change",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play the melodies of both Solar and Blue Bossa from memory",
+          "Comp through both tunes with smooth voice leading",
+          "Solo over both tunes for 2 choruses each, clearly outlining the harmony",
+          "Identify every II-V-I in Solar and explain the key centers in Blue Bossa"
+        ],
+        "relatedGuideSlug": null
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Intermediate Jazz Guitar",
+    "level": "Intermediate",
+    "duration": "12--14 weeks",
+    "prerequisites": "Completion of Module 2",
+    "description": "This module bridges the gap between beginner and serious jazz player. You will add pentatonic scales to your improvisational palette, learn voice leading and passing chords, start arranging chord melodies, and develop a comping vocabulary that makes you valuable in any ensemble.",
+    "units": [
+      {
+        "id": "3.1",
+        "title": "Pentatonic Scales in a Jazz Context",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play major and minor pentatonic scales in all 5 positions",
+          "Use pentatonic scales over jazz changes (not just blues/rock application)",
+          "Understand which pentatonic scale to play over each chord type",
+          "Apply pentatonic \"tricks\": string-skipping patterns, intervallic sequences",
+          "Use pentatonic scales for a more modern, open sound in jazz soloing"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Beyond the blues box",
+            "description": "pentatonic scales as a jazz improvisation tool"
+          },
+          {
+            "term": "Pentatonic choices per chord type",
+            "description": "e.g., G major pentatonic over Cmaj7 gives you the 5-6-7-9-3; A minor pentatonic over Dm7 gives you the 5-b7-1-2-4"
+          },
+          {
+            "term": "Modal pentatonics",
+            "description": "choosing the pentatonic that gives you the \"color tones\" of each mode"
+          },
+          {
+            "term": "Pentatonic patterns",
+            "description": "Jens's approach to making pentatonics sound jazzy (wide intervals, string skipping)"
+          },
+          {
+            "term": "Mixing pentatonics with arpeggios",
+            "description": "combining tools for richer improvisation"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "pentatonic scales jazz"
+          },
+          {
+            "type": "search",
+            "query": "pentatonic tricks jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "modal pentatonics"
+          },
+          {
+            "type": "playlist",
+            "query": "Pentatonic Scales For Jazz Guitar"
+          },
+          {
+            "type": "playlist",
+            "query": "Pentatonic Scales in Jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "Quick Pentatonic Hacks and Tips"
+          },
+          {
+            "type": "playlist",
+            "query": "Short Pentatonic Scale Jazz"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn all 5 pentatonic positions for major and minor",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice pentatonic string-skipping patterns (1-3, 2-4 intervals)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo over a Cmaj7 vamp using different pentatonic scale choices",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Apply pentatonics to the II-V-I: one pentatonic per chord",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Solo over Solar or Autumn Leaves mixing pentatonics and arpeggios",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Name the best pentatonic scale choice for maj7, min7, and dom7 chords",
+          "Solo over a standard using predominantly pentatonic material, sounding jazzy (not bluesy)",
+          "Demonstrate 3 different pentatonic patterns (not just linear up/down)",
+          "Explain why pentatonics create a \"modern\" sound in jazz"
+        ],
+        "relatedGuideSlug": "05-pentatonic-jazz"
+      },
+      {
+        "id": "3.2",
+        "title": "Voice Leading and Passing Chords",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Voice lead through jazz progressions with maximum smoothness",
+          "Use chromatic passing chords between diatonic chords",
+          "Add diminished passing chords to common progressions",
+          "Create movement in static harmonic sections using passing chords",
+          "Apply these concepts to enhance your comping on standards"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Voice leading principles",
+            "description": "each voice moves the smallest interval possible; common tones are held"
+          },
+          {
+            "term": "Chromatic passing chords",
+            "description": "inserting a chord a half-step above or below the target"
+          },
+          {
+            "term": "Diminished passing chords",
+            "description": "the classic I -- #Idim -- IIm7 movement"
+          },
+          {
+            "term": "Tritone substitution preview",
+            "description": "replacing V7 with bII7"
+          },
+          {
+            "term": "Practical application",
+            "description": "how these techniques make your comping sound professional"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "voice leading jazz chords"
+          },
+          {
+            "type": "search",
+            "query": "passing chords"
+          },
+          {
+            "type": "search",
+            "query": "chromatic chords jazz"
+          },
+          {
+            "type": "search",
+            "query": "diminished passing chords"
+          },
+          {
+            "type": "playlist",
+            "query": "Passing Chords"
+          },
+          {
+            "type": "playlist",
+            "query": "Chromatic Chords in Jazz - Shorts"
+          },
+          {
+            "type": "playlist",
+            "query": "Being Creative With Chords and Progressions"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Voice lead Drop 2 voicings through Autumn Leaves (minimize movement)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Add a chromatic passing chord before every chord change in a II-V-I",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice the diminished passing chord between I and IIm7 in 4 keys",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Reharmonize 4 bars of a standard by adding passing chords",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Comp through a standard with passing chords, making them rhythmically musical",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Comp through a standard with noticeably smoother voice leading than before",
+          "Add at least 3 passing chords to an 8-bar progression and make them sound natural",
+          "Demonstrate the diminished passing chord in context",
+          "Explain the voice leading principle and why it matters"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "3.3",
+        "title": "Chord Melody Basics",
+        "estimatedTime": "2--3 weeks",
+        "learningObjectives": [
+          "Arrange a simple melody with chords underneath (chord melody style)",
+          "Harmonize melody notes using Drop 2 voicings",
+          "Create a basic chord melody arrangement of a jazz standard",
+          "Understand when to harmonize every note vs. just the important ones",
+          "Perform a simple chord melody piece as a solo guitar arrangement"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Chord melody defined",
+            "description": "playing the melody on top while voicing chords underneath"
+          },
+          {
+            "term": "Melody on top",
+            "description": "the highest note of each voicing is the melody note"
+          },
+          {
+            "term": "Choosing voicings",
+            "description": "finding Drop 2 (or other) voicings where the melody note is on the top string"
+          },
+          {
+            "term": "Partial harmonization",
+            "description": "not every melody note needs a chord -- mixing single notes and chords"
+          },
+          {
+            "term": "Bass notes",
+            "description": "adding bass movement for a fuller solo guitar sound"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "chord melody basics"
+          },
+          {
+            "type": "search",
+            "query": "chord melody arrangement"
+          },
+          {
+            "type": "search",
+            "query": "how to make chord melody"
+          },
+          {
+            "type": "playlist",
+            "query": "Chord Melody Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Chord Melody - Beautiful Jazz Guitar"
+          },
+          {
+            "type": "playlist",
+            "query": "Chord Melody Arrangements - Free PDF"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Harmonize a C major scale using Drop 2 voicings (melody on string 1)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Arrange the first 8 bars of Autumn Leaves as a chord melody",
+            "dailyTime": "20 min"
+          },
+          {
+            "description": "Work on the remaining sections of your arrangement",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice the full chord melody arrangement with rubato and dynamics",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Study a Jens Larsen chord melody arrangement and learn it",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play a complete chord melody arrangement of a simple standard (e.g., Autumn Leaves)",
+          "Demonstrate how to find voicings for a given melody note",
+          "Play your arrangement with musical phrasing and dynamics (not mechanical)",
+          "Explain the process of creating a chord melody arrangement"
+        ],
+        "relatedGuideSlug": "13-chord-melody"
+      },
+      {
+        "id": "3.4",
+        "title": "Walking Bass and Chords",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play a walking bass line on guitar (quarter notes outlining the harmony)",
+          "Combine walking bass lines with chord voicings on the upper strings",
+          "Apply this technique to a blues and a standard",
+          "Understand bass line construction: chord tones, chromatic approach, and scale-based movement",
+          "Use this skill for solo guitar performance"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Walking bass principles",
+            "description": "root motion, chromatic approach notes, fifth-to-root movement"
+          },
+          {
+            "term": "Bass and chords together",
+            "description": "alternating between bass notes and chord voicings"
+          },
+          {
+            "term": "Joe Pass style",
+            "description": "the classic walking bass and chords approach"
+          },
+          {
+            "term": "Independence of hands/voices",
+            "description": "developing the ability to think of two parts simultaneously"
+          },
+          {
+            "term": "Application",
+            "description": "blues, standards, and duo situations where the guitarist needs to cover bass duties"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "walking bass and chords"
+          },
+          {
+            "type": "search",
+            "query": "walking bass guitar"
+          },
+          {
+            "type": "search",
+            "query": "Joe Pass walking bass"
+          },
+          {
+            "type": "playlist",
+            "query": "Walking Bass and Chords"
+          },
+          {
+            "type": "playlist",
+            "query": "YT lessons on Walking Bass and Chords"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Walk a bass line (just bass notes, no chords) through an F blues",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Add simple chord stabs between bass notes on the blues",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Walk bass and chords through Autumn Leaves",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice chromatic approach notes: approach each root from a half-step below",
+            "dailyTime": "5 min"
+          },
+          {
+            "description": "Work on a Joe Pass-style walking bass arrangement from Jens's lessons",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Walk a bass line through a 12-bar blues without stopping, hitting roots on beat 1",
+          "Combine walking bass with chords through a blues for 3 choruses",
+          "Demonstrate walking bass and chords on at least one standard",
+          "Explain 3 techniques for constructing a walking bass line"
+        ],
+        "relatedGuideSlug": "12-walking-bass-chords"
+      },
+      {
+        "id": "3.5",
+        "title": "Target Notes and Guide Tone Lines",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Construct guide tone lines (3rds and 7ths) through a set of changes",
+          "Use target notes to create strong resolution points in your solos",
+          "Connect target notes with approach patterns (scale-based and chromatic)",
+          "Hear guide tone movement as the \"skeleton\" of a chord progression",
+          "Apply this concept to create more melodic, intentional solos"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Guide tones",
+            "description": "the 3rds and 7ths that define chord quality and create smooth voice leading"
+          },
+          {
+            "term": "Guide tone lines",
+            "description": "playing just the 3rds and 7ths through a progression reveals the harmonic \"melody\""
+          },
+          {
+            "term": "Target notes in soloing",
+            "description": "choosing a strong arrival note for each chord, then creating a path to reach it"
+          },
+          {
+            "term": "Enclosure patterns",
+            "description": "approaching target notes from above and below (chromatic or diatonic)"
+          },
+          {
+            "term": "The \"skeleton\" approach to soloing",
+            "description": "build your solo from strong points and fill in between"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "target notes jazz"
+          },
+          {
+            "type": "search",
+            "query": "guide tone lines"
+          },
+          {
+            "type": "search",
+            "query": "approach notes enclosures"
+          },
+          {
+            "type": "playlist",
+            "query": "Target Notes"
+          },
+          {
+            "type": "playlist",
+            "query": "Chromatic Passing Notes and Enclosures"
+          },
+          {
+            "type": "playlist",
+            "query": "Improve Your Jazz Solos"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Write out guide tone lines (3rds and 7ths) for Autumn Leaves, Solar, and All The Things You Are",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play the guide tone lines on guitar -- notice how smooth the movement is",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo using target notes: pick the 3rd or 7th as your arrival point for each chord",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice enclosure patterns: approach the target from above and below",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Full solo practice integrating target notes with licks and arpeggios",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Write and play guide tone lines for any standard from your repertoire",
+          "Solo over a standard demonstrating clear target notes on the strong beats",
+          "Use at least 2 different enclosure patterns in context",
+          "Explain how guide tones connect to voice leading in comping"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "3.6",
+        "title": "Comping Rhythms, Patterns, and Standards",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play 8--10 distinct comping rhythm patterns",
+          "Vary your comping rhythms to support a soloist dynamically",
+          "Learn the changes and melody for All The Things You Are and Satin Doll",
+          "Comp through these new standards musically and confidently",
+          "Develop an awareness of ensemble interaction (listening while comping)"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Comping as conversation",
+            "description": "reacting to the soloist, not just playing time"
+          },
+          {
+            "term": "Rhythmic vocabulary expansion",
+            "description": "syncopation, anticipations, Charleston variations, long tones, staccato chords"
+          },
+          {
+            "term": "Dynamic comping",
+            "description": "varying volume, density, and rhythm based on the musical context"
+          },
+          {
+            "term": "All The Things You Are",
+            "description": "a standard with many key centers -- excellent for applying II-V-I skills"
+          },
+          {
+            "term": "Satin Doll",
+            "description": "a classic Ellington standard with chromatically moving II-V patterns"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "comping rhythms jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "All The Things You Are"
+          },
+          {
+            "type": "search",
+            "query": "Satin Doll"
+          },
+          {
+            "type": "search",
+            "query": "jazz comping tips"
+          },
+          {
+            "type": "playlist",
+            "query": "Comping Rhythms"
+          },
+          {
+            "type": "playlist",
+            "query": "All The Things You Are"
+          },
+          {
+            "type": "playlist",
+            "query": "Satin Doll"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Chords and Jazz Comping"
+          },
+          {
+            "type": "playlist",
+            "query": "Comping - Learning Chords And Strategies"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Practice 4 comping rhythm patterns on a single chord (with metronome on 2 and 4)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Learn All The Things You Are melody and changes",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Comp through All The Things You Are with varied rhythms",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Learn Satin Doll melody and changes",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Record yourself comping along with a recording -- listen back for rhythmic variety",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Comp through All The Things You Are and Satin Doll from memory",
+          "Demonstrate at least 6 distinct comping rhythm patterns",
+          "Comp behind a recording of a soloist, reacting to their phrasing",
+          "Your repertoire should now include: Autumn Leaves, Solar, Blue Bossa, F Blues, All The Things You Are, Satin Doll"
+        ],
+        "relatedGuideSlug": "14-comping-patterns"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Advanced Harmony & Improvisation",
+    "level": "Advanced Intermediate",
+    "duration": "12--14 weeks",
+    "prerequisites": "Completion of Module 3",
+    "description": "This module transforms your playing from \"functional\" to \"fluent.\" You will learn the bebop language, harmonic tools like the altered scale and melodic minor, and the ability to navigate complex forms like Rhythm Changes. These are the sounds that define jazz guitar.",
+    "units": [
+      {
+        "id": "4.1",
+        "title": "Bebop Concepts - The Language of Jazz",
+        "estimatedTime": "2--3 weeks",
+        "learningObjectives": [
+          "Play the bebop dominant scale and understand its rhythmic logic",
+          "Use bebop-style phrasing: eighth-note lines with chord tones on downbeats",
+          "Learn 5--8 classic bebop patterns and licks",
+          "Apply bebop vocabulary to II-V-I progressions",
+          "Begin to hear and reproduce the \"bebop sound\""
+        ],
+        "coreConcepts": [
+          {
+            "term": "The bebop scale",
+            "description": "the dominant scale with an added passing tone (natural 7 added to Mixolydian) so that chord tones fall on downbeats"
+          },
+          {
+            "term": "Rhythmic logic",
+            "description": "eighth-note lines starting on a downbeat with a chord tone -- the added note keeps everything aligned"
+          },
+          {
+            "term": "Bebop phrasing",
+            "description": "the characteristic sound of Charlie Parker, Dizzy Gillespie, and the bebop tradition"
+          },
+          {
+            "term": "Bebop on guitar",
+            "description": "fingerings, position playing, and picking considerations"
+          },
+          {
+            "term": "Learning from transcriptions",
+            "description": "the importance of studying Charlie Parker, Bud Powell, and early bebop masters"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "bebop jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "bebop scale"
+          },
+          {
+            "type": "search",
+            "query": "Charlie Parker guitar"
+          },
+          {
+            "type": "search",
+            "query": "bebop licks exercises"
+          },
+          {
+            "type": "playlist",
+            "query": "Bebop for Guitar - Getting The Jazz Sound"
+          },
+          {
+            "type": "playlist",
+            "query": "Learn Bebop"
+          },
+          {
+            "type": "playlist",
+            "query": "Exercises for Bebop"
+          },
+          {
+            "type": "playlist",
+            "query": "Charlie Parker for Guitar"
+          },
+          {
+            "type": "playlist",
+            "query": "Learning Jazz Guitar Is About Learning Bebop"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Play the bebop dominant scale from the root, 3rd, 5th, and 7th in 3 keys",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice running eighth-note bebop lines over a dom7 vamp",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Learn 2 Charlie Parker / bebop licks from Jens's lessons",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Apply bebop lines to II-V-I progressions in 4 keys",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Transcribe 4 bars of a Parker/bebop solo by ear",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play the bebop dominant scale in 4 keys, demonstrating chord tones on downbeats",
+          "Solo over a II-V-I for 8 bars in a convincing bebop style",
+          "Play 5 bebop licks from memory and transpose to 2 other keys",
+          "Explain why the added chromatic note makes the bebop scale work rhythmically"
+        ],
+        "relatedGuideSlug": "08-bebop-vocabulary"
+      },
+      {
+        "id": "4.2",
+        "title": "Chromatic Approach Notes and Enclosures",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Apply chromatic approach notes (from above and below) to any target note",
+          "Use enclosure patterns (above-below, below-above) fluently",
+          "Understand the Barry Harris approach to chromaticism",
+          "Integrate approach notes into your bebop vocabulary",
+          "Make your lines sound more \"inside\" the harmony by resolving chromatic notes properly"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Approach notes",
+            "description": "leading into a chord tone from a half-step above or below"
+          },
+          {
+            "term": "Enclosures",
+            "description": "surrounding a target note from both sides before resolving (e.g., F#-Eb-E to enclose E)"
+          },
+          {
+            "term": "Barry Harris method",
+            "description": "the legendary teacher's approach to adding chromaticism (featured frequently in Jens's teaching)"
+          },
+          {
+            "term": "Pat Metheny-style approach notes",
+            "description": "more modern chromatic applications"
+          },
+          {
+            "term": "Rules of resolution",
+            "description": "chromatic notes must resolve to chord tones to sound intentional"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "approach notes enclosures"
+          },
+          {
+            "type": "search",
+            "query": "Barry Harris approach"
+          },
+          {
+            "type": "search",
+            "query": "chromatic passing notes jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "Chromatic Passing Notes and Enclosures"
+          },
+          {
+            "type": "playlist",
+            "query": "Barry Harris - Wizard of Bebop"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Practice single chromatic approach (from below) to each note of a Cmaj7 arpeggio",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice enclosures (above-below) around each chord tone of a Dm7 arpeggio",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Create 4-bar phrases using approach notes over a II-V-I",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Solo over a standard, consciously using approach notes on strong beats",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Demonstrate 3 types of approach patterns (from below, from above, enclosure)",
+          "Solo over a II-V-I where every chord tone on a downbeat is approached chromatically",
+          "Apply approach notes musically in a full chorus on a standard",
+          "Explain the Barry Harris approach to chromaticism in your own words"
+        ],
+        "relatedGuideSlug": "16-chromatic-enclosures"
+      },
+      {
+        "id": "4.3",
+        "title": "The Altered Scale and Altered Dominants",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play the altered scale (7th mode of melodic minor) in at least 3 keys",
+          "Understand which tensions the altered scale provides (b9, #9, b5/#11, b13)",
+          "Apply the altered scale to V7 chords resolving to I",
+          "Voice altered dominant chords (7#9, 7b9, 7#5, 7b5)",
+          "Hear and use the altered sound in context"
+        ],
+        "coreConcepts": [
+          {
+            "term": "The altered scale",
+            "description": "the 7th mode of melodic minor (spelled 1-b9-#9-3-b5-b13-b7)"
+          },
+          {
+            "term": "When to use it",
+            "description": "on dominant 7th chords, especially when resolving to the I chord"
+          },
+          {
+            "term": "The sound",
+            "description": "the maximum amount of tension before resolution -- the quintessential jazz dominant sound"
+          },
+          {
+            "term": "Altered chord voicings",
+            "description": "Drop 2 and shell voicings for 7alt, 7#9, 7b9, 7b13"
+          },
+          {
+            "term": "Relationship to melodic minor",
+            "description": "Ab melodic minor = G altered -- learning to see it both ways"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "altered scale"
+          },
+          {
+            "type": "search",
+            "query": "altered dominants jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "altered scale licks"
+          },
+          {
+            "type": "playlist",
+            "query": "Altered Scale"
+          },
+          {
+            "type": "playlist",
+            "query": "Use Melodic Minor & Altered Scale To Add Magic To Your Jazz Playing!"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn the altered scale fingering from the root in 3 positions",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play the altered scale over a V7-I progression (e.g., G7alt to Cmaj7)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Learn 3 altered scale licks from Jens's lessons",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Voice altered dominant chords (7#9, 7b9, etc.) in 4 keys",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo over a II-V-I, using the altered scale on the V7",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Play the altered scale in 4 keys from memory",
+          "Solo over 8 bars of II-V-I's, using the altered scale on every V7 chord",
+          "Play 3 altered dominant voicings from any root",
+          "Explain the relationship between the altered scale and melodic minor"
+        ],
+        "relatedGuideSlug": "09-altered-dominant"
+      },
+      {
+        "id": "4.4",
+        "title": "Melodic Minor Applications",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play the melodic minor scale in at least 3 positions",
+          "Apply melodic minor modes to different chord types (not just altered dominants)",
+          "Use Lydian dominant (4th mode) over dominant chords going to IV",
+          "Use Locrian natural 2 (6th mode) over min7b5 chords",
+          "Understand the full palette of melodic minor harmony"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Melodic minor scale",
+            "description": "the \"jazz minor\" scale (1-2-b3-4-5-6-7)"
+          },
+          {
+            "term": "Harmonic minor on V chords",
+            "description": "another approach to V7 (particularly V7b9) using harmonic minor from the root of the I chord"
+          },
+          {
+            "term": "Practical application",
+            "description": "knowing when each sound is appropriate"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "melodic minor jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "lydian dominant"
+          },
+          {
+            "type": "search",
+            "query": "harmonic minor V chord"
+          },
+          {
+            "type": "search",
+            "query": "melodic minor modes"
+          },
+          {
+            "type": "playlist",
+            "query": "Melodic Minor"
+          },
+          {
+            "type": "playlist",
+            "query": "Melodic Minor Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Lydian Dominants"
+          },
+          {
+            "type": "playlist",
+            "query": "Lessons on Harmonic Minor"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn melodic minor scale in 3 positions",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice Lydian dominant over a dom7 chord (e.g., C Lydian dominant over C7)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice Locrian natural 2 over min7b5 chords in minor II-V-I",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Apply different melodic minor modes to a standard that has varied chord types",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Learn 2 melodic minor licks for each application (Lydian dom, altered, min-maj7)",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Play the melodic minor scale in 4 keys, naming the mode and its chord application",
+          "Solo over a progression using Lydian dominant on the appropriate chord",
+          "Demonstrate different melodic minor applications on a minor II-V-I",
+          "Explain when to use Lydian dominant vs. Mixolydian vs. altered"
+        ],
+        "relatedGuideSlug": "10-melodic-minor"
+      },
+      {
+        "id": "4.5",
+        "title": "Rhythm Changes - Improvisation Strategies",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Comp through the Rhythm Changes form (AABA, 32 bars) with appropriate voicings",
+          "Solo over the A section using arpeggios, scales, and bebop vocabulary",
+          "Navigate the bridge (III-VI-II-V cycle of dominants) confidently",
+          "Apply simplification strategies for the fast-moving A section",
+          "Play the head of a Rhythm Changes tune (e.g., Oleo or Anthropology)"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Rhythm Changes form",
+            "description": "based on Gershwin's \"I Got Rhythm\" -- the second most common form in jazz after the blues"
+          },
+          {
+            "term": "A section harmony",
+            "description": "I-VI-II-V moving fast (typically 2 chords per bar at medium-up tempos)"
+          },
+          {
+            "term": "Bridge",
+            "description": "a cycle of dominant 7ths (III7-VI7-II7-V7)"
+          },
+          {
+            "term": "Simplification strategies",
+            "description": "treating 2 bars as one chord, using Bb major over the whole A section as a starting point"
+          },
+          {
+            "term": "Bebop on Rhythm Changes",
+            "description": "this is where bebop vocabulary really shines"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "rhythm changes"
+          },
+          {
+            "type": "search",
+            "query": "rhythm changes improvisation"
+          },
+          {
+            "type": "search",
+            "query": "rhythm changes comping"
+          },
+          {
+            "type": "playlist",
+            "query": "Rhythm Changes"
+          },
+          {
+            "type": "playlist",
+            "query": "YT Rhythm Changes Lessons"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Memorize the Rhythm Changes form in Bb (chords for A section and bridge)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Comp through the form with Drop 2 voicings",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo over the A section: first using just Bb major scale, then adding arpeggios",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Solo over the bridge: practice the cycle of dominants with Mixolydian and arpeggios",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Learn 3 classic Rhythm Changes licks for the A section",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Comp through the full Rhythm Changes form from memory",
+          "Solo over 2 choruses, maintaining the form and clearly navigating the bridge",
+          "Play 3 Rhythm Changes licks and explain how they outline the harmony",
+          "Play or hum the melody of at least one Rhythm Changes tune"
+        ],
+        "relatedGuideSlug": "11-rhythm-changes"
+      },
+      {
+        "id": "4.6",
+        "title": "Tritone Substitution and Quartal Voicings",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Apply tritone substitution to dominant 7th chords in comping and soloing",
+          "Voice tritone substitution chords and resolve them smoothly",
+          "Construct and play quartal voicings (built in 4ths)",
+          "Use quartal voicings as a modern alternative to Drop 2 and shell voicings",
+          "Integrate both concepts into your comping and harmonic vocabulary"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Tritone substitution",
+            "description": "replacing a dom7 chord with the dom7 a tritone away (e.g., Db7 for G7) because they share the same guide tones (3rd and 7th swap)"
+          },
+          {
+            "term": "Chromatic bass movement",
+            "description": "tritone subs create elegant chromatic bass lines (Dm7-Db7-Cmaj7 instead of Dm7-G7-Cmaj7)"
+          },
+          {
+            "term": "Quartal voicings",
+            "description": "chords built by stacking perfect and augmented 4ths instead of 3rds"
+          },
+          {
+            "term": "The McCoy Tyner / modern jazz sound",
+            "description": "quartal voicings on piano translated to guitar"
+          },
+          {
+            "term": "Practical application",
+            "description": "when and where tritone subs and quartal voicings fit in a jazz context"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "tritone substitution"
+          },
+          {
+            "type": "search",
+            "query": "quartal harmony guitar"
+          },
+          {
+            "type": "search",
+            "query": "modern jazz chords"
+          },
+          {
+            "type": "playlist",
+            "query": "Tritone Substitution"
+          },
+          {
+            "type": "playlist",
+            "query": "Quartal Harmony"
+          },
+          {
+            "type": "playlist",
+            "query": "Modern Jazz Chord Sounds"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Play a II-V-I with tritone substitution (II-bII7-I) in 6 keys",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Build quartal voicings from each note of a major scale on strings 1-2-3-4",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Comp through a standard, replacing some V7 chords with tritone subs",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Use quartal voicings to comp through a modal section (e.g., Dm7 for 8 bars)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Improvise over tritone substitution changes (solo over Dm7-Db7-Cmaj7)",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Explain and demonstrate tritone substitution with correct voice leading",
+          "Comp through a standard incorporating tritone subs naturally",
+          "Play quartal voicings across the fretboard and use them in comping",
+          "Solo over a II-bII7-I progression, clearly outlining the chromatic movement"
+        ],
+        "relatedGuideSlug": "15-quartal-harmony"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Advanced Techniques & Modern Jazz",
+    "level": "Advanced",
+    "duration": "12--14 weeks",
+    "prerequisites": "Completion of Module 4",
+    "description": "This module takes you into the deep end. You will study Coltrane's harmonic innovations, explore \"outside\" playing, and use advanced structures like upper structure triads and triad pairs. This is the module that separates the serious jazz musician from the casual player.",
+    "units": [
+      {
+        "id": "5.1",
+        "title": "Outside Playing and Side-Slipping",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Understand the concept of \"outside\" playing (intentionally playing notes outside the key)",
+          "Apply side-slipping: displacing a phrase by a half step, then resolving back",
+          "Use outside playing to create tension and release in solos",
+          "Control the degree of \"outness\" -- from subtle chromaticism to bold displacement",
+          "Listen to and analyze outside playing in recordings"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Outside playing defined",
+            "description": "intentionally leaving the \"inside\" (diatonic) notes to create tension, then resolving back"
+          },
+          {
+            "term": "Side-slipping (chromatic displacement)",
+            "description": "playing a familiar pattern a half-step above or below, then resolving to the original key"
+          },
+          {
+            "term": "Tension and release",
+            "description": "the musical principle that makes outside playing work -- you must resolve"
+          },
+          {
+            "term": "Gradations of outside",
+            "description": "slight chromatic tension vs. full tonal displacement"
+          },
+          {
+            "term": "Artists who use this",
+            "description": "Pat Metheny, John Scofield, Kurt Rosenwinkel"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "outside playing jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "side slipping"
+          },
+          {
+            "type": "search",
+            "query": "creating tension in jazz solos"
+          },
+          {
+            "type": "playlist",
+            "query": "Outside Playing"
+          },
+          {
+            "type": "playlist",
+            "query": "Kurt Rosenwinkel Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "John Scofield Lessons"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Take a II-V-I lick and play it a half-step up, then resolve to the correct key",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice side-slipping over a Dm7 vamp: play \"inside\" 2 bars, \"outside\" 1 bar, resolve 1 bar",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Transcribe 4 bars of outside playing from a Pat Metheny or Scofield recording",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Apply side-slipping to a standard -- choose specific moments to go outside",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice pentatonic side-slipping: play a pentatonic scale a half-step away, then return",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Solo over a II-V-I demonstrating controlled outside playing with clear resolution",
+          "Explain the concept of tension and release in outside playing",
+          "Apply side-slipping to at least 2 different spots in a standard",
+          "Demonstrate the difference between outside playing and simply playing \"wrong notes\""
+        ],
+        "relatedGuideSlug": "17-outside-playing"
+      },
+      {
+        "id": "5.2",
+        "title": "Coltrane Patterns and Giant Steps",
+        "estimatedTime": "2--3 weeks",
+        "learningObjectives": [
+          "Understand \"Coltrane changes\" (the cycle of major thirds)",
+          "Navigate the chord progression of Giant Steps at a slow-to-medium tempo",
+          "Apply the 1-2-3-5 pattern and other Coltrane-associated melodic patterns",
+          "Understand how Coltrane changes relate to standard progressions (Coltrane substitutions)",
+          "Solo over Giant Steps changes using arpeggios and patterns"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Coltrane changes",
+            "description": "chord progressions that move through key centers a major third apart (C -- E -- Ab -- C)"
+          },
+          {
+            "term": "Giant Steps",
+            "description": "Coltrane's landmark composition, the \"final exam\" of jazz harmony"
+          },
+          {
+            "term": "The 1-2-3-5 pattern",
+            "description": "a melodic pattern Coltrane used extensively, applied to each key center"
+          },
+          {
+            "term": "Coltrane substitution",
+            "description": "applying the cycle of thirds to replace standard II-V-I progressions"
+          },
+          {
+            "term": "Practice strategy",
+            "description": "slow tempo, arpeggio-based navigation, then adding patterns"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "Giant Steps guitar"
+          },
+          {
+            "type": "search",
+            "query": "Coltrane patterns"
+          },
+          {
+            "type": "search",
+            "query": "Coltrane changes"
+          },
+          {
+            "type": "playlist",
+            "query": "Giant Steps"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Play arpeggios through the Giant Steps changes at a slow tempo (60 BPM)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice the 1-2-3-5 pattern in all 12 keys",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Apply the 1-2-3-5 pattern to the Giant Steps changes",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice the 3-key-center cycle: Bb major -- G major -- Eb major arpeggios",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo over Giant Steps backing track, gradually increasing tempo",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Play through the Giant Steps changes using arpeggios at 100 BPM",
+          "Demonstrate the 1-2-3-5 pattern in 6 keys",
+          "Solo over Giant Steps for 1 chorus with clear harmonic navigation",
+          "Explain how Coltrane changes divide the octave into major thirds"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "5.3",
+        "title": "Diminished Scale and Lydian Dominant Applications",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Play the diminished scale (half-whole and whole-half) in all positions",
+          "Apply the half-whole diminished scale to dominant 7th chords",
+          "Apply the whole-half diminished scale to diminished 7th chords",
+          "Understand Lydian dominant as an alternative dominant color",
+          "Choose between altered, Lydian dominant, and diminished based on harmonic context"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Half-whole diminished scale",
+            "description": "alternating half and whole steps, applied to dom7 chords (gives you b9, #9, #11, 13)"
+          },
+          {
+            "term": "Whole-half diminished scale",
+            "description": "alternating whole and half steps, applied to dim7 chords"
+          },
+          {
+            "term": "Symmetry",
+            "description": "the diminished scale repeats every minor 3rd -- only 3 unique transpositions"
+          },
+          {
+            "term": "Lydian dominant vs. diminished vs. altered",
+            "description": "a comparison of dominant chord color choices"
+          },
+          {
+            "term": "When to use each",
+            "description": "diminished sounds \"bright and tense,\" altered sounds \"dark and tense,\" Lydian dominant sounds \"bright and floating\""
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "diminished scale dominant"
+          },
+          {
+            "type": "search",
+            "query": "lydian dominant"
+          },
+          {
+            "type": "search",
+            "query": "diminished scale patterns"
+          },
+          {
+            "type": "playlist",
+            "query": "Diminished Scale on Dominants"
+          },
+          {
+            "type": "playlist",
+            "query": "Lydian Dominant Videos"
+          },
+          {
+            "type": "playlist",
+            "query": "Diminished Chord Lessons"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Learn the half-whole diminished scale in 2 positions for 3 roots",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice diminished scale patterns (in 3rds, arpeggios from each scale degree)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Apply the diminished scale to a dom7 chord in a II-V-I context",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Compare: play altered, Lydian dominant, and diminished over the same V7 chord",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Learn 3 diminished scale licks from Jens's lessons",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Play the half-whole diminished scale from any root",
+          "Solo over a II-V-I using the diminished scale on V7",
+          "Demonstrate the Lydian dominant scale and explain when to use it",
+          "Play the same 4-bar phrase three ways: altered, diminished, Lydian dominant"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "5.4",
+        "title": "Upper Structure Triads",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Understand upper structure triads: using simple triads to access complex harmony",
+          "Identify which triads work over each chord type to produce extensions (9, 11, 13, altered tones)",
+          "Play upper structure triad voicings on guitar",
+          "Use upper structure triads as improvisation tools (playing triads over changes)",
+          "Integrate triads into comping for a modern harmonic sound"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Upper structure triads defined",
+            "description": "playing a triad from a non-root note of the chord to produce extensions"
+          },
+          {
+            "term": "Examples",
+            "description": "E major triad over C7 = 3-#5-7-#9 (altered sound); D major triad over Cmaj7 = 9-#11-13"
+          },
+          {
+            "term": "Triads for each chord type",
+            "description": "a systematic mapping of useful triads"
+          },
+          {
+            "term": "Triads in improvisation",
+            "description": "playing arpeggiated triads over changes for a modern, intervallic sound"
+          },
+          {
+            "term": "Triads as voicings",
+            "description": "upper structure triads as comping tools (triad over bass note)"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "triads jazz improvisation"
+          },
+          {
+            "type": "search",
+            "query": "upper structure triads"
+          },
+          {
+            "type": "search",
+            "query": "triads over chords"
+          },
+          {
+            "type": "playlist",
+            "query": "Triads in Jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "Triads In Jazz - Short"
+          },
+          {
+            "type": "playlist",
+            "query": "Putting Triads To Use"
+          },
+          {
+            "type": "playlist",
+            "query": "Triads as Jazz Chords"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Map out 3 useful triads for each chord type (maj7, min7, dom7)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play upper structure triads over a Cmaj7 vamp: D, Em, and Am triads",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice triadic improvisation over a II-V-I using appropriate triads",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Create voicings by combining a bass note with an upper triad",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Apply triadic improvisation to a standard",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Name 3 useful upper structure triads for maj7, min7, and dom7 chords",
+          "Solo using triadic patterns over a standard, creating an intervallic modern sound",
+          "Play upper structure triad voicings in comping context",
+          "Explain what tensions each triad produces over a given chord"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "5.5",
+        "title": "Triad Pairs for Improvisation",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Understand the triad pair concept: two triads that together cover a scale",
+          "Select appropriate triad pairs for different chord types",
+          "Practice triad pair permutations and patterns",
+          "Use triad pairs to create modern, angular melodic lines",
+          "Apply triad pairs to standards"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Triad pairs",
+            "description": "choosing two triads (from adjacent scale degrees) and alternating between them for improvisation"
+          },
+          {
+            "term": "Example",
+            "description": "C and D major triads over Cmaj7 gives you 1-3-5-2-#4-6 -- all the notes of Lydian without any \"scale-running\" sound"
+          },
+          {
+            "term": "Why triad pairs work",
+            "description": "they create wide intervals and avoid the stepwise motion that makes lines sound like exercises"
+          },
+          {
+            "term": "Common triad pairs per chord type",
+            "description": "a practical reference"
+          },
+          {
+            "term": "Permutations",
+            "description": "different ways to combine and order the triad tones"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "triad pairs jazz"
+          },
+          {
+            "type": "search",
+            "query": "triad pairs improvisation"
+          },
+          {
+            "type": "playlist",
+            "query": "Triad Pairs"
+          },
+          {
+            "type": "playlist",
+            "query": "Spread Triads"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Practice C and D triads in all inversions, alternating smoothly",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Apply triad pairs over a Cmaj7 chord (C+D, C+Em, etc.)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Create melodic lines using triad pairs over a II-V-I",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice triad pair permutations: 1-3-5 / 5-3-1 / 3-5-1, etc.",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo on a standard using triad pairs where appropriate",
+            "dailyTime": "15 min"
+          }
+        ],
+        "assessment": [
+          "Name and play appropriate triad pairs for maj7, min7, and dom7 chords",
+          "Solo for 1 chorus using triad pairs prominently",
+          "Demonstrate at least 3 permutations of a triad pair",
+          "Explain why triad pairs sound more angular than scale-based lines"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "5.6",
+        "title": "Advanced Chord Melody and Motifs",
+        "estimatedTime": "2 weeks",
+        "learningObjectives": [
+          "Create a sophisticated chord melody arrangement using advanced voicings",
+          "Use reharmonization techniques in your arrangements",
+          "Apply motivic development in improvisation",
+          "Develop a motif and transform it over a full chorus",
+          "Combine all advanced techniques into a personal musical statement"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Advanced chord melody",
+            "description": "using altered voicings, quartal sounds, inner voice movement, and reharmonization"
+          },
+          {
+            "term": "Reharmonization in arranging",
+            "description": "adding passing chords, tritone subs, and chromatic harmony to enrich a melody"
+          },
+          {
+            "term": "Motivic development",
+            "description": "the art of taking a short musical idea and developing it through repetition, transposition, augmentation, diminution, inversion, and rhythmic variation"
+          },
+          {
+            "term": "Musical storytelling",
+            "description": "building a solo with an arc -- beginning, development, climax, resolution"
+          },
+          {
+            "term": "Solo guitar as composition",
+            "description": "treating each performance as a mini-composition"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "advanced chord melody"
+          },
+          {
+            "type": "search",
+            "query": "reharmonization"
+          },
+          {
+            "type": "search",
+            "query": "motifs motivic development"
+          },
+          {
+            "type": "search",
+            "query": "solo guitar jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "Chord Melody And Jazz Chords"
+          },
+          {
+            "type": "playlist",
+            "query": "Reharmonization"
+          },
+          {
+            "type": "playlist",
+            "query": "Motifs and Motivic Development"
+          },
+          {
+            "type": "playlist",
+            "query": "Motifs and Compositional Tools"
+          },
+          {
+            "type": "playlist",
+            "query": "Functional Harmony And Reharmonization"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Create a chord melody arrangement of a standard using advanced voicings",
+            "dailyTime": "20 min"
+          },
+          {
+            "description": "Add reharmonization to 8 bars of your arrangement",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Solo for a full chorus, focusing on motivic development (avoid random lick-stringing)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Study an advanced Jens Larsen chord melody and learn it",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Perform a full advanced chord melody arrangement (solo guitar)",
+          "Solo for 2 choruses demonstrating motivic development (a listener should hear the \"story\")",
+          "Identify 3 reharmonization techniques used in your arrangement",
+          "Explain 4 ways to develop a motif"
+        ],
+        "relatedGuideSlug": "13-chord-melody"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Mastery & Musicianship",
+    "level": "Ongoing",
+    "duration": "Lifelong",
+    "prerequisites": "Completion of Module 5 (or concurrent with Module 4/5)",
+    "description": "This final module is not a destination but a way of working. It covers the skills that make a complete musician: transcription, practice methodology, repertoire management, and the ability to learn from the masters. These skills are relevant at every stage and should be revisited throughout your journey.",
+    "units": [
+      {
+        "id": "6.1",
+        "title": "Transcription Methodology - Learning from the Masters",
+        "estimatedTime": "Ongoing (start with 2--3 weeks of focused practice)",
+        "learningObjectives": [
+          "Transcribe a jazz solo (or excerpt) by ear",
+          "Analyze a transcription for harmonic, melodic, and rhythmic content",
+          "Incorporate transcribed vocabulary into your own playing",
+          "Develop your ear through the transcription process",
+          "Build a personal transcription library over time"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Why transcribe",
+            "description": "it trains your ear, builds vocabulary, and connects you to the jazz tradition in a way no other practice method can"
+          },
+          {
+            "term": "How to transcribe",
+            "description": "Jens's step-by-step method (slow down the recording, learn phrase by phrase, figure out the notes, write them down, analyze, memorize)"
+          },
+          {
+            "term": "What to transcribe",
+            "description": "start with short phrases (2--4 bars), not entire solos"
+          },
+          {
+            "term": "Analysis after transcription",
+            "description": "what scales, arpeggios, and patterns is the soloist using?"
+          },
+          {
+            "term": "Integration",
+            "description": "transposing transcribed phrases and using them in your own solos"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "transcription jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "learn by ear jazz"
+          },
+          {
+            "type": "search",
+            "query": "how to transcribe solos"
+          },
+          {
+            "type": "playlist",
+            "query": "Learn By Ear And Transcribe"
+          },
+          {
+            "type": "playlist",
+            "query": "Analyzing Great Guitarists"
+          },
+          {
+            "type": "playlist",
+            "query": "Learning from Great Jazz Players"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Choose a short solo excerpt (4--8 bars) and slow it down to 50% speed",
+            "dailyTime": "5 min"
+          },
+          {
+            "description": "Learn the phrase by ear, note by note, on guitar",
+            "dailyTime": "20 min"
+          },
+          {
+            "description": "Write out what you hear (standard notation or tab)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Analyze: identify the chord tones, approach notes, and patterns used",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Transpose the phrase to 2 other keys and practice it",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Complete a full transcription of at least 1 chorus of a jazz solo (or 3 shorter excerpts)",
+          "Perform the transcription from memory along with the recording",
+          "Analyze the transcription: identify arpeggios, scales, approach notes, and motivic ideas",
+          "Play 3 phrases from your transcription in different keys, integrated into your own solo"
+        ],
+        "relatedGuideSlug": "19-transcription-method"
+      },
+      {
+        "id": "6.2",
+        "title": "Jazz Phrasing Refinement",
+        "estimatedTime": "Ongoing (start with 2 weeks of focused practice)",
+        "learningObjectives": [
+          "Play with dynamic variation (not everything at the same volume)",
+          "Use space and silence as part of your musical vocabulary",
+          "Develop rhythmic sophistication: delayed attacks, anticipations, behind-the-beat phrasing",
+          "Vary articulation: legato, staccato, accents, ghost notes",
+          "Make your playing \"speak\" -- phrasing that sounds like a human voice"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Phrasing is what separates good from great",
+            "description": "two players can know the same notes, but phrasing determines who sounds like a jazz musician"
+          },
+          {
+            "term": "Space",
+            "description": "Miles Davis's famous principle -- the notes you don't play matter as much as the ones you do"
+          },
+          {
+            "term": "Dynamics",
+            "description": "playing soft-loud-soft, building intensity, pulling back"
+          },
+          {
+            "term": "Rhythmic placement",
+            "description": "playing on top of, behind, or ahead of the beat for different feels"
+          },
+          {
+            "term": "Articulation",
+            "description": "hammer-ons, pull-offs, slides, accents, and ghost notes create the \"vocal\" quality of great jazz phrasing"
+          },
+          {
+            "term": "Listening deeply",
+            "description": "the best way to improve phrasing is to internalize great players' phrasing through listening"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "jazz phrasing"
+          },
+          {
+            "type": "search",
+            "query": "jazz rhythm phrasing"
+          },
+          {
+            "type": "search",
+            "query": "swing phrasing"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Phrasing"
+          },
+          {
+            "type": "playlist",
+            "query": "Swing Feel and Jazz Phrasing"
+          },
+          {
+            "type": "playlist",
+            "query": "Learn Great Jazz Phrasing And Vocabulary By Studying The Masters"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Solo for 2 choruses, leaving at least 2 beats of space between every phrase",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Play a solo with exaggerated dynamics: whisper, then shout, then whisper",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice behind-the-beat phrasing: play eighth notes slightly behind the metronome click",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Transcribe 4 bars and match the original articulation exactly (slides, accents, ghost notes)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Record yourself and listen critically: does it \"breathe\"? Are there dynamics?",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Solo for 3 choruses demonstrating space, dynamics, and rhythmic variety",
+          "A listener should notice intentional use of silence in your solo",
+          "Demonstrate 3 different articulation techniques in a single phrase",
+          "Your solo should not sound like \"running scales\" -- it should sound conversational"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "6.3",
+        "title": "Practice Methodology - How to Practice Efficiently",
+        "estimatedTime": "1--2 weeks to set up; ongoing refinement",
+        "learningObjectives": [
+          "Design an effective daily practice routine (45--90 minutes)",
+          "Balance technique, repertoire, ear training, and creative practice",
+          "Use a metronome and backing tracks effectively",
+          "Practice with intention: know what you're working on and why",
+          "Track progress and adjust your routine over time"
+        ],
+        "coreConcepts": [
+          {
+            "term": "Jens's practice philosophy",
+            "description": "practice things in a musical context, not just as exercises"
+          },
+          {
+            "term": "Practice categories",
+            "description": "technique, vocabulary/language, repertoire, ear training, creative/free play"
+          },
+          {
+            "term": "Time management",
+            "description": "quality over quantity -- focused practice beats mindless noodling"
+          },
+          {
+            "term": "The metronome",
+            "description": "your best friend and worst enemy -- use it wisely"
+          },
+          {
+            "term": "Slow practice",
+            "description": "the paradox that slow, careful practice leads to faster progress"
+          },
+          {
+            "term": "Practice journal",
+            "description": "tracking what you work on, what's improving, and what needs attention"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "practice routine jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "how to practice jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "efficient practice"
+          },
+          {
+            "type": "search",
+            "query": "learn jazz faster"
+          },
+          {
+            "type": "playlist",
+            "query": "Learn Jazz Faster - Practice Strategies"
+          },
+          {
+            "type": "playlist",
+            "query": "Make Your Practice More Efficient"
+          },
+          {
+            "type": "playlist",
+            "query": "Practice Strategies And Advice On Learning Jazz"
+          },
+          {
+            "type": "playlist",
+            "query": "Develop your Practice Routine"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Component",
+            "dailyTime": "Time"
+          },
+          {
+            "description": "Warm-up / Technique",
+            "dailyTime": "10--15 min"
+          },
+          {
+            "description": "Vocabulary / Language",
+            "dailyTime": "15--20 min"
+          },
+          {
+            "description": "Repertoire",
+            "dailyTime": "15--20 min"
+          },
+          {
+            "description": "Ear Training",
+            "dailyTime": "5--10 min"
+          },
+          {
+            "description": "Creative / Free Play",
+            "dailyTime": "10--15 min"
+          }
+        ],
+        "assessment": [
+          "Write out your personal practice routine (with time allocations)",
+          "Demonstrate 1 week of consistent, structured practice (using a practice log)",
+          "Explain why you've allocated time as you have and what your current priorities are",
+          "Show improvement in a specific area you've been focused on"
+        ],
+        "relatedGuideSlug": "20-practice-methodology"
+      },
+      {
+        "id": "6.4",
+        "title": "Building and Maintaining a Repertoire",
+        "estimatedTime": "Ongoing",
+        "learningObjectives": [
+          "Maintain a repertoire of at least 15--20 jazz standards from memory",
+          "Know each tune in terms of melody, changes, form, and key",
+          "Be able to call a tune at a jam session confidently",
+          "Organize standards by difficulty and style",
+          "Continue adding new tunes regularly"
+        ],
+        "coreConcepts": [
+          {
+            "term": "The working repertoire",
+            "description": "tunes you can play right now, without a chart, in a jam session"
+          },
+          {
+            "term": "Standard categories",
+            "description": "blues, rhythm changes, Great American Songbook, bossa novas, modal tunes, minor tunes"
+          },
+          {
+            "term": "Maintenance practice",
+            "description": "cycling through your tunes so you don't forget them"
+          },
+          {
+            "term": "Learning new tunes efficiently",
+            "description": "Jens's approach to learning a tune quickly (listen, learn the melody by ear, analyze the harmony, practice in all areas)"
+          },
+          {
+            "term": "The goal",
+            "description": "a musician who knows tunes is a musician who gets called for gigs"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "how to learn jazz standards"
+          },
+          {
+            "type": "search",
+            "query": "jazz standard repertoire"
+          },
+          {
+            "type": "search",
+            "query": "easy jazz standards for beginners"
+          },
+          {
+            "type": "playlist",
+            "query": "How To Learn Jazz Standards"
+          },
+          {
+            "type": "playlist",
+            "query": "Learning Jazz Standards"
+          },
+          {
+            "type": "playlist",
+            "query": "Easy Jazz Standards for Beginners"
+          },
+          {
+            "type": "playlist",
+            "query": "Practice on Songs"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Play through 3 tunes from your repertoire (melody + comping + solo)",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Work on 1 new tune: learn the melody and analyze the changes",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice a tune in a different key (start with tunes you know well)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Cycle through your full repertoire over the course of the week",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Play 15 standards from memory: melody, chords, and 1 chorus of solo on each",
+          "Demonstrate one tune in two keys",
+          "Learn a new tune from scratch in one practice session (15--20 minutes)",
+          "Maintain your repertoire list (written or digital) with tune names, keys, and notes"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "6.5",
+        "title": "Artist Studies - Joe Pass, Wes Montgomery, Jim Hall",
+        "estimatedTime": "2--3 weeks per artist (ongoing)",
+        "learningObjectives": [
+          "Study and describe the signature style of Joe Pass, Wes Montgomery, and Jim Hall",
+          "Transcribe at least one phrase from each artist",
+          "Incorporate elements of each artist's style into your playing",
+          "Understand what makes each artist unique in the jazz guitar tradition",
+          "Expand your study to additional artists (Grant Green, Pat Metheny, Ed Bickert, etc.)"
+        ],
+        "coreConcepts": [],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "Joe Pass lessons"
+          },
+          {
+            "type": "search",
+            "query": "Wes Montgomery lessons"
+          },
+          {
+            "type": "search",
+            "query": "Jim Hall lessons"
+          },
+          {
+            "type": "search",
+            "query": "Grant Green lessons"
+          },
+          {
+            "type": "search",
+            "query": "Pat Metheny lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Joe Pass\" / \"Joe Pass Lessons and Analysis"
+          },
+          {
+            "type": "playlist",
+            "query": "Wes Montgomery Guitar Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Jim Hall"
+          },
+          {
+            "type": "playlist",
+            "query": "Grant Green Guitar Lessons"
+          },
+          {
+            "type": "playlist",
+            "query": "Pat Metheny Lesson Videos"
+          },
+          {
+            "type": "playlist",
+            "query": "Ed Bickert Videos"
+          },
+          {
+            "type": "playlist",
+            "query": "Essential Jazz Guitarists To Know"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Listen to one album by the artist you're studying (active listening with score if possible)",
+            "dailyTime": "20 min"
+          },
+          {
+            "description": "Transcribe a 4--8 bar phrase from the artist",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice the transcribed phrase in 3 keys",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Imitate the artist's tone/touch/approach on a standard you know",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Integrate one element of the artist's style into your own solo",
+            "dailyTime": "10 min"
+          }
+        ],
+        "assessment": [
+          "Describe the signature style of Joe Pass, Wes Montgomery, and Jim Hall in your own words",
+          "Play a transcribed phrase from each artist",
+          "Demonstrate one technique borrowed from each artist (e.g., Wes-style octaves, Joe Pass walking bass, Jim Hall-style space)",
+          "Name 3 essential albums for each artist"
+        ],
+        "relatedGuideSlug": null
+      },
+      {
+        "id": "6.6",
+        "title": "Performance Skills - Playing in Ensembles",
+        "estimatedTime": "Ongoing",
+        "learningObjectives": [
+          "Participate in a jazz jam session or ensemble rehearsal",
+          "Communicate with other musicians using standard jazz conventions (head-solos-head, trading fours, endings)",
+          "Comp effectively behind other soloists",
+          "Listen and react in real time to the music around you",
+          "Handle common jam session situations: being called a tune you don't know well, adjusting to other players' tempos and feel"
+        ],
+        "coreConcepts": [
+          {
+            "term": "The jam session format",
+            "description": "head in (play the melody), solos (round-robin), trading fours, head out"
+          },
+          {
+            "term": "Jazz etiquette",
+            "description": "listening, staying out of the way, knowing when to play and when not to"
+          },
+          {
+            "term": "Comping behind soloists",
+            "description": "supporting, not competing -- dynamics, density, rhythmic interaction"
+          },
+          {
+            "term": "Trading fours and eights",
+            "description": "improvising for 4 or 8 bars and then handing off to another instrument"
+          },
+          {
+            "term": "Endings and intros",
+            "description": "standard jazz endings (tag the last 4, ritardando, Ellington ending, etc.)"
+          },
+          {
+            "term": "Dealing with nerves",
+            "description": "performance anxiety is normal -- preparation is the best antidote"
+          }
+        ],
+        "recommendedVideos": [
+          {
+            "type": "search",
+            "query": "jazz jam session tips"
+          },
+          {
+            "type": "search",
+            "query": "comping behind soloist"
+          },
+          {
+            "type": "search",
+            "query": "duo comping jazz guitar"
+          },
+          {
+            "type": "search",
+            "query": "jazz ensemble guitar"
+          },
+          {
+            "type": "playlist",
+            "query": "Duo comping jazz guitar"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Comping"
+          },
+          {
+            "type": "playlist",
+            "query": "Jazz Lessons with Backing Tracks"
+          }
+        ],
+        "exercises": [
+          {
+            "description": "Comp along with a jazz recording as if you're in the band",
+            "dailyTime": "15 min"
+          },
+          {
+            "description": "Practice calling tunes: pick a random standard, count it off, play the whole form",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Trading fours: solo for 4 bars, rest for 4, solo for 4 (with backing track)",
+            "dailyTime": "10 min"
+          },
+          {
+            "description": "Practice standard jazz endings on 3 tunes",
+            "dailyTime": "5 min"
+          },
+          {
+            "description": "Attend a jam session or play with another musician at least once per week",
+            "dailyTime": "--"
+          }
+        ],
+        "assessment": [
+          "Participate in a jam session or duo/trio performance",
+          "Comp behind a soloist for 3 choruses, demonstrating dynamic comping",
+          "Call a tune and lead the band through head-solos-head",
+          "Trade fours for 2 choruses without losing the form",
+          "Receive feedback from other musicians and incorporate it"
+        ],
+        "relatedGuideSlug": null
+      }
+    ]
+  }
+]

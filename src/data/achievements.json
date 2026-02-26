@@ -1,0 +1,349 @@
+[
+  {
+    "id": "first-session",
+    "title": "First Steps",
+    "description": "Log your first practice session",
+    "icon": "👣",
+    "category": "practice",
+    "condition": {
+      "type": "practice_sessions",
+      "threshold": 1
+    }
+  },
+  {
+    "id": "practice-10",
+    "title": "Getting Serious",
+    "description": "Log 10 practice sessions",
+    "icon": "🎵",
+    "category": "practice",
+    "condition": {
+      "type": "practice_sessions",
+      "threshold": 10
+    }
+  },
+  {
+    "id": "practice-50",
+    "title": "Dedicated Student",
+    "description": "Log 50 practice sessions",
+    "icon": "🔥",
+    "category": "practice",
+    "condition": {
+      "type": "practice_sessions",
+      "threshold": 50
+    }
+  },
+  {
+    "id": "practice-100",
+    "title": "Centurion",
+    "description": "Log 100 practice sessions",
+    "icon": "🏆",
+    "category": "practice",
+    "condition": {
+      "type": "practice_sessions",
+      "threshold": 100
+    }
+  },
+  {
+    "id": "hours-1",
+    "title": "One Hour Down",
+    "description": "Practice for 1 total hour",
+    "icon": "🕐",
+    "category": "practice",
+    "condition": {
+      "type": "practice_minutes",
+      "threshold": 60
+    }
+  },
+  {
+    "id": "hours-10",
+    "title": "Ten Hour Club",
+    "description": "Practice for 10 total hours",
+    "icon": "🕙",
+    "category": "practice",
+    "condition": {
+      "type": "practice_minutes",
+      "threshold": 600
+    }
+  },
+  {
+    "id": "hours-50",
+    "title": "Fifty Hours",
+    "description": "Practice for 50 total hours",
+    "icon": "⭐",
+    "category": "practice",
+    "condition": {
+      "type": "practice_minutes",
+      "threshold": 3000
+    }
+  },
+  {
+    "id": "hours-100",
+    "title": "100 Hour Guitarist",
+    "description": "Practice for 100 total hours",
+    "icon": "🎸",
+    "category": "practice",
+    "condition": {
+      "type": "practice_minutes",
+      "threshold": 6000
+    }
+  },
+  {
+    "id": "streak-3",
+    "title": "Three's a Charm",
+    "description": "Maintain a 3-day practice streak",
+    "icon": "3️⃣",
+    "category": "streak",
+    "condition": {
+      "type": "streak_days",
+      "threshold": 3
+    }
+  },
+  {
+    "id": "streak-7",
+    "title": "One Week Strong",
+    "description": "Maintain a 7-day practice streak",
+    "icon": "📅",
+    "category": "streak",
+    "condition": {
+      "type": "streak_days",
+      "threshold": 7
+    }
+  },
+  {
+    "id": "streak-14",
+    "title": "Two Week Warrior",
+    "description": "Maintain a 14-day practice streak",
+    "icon": "💪",
+    "category": "streak",
+    "condition": {
+      "type": "streak_days",
+      "threshold": 14
+    }
+  },
+  {
+    "id": "streak-30",
+    "title": "Monthly Master",
+    "description": "Maintain a 30-day practice streak",
+    "icon": "👑",
+    "category": "streak",
+    "condition": {
+      "type": "streak_days",
+      "threshold": 30
+    }
+  },
+  {
+    "id": "streak-60",
+    "title": "Relentless",
+    "description": "Maintain a 60-day practice streak",
+    "icon": "⚡",
+    "category": "streak",
+    "condition": {
+      "type": "streak_days",
+      "threshold": 60
+    }
+  },
+  {
+    "id": "streak-100",
+    "title": "The Hundred",
+    "description": "Maintain a 100-day practice streak",
+    "icon": "💯",
+    "category": "streak",
+    "condition": {
+      "type": "streak_days",
+      "threshold": 100
+    }
+  },
+  {
+    "id": "first-lesson",
+    "title": "Student of Jazz",
+    "description": "Complete your first lesson",
+    "icon": "📖",
+    "category": "curriculum",
+    "condition": {
+      "type": "lessons_completed",
+      "threshold": 1
+    }
+  },
+  {
+    "id": "first-unit",
+    "title": "Unit Complete",
+    "description": "Complete a full unit",
+    "icon": "✅",
+    "category": "curriculum",
+    "condition": {
+      "type": "units_completed",
+      "threshold": 1
+    }
+  },
+  {
+    "id": "module-1",
+    "title": "Jazz Foundations",
+    "description": "Complete Module 1",
+    "icon": "🎓",
+    "category": "curriculum",
+    "condition": {
+      "type": "modules_completed",
+      "threshold": 1,
+      "moduleId": "1"
+    }
+  },
+  {
+    "id": "module-2",
+    "title": "Vocabulary Builder",
+    "description": "Complete Module 2",
+    "icon": "📚",
+    "category": "curriculum",
+    "condition": {
+      "type": "modules_completed",
+      "threshold": 1,
+      "moduleId": "2"
+    }
+  },
+  {
+    "id": "module-3",
+    "title": "Intermediate Jazzcat",
+    "description": "Complete Module 3",
+    "icon": "🎷",
+    "category": "curriculum",
+    "condition": {
+      "type": "modules_completed",
+      "threshold": 1,
+      "moduleId": "3"
+    }
+  },
+  {
+    "id": "module-4",
+    "title": "Advanced Harmonist",
+    "description": "Complete Module 4",
+    "icon": "🎹",
+    "category": "curriculum",
+    "condition": {
+      "type": "modules_completed",
+      "threshold": 1,
+      "moduleId": "4"
+    }
+  },
+  {
+    "id": "module-5",
+    "title": "Modern Jazz Explorer",
+    "description": "Complete Module 5",
+    "icon": "🌟",
+    "category": "curriculum",
+    "condition": {
+      "type": "modules_completed",
+      "threshold": 1,
+      "moduleId": "5"
+    }
+  },
+  {
+    "id": "module-6",
+    "title": "Jazz Master",
+    "description": "Complete Module 6",
+    "icon": "👨‍🎓",
+    "category": "curriculum",
+    "condition": {
+      "type": "modules_completed",
+      "threshold": 1,
+      "moduleId": "6"
+    }
+  },
+  {
+    "id": "all-modules",
+    "title": "Curriculum Complete",
+    "description": "Complete all 6 modules",
+    "icon": "🎓",
+    "category": "curriculum",
+    "condition": {
+      "type": "modules_completed",
+      "threshold": 6
+    }
+  },
+  {
+    "id": "video-1",
+    "title": "First Lesson Watched",
+    "description": "Watch your first video",
+    "icon": "📺",
+    "category": "videos",
+    "condition": {
+      "type": "videos_watched",
+      "threshold": 1
+    }
+  },
+  {
+    "id": "video-25",
+    "title": "Quarter Century",
+    "description": "Watch 25 videos",
+    "icon": "🎬",
+    "category": "videos",
+    "condition": {
+      "type": "videos_watched",
+      "threshold": 25
+    }
+  },
+  {
+    "id": "video-100",
+    "title": "Century of Lessons",
+    "description": "Watch 100 videos",
+    "icon": "💯",
+    "category": "videos",
+    "condition": {
+      "type": "videos_watched",
+      "threshold": 100
+    }
+  },
+  {
+    "id": "video-250",
+    "title": "Dedicated Viewer",
+    "description": "Watch 250 videos",
+    "icon": "👀",
+    "category": "videos",
+    "condition": {
+      "type": "videos_watched",
+      "threshold": 250
+    }
+  },
+  {
+    "id": "video-500",
+    "title": "Half the Catalog",
+    "description": "Watch 500 videos",
+    "icon": "🍿",
+    "category": "videos",
+    "condition": {
+      "type": "videos_watched",
+      "threshold": 500
+    }
+  },
+  {
+    "id": "guide-1",
+    "title": "Guide Reader",
+    "description": "Read your first practice guide",
+    "icon": "📜",
+    "category": "explorer",
+    "condition": {
+      "type": "guides_read",
+      "threshold": 1
+    }
+  },
+  {
+    "id": "guide-10",
+    "title": "Deep Diver",
+    "description": "Read 10 practice guides",
+    "icon": "🔍",
+    "category": "explorer",
+    "condition": {
+      "type": "guides_read",
+      "threshold": 10
+    }
+  },
+  {
+    "id": "guide-all",
+    "title": "Study Complete",
+    "description": "Read all 20 practice guides",
+    "icon": "📚",
+    "category": "explorer",
+    "condition": {
+      "type": "guides_read",
+      "threshold": 20
+    }
+  }
+]

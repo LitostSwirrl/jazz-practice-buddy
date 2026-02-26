@@ -1,0 +1,464 @@
+[
+  {
+    "id": "1",
+    "name": "Fundamentals",
+    "subcategories": [
+      {
+        "id": "1.1",
+        "name": "Music Theory Basics",
+        "videoCount": 13
+      },
+      {
+        "id": "1.2",
+        "name": "Fretboard Navigation",
+        "videoCount": 10
+      },
+      {
+        "id": "1.3",
+        "name": "Basic Jazz Chords",
+        "videoCount": 25
+      },
+      {
+        "id": "1.4",
+        "name": "Basic Scales",
+        "videoCount": 3
+      },
+      {
+        "id": "1.5",
+        "name": "Rhythm & Timing",
+        "videoCount": 1
+      }
+    ],
+    "videoCount": 52
+  },
+  {
+    "id": "2",
+    "name": "Chord Voicings",
+    "subcategories": [
+      {
+        "id": "2.10",
+        "name": "Modern Jazz Chords",
+        "videoCount": 57
+      },
+      {
+        "id": "2.1",
+        "name": "Drop 2 Voicings",
+        "videoCount": 11
+      },
+      {
+        "id": "2.2",
+        "name": "Drop 2&4 Voicings",
+        "videoCount": 1
+      },
+      {
+        "id": "2.3",
+        "name": "Shell Voicings",
+        "videoCount": 2
+      },
+      {
+        "id": "2.4",
+        "name": "Rootless Voicings",
+        "videoCount": 3
+      },
+      {
+        "id": "2.5",
+        "name": "Triads & Open Triads",
+        "videoCount": 12
+      },
+      {
+        "id": "2.6",
+        "name": "Quartal Voicings",
+        "videoCount": 9
+      },
+      {
+        "id": "2.7",
+        "name": "Upper Structure Triads",
+        "videoCount": 4
+      },
+      {
+        "id": "2.9",
+        "name": "Passing Chords & Voice Leading",
+        "videoCount": 10
+      }
+    ],
+    "videoCount": 109
+  },
+  {
+    "id": "3",
+    "name": "Comping & Accompaniment",
+    "subcategories": [
+      {
+        "id": "3.1",
+        "name": "Comping Patterns & Rhythms",
+        "videoCount": 25
+      },
+      {
+        "id": "3.2",
+        "name": "Bossa Nova Comping",
+        "videoCount": 2
+      },
+      {
+        "id": "3.3",
+        "name": "Walking Bass & Chords",
+        "videoCount": 5
+      },
+      {
+        "id": "3.4",
+        "name": "Chord Melody",
+        "videoCount": 37
+      },
+      {
+        "id": "3.5",
+        "name": "Turnarounds",
+        "videoCount": 8
+      }
+    ],
+    "videoCount": 77
+  },
+  {
+    "id": "4",
+    "name": "Improvisation Foundations",
+    "subcategories": [
+      {
+        "id": "4.1",
+        "name": "Chord Tone Soloing",
+        "videoCount": 6
+      },
+      {
+        "id": "4.2",
+        "name": "Arpeggio-Based Soloing",
+        "videoCount": 40
+      },
+      {
+        "id": "4.3",
+        "name": "Scale-Based Improvisation",
+        "videoCount": 30
+      },
+      {
+        "id": "4.4",
+        "name": "Target Notes & Guide Tones",
+        "videoCount": 1
+      },
+      {
+        "id": "4.5",
+        "name": "Pentatonic Scales in Jazz",
+        "videoCount": 24
+      },
+      {
+        "id": "4.6",
+        "name": "Jazz Licks & Vocabulary",
+        "videoCount": 43
+      }
+    ],
+    "videoCount": 144
+  },
+  {
+    "id": "5",
+    "name": "Advanced Improvisation",
+    "subcategories": [
+      {
+        "id": "5.1",
+        "name": "Bebop Concepts & Vocabulary",
+        "videoCount": 25
+      },
+      {
+        "id": "5.10",
+        "name": "Tritone Substitution",
+        "videoCount": 5
+      },
+      {
+        "id": "5.11",
+        "name": "Triad Pairs",
+        "videoCount": 5
+      },
+      {
+        "id": "5.12",
+        "name": "Motifs & Motivic Development",
+        "videoCount": 3
+      },
+      {
+        "id": "5.2",
+        "name": "Chromatic Enclosures & Approach Notes",
+        "videoCount": 11
+      },
+      {
+        "id": "5.3",
+        "name": "Altered Scale",
+        "videoCount": 15
+      },
+      {
+        "id": "5.4",
+        "name": "Melodic Minor Applications",
+        "videoCount": 15
+      },
+      {
+        "id": "5.5",
+        "name": "Lydian Dominant",
+        "videoCount": 6
+      },
+      {
+        "id": "5.6",
+        "name": "Diminished Scale",
+        "videoCount": 12
+      },
+      {
+        "id": "5.7",
+        "name": "Outside Playing",
+        "videoCount": 10
+      },
+      {
+        "id": "5.8",
+        "name": "Coltrane Patterns / Giant Steps",
+        "videoCount": 5
+      },
+      {
+        "id": "5.9",
+        "name": "Rhythm Changes",
+        "videoCount": 7
+      }
+    ],
+    "videoCount": 119
+  },
+  {
+    "id": "6",
+    "name": "Standards & Repertoire",
+    "subcategories": [
+      {
+        "id": "6.1",
+        "name": "Autumn Leaves",
+        "videoCount": 14
+      },
+      {
+        "id": "6.10",
+        "name": "General Standards & Repertoire",
+        "videoCount": 17
+      },
+      {
+        "id": "6.2",
+        "name": "All The Things You Are",
+        "videoCount": 5
+      },
+      {
+        "id": "6.3",
+        "name": "Solar",
+        "videoCount": 7
+      },
+      {
+        "id": "6.4",
+        "name": "Stella By Starlight",
+        "videoCount": 7
+      },
+      {
+        "id": "6.5",
+        "name": "Satin Doll",
+        "videoCount": 6
+      },
+      {
+        "id": "6.6",
+        "name": "Blue Bossa",
+        "videoCount": 4
+      },
+      {
+        "id": "6.7",
+        "name": "Other Named Standards",
+        "videoCount": 68
+      },
+      {
+        "id": "6.8",
+        "name": "Jazz Blues",
+        "videoCount": 54
+      },
+      {
+        "id": "6.9",
+        "name": "Easy Standards for Beginners",
+        "videoCount": 2
+      }
+    ],
+    "videoCount": 184
+  },
+  {
+    "id": "7",
+    "name": "Technical Development",
+    "subcategories": [
+      {
+        "id": "7.1",
+        "name": "Scale Exercises",
+        "videoCount": 17
+      },
+      {
+        "id": "7.2",
+        "name": "Arpeggio Exercises",
+        "videoCount": 6
+      },
+      {
+        "id": "7.3",
+        "name": "Picking Technique",
+        "videoCount": 7
+      },
+      {
+        "id": "7.4",
+        "name": "Legato & Articulation",
+        "videoCount": 1
+      },
+      {
+        "id": "7.5",
+        "name": "Speed & Fast Tempos",
+        "videoCount": 4
+      },
+      {
+        "id": "7.6",
+        "name": "Fretboard Exercises",
+        "videoCount": 2
+      }
+    ],
+    "videoCount": 37
+  },
+  {
+    "id": "8",
+    "name": "Phrasing & Musicianship",
+    "subcategories": [
+      {
+        "id": "8.1",
+        "name": "Jazz Phrasing & Swing Feel",
+        "videoCount": 12
+      },
+      {
+        "id": "8.2",
+        "name": "Rhythmic Variation",
+        "videoCount": 9
+      },
+      {
+        "id": "8.3",
+        "name": "Dynamics & Expression",
+        "videoCount": 2
+      },
+      {
+        "id": "8.4",
+        "name": "Transcription & Ear Training",
+        "videoCount": 3
+      },
+      {
+        "id": "8.5",
+        "name": "Practice Methodology",
+        "videoCount": 38
+      },
+      {
+        "id": "8.6",
+        "name": "Learning Strategies",
+        "videoCount": 82
+      }
+    ],
+    "videoCount": 146
+  },
+  {
+    "id": "9",
+    "name": "Music Theory & Analysis",
+    "subcategories": [
+      {
+        "id": "9.1",
+        "name": "Functional Harmony",
+        "videoCount": 7
+      },
+      {
+        "id": "9.2",
+        "name": "Modal Interchange & Reharmonization",
+        "videoCount": 9
+      },
+      {
+        "id": "9.3",
+        "name": "Chord Analysis",
+        "videoCount": 17
+      },
+      {
+        "id": "9.4",
+        "name": "Dorian / Mixolydian / Modal Concepts",
+        "videoCount": 9
+      },
+      {
+        "id": "9.5",
+        "name": "Harmonic Minor",
+        "videoCount": 3
+      },
+      {
+        "id": "9.6",
+        "name": "II-V-I Progressions",
+        "videoCount": 29
+      }
+    ],
+    "videoCount": 74
+  },
+  {
+    "id": "10",
+    "name": "Artist Studies",
+    "subcategories": [
+      {
+        "id": "10.1",
+        "name": "Joe Pass",
+        "videoCount": 8
+      },
+      {
+        "id": "10.2",
+        "name": "Wes Montgomery",
+        "videoCount": 5
+      },
+      {
+        "id": "10.3",
+        "name": "Jim Hall",
+        "videoCount": 3
+      },
+      {
+        "id": "10.4",
+        "name": "Grant Green",
+        "videoCount": 3
+      },
+      {
+        "id": "10.5",
+        "name": "Barry Harris",
+        "videoCount": 6
+      },
+      {
+        "id": "10.6",
+        "name": "Charlie Parker",
+        "videoCount": 8
+      },
+      {
+        "id": "10.7",
+        "name": "Pat Metheny / Kurt Rosenwinkel / Modern Players",
+        "videoCount": 16
+      },
+      {
+        "id": "10.8",
+        "name": "Other Artists",
+        "videoCount": 42
+      }
+    ],
+    "videoCount": 91
+  },
+  {
+    "id": "11",
+    "name": "Gear & Performance",
+    "subcategories": [
+      {
+        "id": "11.1",
+        "name": "Jazz Tone & Gear",
+        "videoCount": 10
+      },
+      {
+        "id": "11.2",
+        "name": "Guitar Reviews",
+        "videoCount": 10
+      },
+      {
+        "id": "11.3",
+        "name": "Live Performances",
+        "videoCount": 31
+      },
+      {
+        "id": "11.4",
+        "name": "Q&A / Interviews / Podcasts",
+        "videoCount": 35
+      }
+    ],
+    "videoCount": 86
+  }
+]
