@@ -212,4 +212,13 @@ function formatDuration(secs: number): string {
       </router-link>
     </div>
   </div>
+
+  <!-- Not Found -->
+  <div v-else class="text-center py-16">
+    <p class="text-2xl font-heading font-bold text-jazz-espresso mb-2">Unit not found</p>
+    <p class="text-jazz-smoke mb-6">The unit you're looking for doesn't exist.</p>
+    <router-link :to="{ name: 'module', params: { moduleId } }" class="px-4 py-2 bg-jazz-blue text-white rounded-lg hover:bg-jazz-blue/90 transition-colors">
+      Back to Module
+    </router-link>
+  </div>
 </template>

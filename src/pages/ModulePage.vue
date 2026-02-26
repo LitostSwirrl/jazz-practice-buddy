@@ -97,4 +97,13 @@ const moduleProgress = computed(() => progress.moduleProgress(props.moduleId))
       </router-link>
     </div>
   </div>
+
+  <!-- Not Found -->
+  <div v-else class="text-center py-16">
+    <p class="text-2xl font-heading font-bold text-jazz-espresso mb-2">Module not found</p>
+    <p class="text-jazz-smoke mb-6">The module you're looking for doesn't exist.</p>
+    <router-link to="/syllabus" class="px-4 py-2 bg-jazz-blue text-white rounded-lg hover:bg-jazz-blue/90 transition-colors">
+      Back to Syllabus
+    </router-link>
+  </div>
 </template>
