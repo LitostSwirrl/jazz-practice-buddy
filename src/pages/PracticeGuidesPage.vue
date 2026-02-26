@@ -2,6 +2,7 @@
 import { useSyllabusStore } from '@/stores/syllabus'
 import { useProgressStore } from '@/stores/progress'
 import BaseCard from '@/components/shared/BaseCard.vue'
+import { Play, CheckCircle2 } from 'lucide-vue-next'
 
 const syllabus = useSyllabusStore()
 const progress = useProgressStore()
@@ -32,10 +33,12 @@ const progress = useProgressStore()
               </h3>
               <p class="text-xs text-jazz-smoke mt-1 line-clamp-2">{{ guide.overview.slice(0, 120) }}...</p>
               <div class="flex items-center gap-3 mt-2 text-[10px] text-jazz-smoke">
-                <span v-if="guide.videoReferences.length > 0">
-                  🎬 {{ guide.videoReferences.length }} videos
+                <span v-if="guide.videoReferences.length > 0" class="flex items-center gap-1">
+                  <Play class="w-3 h-3" /> {{ guide.videoReferences.length }} videos
                 </span>
-                <span v-if="progress.isGuideRead(guide.slug)" class="text-jazz-green font-medium">✓ Read</span>
+                <span v-if="progress.isGuideRead(guide.slug)" class="text-jazz-green font-medium flex items-center gap-0.5">
+                  <CheckCircle2 class="w-3 h-3" /> Read
+                </span>
               </div>
             </div>
           </div>

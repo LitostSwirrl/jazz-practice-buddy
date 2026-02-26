@@ -30,7 +30,7 @@ const levelBg: Record<string, string> = {
   <div>
     <div class="mb-8">
       <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Course Syllabus</h1>
-      <p class="text-jazz-smoke mt-1">6 progressive modules spanning 15-20 months of study</p>
+      <p class="font-heading italic text-jazz-smoke mt-1">6 progressive modules spanning 15-20 months of study</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
@@ -45,7 +45,8 @@ const levelBg: Record<string, string> = {
             class="h-2 rounded-t-xl bg-gradient-to-r"
             :class="levelColors[mod.level] || 'from-gray-400 to-gray-500'"
           />
-          <div class="p-5">
+          <div class="p-5 relative">
+            <span class="absolute top-3 right-4 text-5xl font-heading font-bold text-jazz-espresso/5 leading-none select-none">{{ mod.id }}</span>
             <div class="flex items-start justify-between mb-2">
               <div>
                 <span class="text-sm text-jazz-gold font-bold">Module {{ mod.id }}</span>

@@ -5,6 +5,7 @@ import { useProgressStore } from '@/stores/progress'
 import { useVideosStore } from '@/stores/videos'
 import BaseCard from '@/components/shared/BaseCard.vue'
 import type { Video } from '@/types'
+import { Search, List, BookOpen } from 'lucide-vue-next'
 
 const props = defineProps<{ moduleId: string; unitId: string }>()
 const syllabus = useSyllabusStore()
@@ -122,8 +123,9 @@ function formatDuration(secs: number): string {
           :key="ref.query"
           class="flex items-center gap-2 text-sm"
         >
-          <span class="text-xs px-1.5 py-0.5 rounded bg-jazz-cream-dark text-jazz-smoke">
-            {{ ref.type === 'search' ? '🔍' : '📋' }}
+          <span class="px-1.5 py-0.5 rounded bg-jazz-cream-dark text-jazz-smoke flex items-center">
+            <Search v-if="ref.type === 'search'" class="w-3 h-3" />
+            <List v-else class="w-3 h-3" />
           </span>
           <span class="text-jazz-espresso">{{ ref.query }}</span>
         </div>
@@ -155,12 +157,12 @@ function formatDuration(secs: number): string {
     </BaseCard>
 
     <!-- Practice Guide Link -->
-    <BaseCard v-if="unit.relatedGuideSlug" class="mb-6">
+    <BaseCard v-if="unit.relatedGuideSlug" variant="warm" class="mb-6">
       <router-link
         :to="{ name: 'guide-detail', params: { slug: unit.relatedGuideSlug } }"
         class="flex items-center gap-3 hover:opacity-80 transition-opacity"
       >
-        <span class="text-2xl">📝</span>
+        <BookOpen class="w-6 h-6 text-jazz-blue shrink-0" />
         <div>
           <p class="text-sm font-semibold text-jazz-blue">Practice Guide Available</p>
           <p class="text-xs text-jazz-smoke">Detailed exercises and 6-week practice routine</p>

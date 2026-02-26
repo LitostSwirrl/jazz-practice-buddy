@@ -3,7 +3,7 @@
     "id": "first-session",
     "title": "First Steps",
     "description": "Log your first practice session",
-    "icon": "👣",
+    "icon": "footprints",
     "category": "practice",
     "condition": {
       "type": "practice_sessions",
@@ -14,7 +14,7 @@
     "id": "practice-10",
     "title": "Getting Serious",
     "description": "Log 10 practice sessions",
-    "icon": "🎵",
+    "icon": "music",
     "category": "practice",
     "condition": {
       "type": "practice_sessions",
@@ -25,7 +25,7 @@
     "id": "practice-50",
     "title": "Dedicated Student",
     "description": "Log 50 practice sessions",
-    "icon": "🔥",
+    "icon": "flame",
     "category": "practice",
     "condition": {
       "type": "practice_sessions",
@@ -36,7 +36,7 @@
     "id": "practice-100",
     "title": "Centurion",
     "description": "Log 100 practice sessions",
-    "icon": "🏆",
+    "icon": "trophy",
     "category": "practice",
     "condition": {
       "type": "practice_sessions",
@@ -47,7 +47,7 @@
     "id": "hours-1",
     "title": "One Hour Down",
     "description": "Practice for 1 total hour",
-    "icon": "🕐",
+    "icon": "clock",
     "category": "practice",
     "condition": {
       "type": "practice_minutes",
@@ -58,7 +58,7 @@
     "id": "hours-10",
     "title": "Ten Hour Club",
     "description": "Practice for 10 total hours",
-    "icon": "🕙",
+    "icon": "clock-4",
     "category": "practice",
     "condition": {
       "type": "practice_minutes",
@@ -69,7 +69,7 @@
     "id": "hours-50",
     "title": "Fifty Hours",
     "description": "Practice for 50 total hours",
-    "icon": "⭐",
+    "icon": "star",
     "category": "practice",
     "condition": {
       "type": "practice_minutes",
@@ -80,7 +80,7 @@
     "id": "hours-100",
     "title": "100 Hour Guitarist",
     "description": "Practice for 100 total hours",
-    "icon": "🎸",
+    "icon": "guitar",
     "category": "practice",
     "condition": {
       "type": "practice_minutes",
@@ -91,7 +91,7 @@
     "id": "streak-3",
     "title": "Three's a Charm",
     "description": "Maintain a 3-day practice streak",
-    "icon": "3️⃣",
+    "icon": "hash",
     "category": "streak",
     "condition": {
       "type": "streak_days",
@@ -102,7 +102,7 @@
     "id": "streak-7",
     "title": "One Week Strong",
     "description": "Maintain a 7-day practice streak",
-    "icon": "📅",
+    "icon": "calendar",
     "category": "streak",
     "condition": {
       "type": "streak_days",
@@ -113,7 +113,7 @@
     "id": "streak-14",
     "title": "Two Week Warrior",
     "description": "Maintain a 14-day practice streak",
-    "icon": "💪",
+    "icon": "dumbbell",
     "category": "streak",
     "condition": {
       "type": "streak_days",
@@ -124,7 +124,7 @@
     "id": "streak-30",
     "title": "Monthly Master",
     "description": "Maintain a 30-day practice streak",
-    "icon": "👑",
+    "icon": "crown",
     "category": "streak",
     "condition": {
       "type": "streak_days",
@@ -135,7 +135,7 @@
     "id": "streak-60",
     "title": "Relentless",
     "description": "Maintain a 60-day practice streak",
-    "icon": "⚡",
+    "icon": "zap",
     "category": "streak",
     "condition": {
       "type": "streak_days",
@@ -146,7 +146,7 @@
     "id": "streak-100",
     "title": "The Hundred",
     "description": "Maintain a 100-day practice streak",
-    "icon": "💯",
+    "icon": "medal",
     "category": "streak",
     "condition": {
       "type": "streak_days",
@@ -157,7 +157,7 @@
     "id": "first-lesson",
     "title": "Student of Jazz",
     "description": "Complete your first lesson",
-    "icon": "📖",
+    "icon": "book-open",
     "category": "curriculum",
     "condition": {
       "type": "lessons_completed",
@@ -168,7 +168,7 @@
     "id": "first-unit",
     "title": "Unit Complete",
     "description": "Complete a full unit",
-    "icon": "✅",
+    "icon": "check-circle-2",
     "category": "curriculum",
     "condition": {
       "type": "units_completed",
@@ -179,7 +179,7 @@
     "id": "module-1",
     "title": "Jazz Foundations",
     "description": "Complete Module 1",
-    "icon": "🎓",
+    "icon": "graduation-cap",
     "category": "curriculum",
     "condition": {
       "type": "modules_completed",
@@ -191,7 +191,7 @@
     "id": "module-2",
     "title": "Vocabulary Builder",
     "description": "Complete Module 2",
-    "icon": "📚",
+    "icon": "library",
     "category": "curriculum",
     "condition": {
       "type": "modules_completed",
@@ -203,7 +203,7 @@
     "id": "module-3",
     "title": "Intermediate Jazzcat",
     "description": "Complete Module 3",
-    "icon": "🎷",
+    "icon": "music-2",
     "category": "curriculum",
     "condition": {
       "type": "modules_completed",
@@ -215,7 +215,7 @@
     "id": "module-4",
     "title": "Advanced Harmonist",
     "description": "Complete Module 4",
-    "icon": "🎹",
+    "icon": "music-3",
     "category": "curriculum",
     "condition": {
       "type": "modules_completed",
@@ -227,7 +227,7 @@
     "id": "module-5",
     "title": "Modern Jazz Explorer",
     "description": "Complete Module 5",
-    "icon": "🌟",
+    "icon": "sparkles",
     "category": "curriculum",
     "condition": {
       "type": "modules_completed",
@@ -239,7 +239,7 @@
     "id": "module-6",
     "title": "Jazz Master",
     "description": "Complete Module 6",
-    "icon": "👨‍🎓",
+    "icon": "graduation-cap",
     "category": "curriculum",
     "condition": {
       "type": "modules_completed",
@@ -251,7 +251,7 @@
     "id": "all-modules",
     "title": "Curriculum Complete",
     "description": "Complete all 6 modules",
-    "icon": "🎓",
+    "icon": "graduation-cap",
     "category": "curriculum",
     "condition": {
       "type": "modules_completed",
@@ -262,7 +262,7 @@
     "id": "video-1",
     "title": "First Lesson Watched",
     "description": "Watch your first video",
-    "icon": "📺",
+    "icon": "monitor-play",
     "category": "videos",
     "condition": {
       "type": "videos_watched",
@@ -273,7 +273,7 @@
     "id": "video-25",
     "title": "Quarter Century",
     "description": "Watch 25 videos",
-    "icon": "🎬",
+    "icon": "clapperboard",
     "category": "videos",
     "condition": {
       "type": "videos_watched",
@@ -284,7 +284,7 @@
     "id": "video-100",
     "title": "Century of Lessons",
     "description": "Watch 100 videos",
-    "icon": "💯",
+    "icon": "medal",
     "category": "videos",
     "condition": {
       "type": "videos_watched",
@@ -295,7 +295,7 @@
     "id": "video-250",
     "title": "Dedicated Viewer",
     "description": "Watch 250 videos",
-    "icon": "👀",
+    "icon": "eye",
     "category": "videos",
     "condition": {
       "type": "videos_watched",
@@ -306,7 +306,7 @@
     "id": "video-500",
     "title": "Half the Catalog",
     "description": "Watch 500 videos",
-    "icon": "🍿",
+    "icon": "film",
     "category": "videos",
     "condition": {
       "type": "videos_watched",
@@ -317,7 +317,7 @@
     "id": "guide-1",
     "title": "Guide Reader",
     "description": "Read your first practice guide",
-    "icon": "📜",
+    "icon": "scroll",
     "category": "explorer",
     "condition": {
       "type": "guides_read",
@@ -328,7 +328,7 @@
     "id": "guide-10",
     "title": "Deep Diver",
     "description": "Read 10 practice guides",
-    "icon": "🔍",
+    "icon": "search",
     "category": "explorer",
     "condition": {
       "type": "guides_read",
@@ -339,7 +339,7 @@
     "id": "guide-all",
     "title": "Study Complete",
     "description": "Read all 20 practice guides",
-    "icon": "📚",
+    "icon": "library",
     "category": "explorer",
     "condition": {
       "type": "guides_read",

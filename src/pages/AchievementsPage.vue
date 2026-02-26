@@ -6,6 +6,8 @@ import { useGamificationStore } from '@/stores/gamification'
 import { usePracticeStore } from '@/stores/practice'
 import { useProgressStore } from '@/stores/progress'
 import BaseCard from '@/components/shared/BaseCard.vue'
+import AchievementIcon from '@/components/icons/AchievementIcon.vue'
+import { Clock, Flame, Trophy, MonitorPlay } from 'lucide-vue-next'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip)
 
@@ -14,6 +16,13 @@ const practice = usePracticeStore()
 const progress = useProgressStore()
 
 const totalHours = computed(() => Math.round(practice.totalPracticeMinutes / 60 * 10) / 10)
+
+const statItems = computed(() => [
+  { label: 'Total Hours', value: totalHours.value, icon: Clock, color: 'bg-jazz-blue/10 text-jazz-blue' },
+  { label: 'Current Streak', value: `${gamification.streakData.currentStreak} days`, icon: Flame, color: 'bg-orange-100 text-orange-600' },
+  { label: 'Longest Streak', value: `${gamification.streakData.longestStreak} days`, icon: Trophy, color: 'bg-jazz-gold/10 text-jazz-gold' },
+  { label: 'Videos Watched', value: progress.totalVideosWatched, icon: MonitorPlay, color: 'bg-jazz-green/10 text-jazz-green' },
+])
 
 // Group achievements by category
 const achievementsByCategory = computed(() => {
@@ -81,22 +90,19 @@ const intensityColors = ['bg-jazz-cream-dark', 'bg-green-200', 'bg-green-300', '
   <div>
     <div class="mb-8">
       <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Achievements & Stats</h1>
-      <p class="text-jazz-smoke mt-1">
+      <p class="font-heading italic text-jazz-smoke mt-1">
         {{ gamification.unlockedCount }} of {{ gamification.totalAchievements }} unlocked
       </p>
     </div>
 
     <!-- Summary Stats -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-      <BaseCard v-for="stat in [
-        { label: 'Total Hours', value: totalHours, icon: '⏱️' },
-        { label: 'Current Streak', value: `${gamification.streakData.currentStreak} days`, icon: '🔥' },
-        { label: 'Longest Streak', value: `${gamification.streakData.longestStreak} days`, icon: '🏆' },
-        { label: 'Videos Watched', value: progress.totalVideosWatched, icon: '🎬' },
-      ]" :key="stat.label">
+      <BaseCard v-for="stat in statItems" :key="stat.label">
         <div class="text-center">
-          <span class="text-2xl">{{ stat.icon }}</span>
-          <p class="text-xl font-bold text-jazz-espresso mt-1">{{ stat.value }}</p>
+          <div class="w-10 h-10 rounded-xl mx-auto mb-2 flex items-center justify-center" :class="stat.color">
+            <component :is="stat.icon" class="w-5 h-5" />
+          </div>
+          <p class="text-xl font-heading font-bold text-jazz-espresso mt-1">{{ stat.value }}</p>
           <p class="text-xs text-jazz-smoke">{{ stat.label }}</p>
         </div>
       </BaseCard>
@@ -142,12 +148,12 @@ const intensityColors = ['bg-jazz-cream-dark', 'bg-green-200', 'bg-green-300', '
               ? 'bg-white border-jazz-gold/30 shadow-sm'
               : 'bg-jazz-cream-dark/50 border-transparent opacity-60'"
           >
-            <span
-              class="text-3xl"
-              :class="gamification.isUnlocked(a.id) ? '' : 'grayscale'"
+            <div
+              class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+              :class="gamification.isUnlocked(a.id) ? 'bg-jazz-gold/10 text-jazz-gold' : 'bg-jazz-smoke/10 text-jazz-smoke/30'"
             >
-              {{ a.icon }}
-            </span>
+              <AchievementIcon :name="a.icon" :size="22" :locked="!gamification.isUnlocked(a.id)" />
+            </div>
             <div>
               <h3 class="text-sm font-semibold text-jazz-espresso">{{ a.title }}</h3>
               <p class="text-xs text-jazz-smoke">{{ a.description }}</p>

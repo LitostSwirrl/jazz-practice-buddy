@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { usePracticeStore } from '@/stores/practice'
 import BaseCard from '@/components/shared/BaseCard.vue'
+import { PenLine, Star } from 'lucide-vue-next'
 
 const practice = usePracticeStore()
 
@@ -49,8 +50,8 @@ function formatDuration(mins: number): string {
     </div>
 
     <div v-if="practice.logs.length === 0" class="text-center py-16">
-      <span class="text-5xl block mb-4">📝</span>
-      <h2 class="text-xl font-heading font-bold text-jazz-espresso mb-2">No practice sessions yet</h2>
+      <PenLine class="w-12 h-12 mx-auto mb-4 text-jazz-smoke-light" />
+      <h2 class="text-xl font-heading italic text-jazz-espresso mb-2">No practice sessions yet</h2>
       <p class="text-jazz-smoke mb-4">Start your first session to begin tracking your progress.</p>
       <router-link to="/practice" class="px-5 py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass transition-colors">
         Start Practicing
@@ -66,8 +67,8 @@ function formatDuration(mins: number): string {
               <div class="flex-1">
                 <div class="flex items-center gap-2">
                   <h3 class="font-medium text-jazz-espresso">{{ log.topic }}</h3>
-                  <div class="flex text-jazz-gold text-xs">
-                    <span v-for="i in 5" :key="i" :class="i <= log.rating ? 'opacity-100' : 'opacity-20'">★</span>
+                  <div class="flex text-jazz-gold">
+                    <Star v-for="i in 5" :key="i" class="w-3 h-3" :class="i <= log.rating ? 'opacity-100' : 'opacity-20'" />
                   </div>
                 </div>
                 <p v-if="log.notes" class="text-sm text-jazz-smoke mt-1">{{ log.notes }}</p>

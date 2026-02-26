@@ -6,6 +6,8 @@ import { usePracticeStore } from '@/stores/practice'
 import { useGamificationStore } from '@/stores/gamification'
 import BaseCard from '@/components/shared/BaseCard.vue'
 import BaseProgress from '@/components/shared/BaseProgress.vue'
+import AchievementIcon from '@/components/icons/AchievementIcon.vue'
+import { Clock, MonitorPlay, CheckCircle2, Trophy, Flame, Guitar, PenLine, Star } from 'lucide-vue-next'
 
 const syllabus = useSyllabusStore()
 const progress = useProgressStore()
@@ -17,6 +19,13 @@ const totalHours = computed(() => Math.round(practice.totalPracticeMinutes / 60 
 const recentLogs = computed(() => practice.recentLogs(5))
 const recentAchievements = computed(() => gamification.recentUnlocks(4))
 const isNewUser = computed(() => practice.logs.length === 0 && progress.completedLessons.length === 0)
+
+const stats = computed(() => [
+  { label: 'Practice Hours', value: totalHours.value, icon: Clock, color: 'bg-jazz-blue/10 text-jazz-blue' },
+  { label: 'Videos Watched', value: progress.totalVideosWatched, icon: MonitorPlay, color: 'bg-jazz-green/10 text-jazz-green' },
+  { label: 'Lessons Done', value: progress.totalLessonsCompleted, icon: CheckCircle2, color: 'bg-jazz-gold/10 text-jazz-gold' },
+  { label: 'Achievements', value: gamification.unlockedCount, icon: Trophy, color: 'bg-jazz-red/10 text-jazz-red' },
+])
 
 function formatDuration(mins: number): string {
   if (mins < 60) return `${mins}m`
@@ -32,7 +41,7 @@ function formatDuration(mins: number): string {
         <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">
           {{ isNewUser ? 'Welcome to Jazz Practice Buddy' : 'Welcome Back' }}
         </h1>
-        <p class="text-jazz-smoke mt-1">
+        <p class="font-heading italic text-jazz-smoke text-base mt-1">
           {{ isNewUser ? 'Your personal Jens Larsen curriculum companion.' : `Day ${gamification.streakData.currentStreak} of your jazz journey` }}
         </p>
       </div>
@@ -40,18 +49,18 @@ function formatDuration(mins: number): string {
         v-if="gamification.streakIsActive"
         class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl border border-orange-200"
       >
-        <span class="text-2xl">🔥</span>
+        <Flame class="w-6 h-6 text-orange-500" />
         <div>
-          <p class="text-lg font-bold text-orange-700">{{ gamification.streakData.currentStreak }}-day streak</p>
+          <p class="text-lg font-heading font-bold text-orange-700">{{ gamification.streakData.currentStreak }}-day streak</p>
           <p class="text-xs text-orange-500">Best: {{ gamification.streakData.longestStreak }} days</p>
         </div>
       </div>
     </div>
 
     <!-- New user onboarding -->
-    <BaseCard v-if="isNewUser">
+    <BaseCard v-if="isNewUser" variant="featured">
       <div class="text-center py-6">
-        <span class="text-5xl block mb-4">🎸</span>
+        <Guitar class="w-16 h-16 text-jazz-gold mx-auto mb-4" />
         <h2 class="text-xl font-heading font-bold mb-2">Ready to Learn Jazz Guitar?</h2>
         <p class="text-jazz-smoke max-w-lg mx-auto mb-6">
           This app organizes Jens Larsen's 1,100+ YouTube lessons into a structured curriculum
@@ -70,16 +79,13 @@ function formatDuration(mins: number): string {
 
     <!-- Stats Grid -->
     <div v-if="!isNewUser" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <BaseCard v-for="stat in [
-        { label: 'Practice Hours', value: totalHours, icon: '⏱️' },
-        { label: 'Videos Watched', value: progress.totalVideosWatched, icon: '🎬' },
-        { label: 'Lessons Done', value: progress.totalLessonsCompleted, icon: '✅' },
-        { label: 'Achievements', value: gamification.unlockedCount, icon: '🏆' },
-      ]" :key="stat.label">
+      <BaseCard v-for="stat in stats" :key="stat.label">
         <div class="flex items-center gap-3">
-          <span class="text-2xl">{{ stat.icon }}</span>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" :class="stat.color">
+            <component :is="stat.icon" class="w-6 h-6" />
+          </div>
           <div>
-            <p class="text-2xl font-bold text-jazz-espresso">{{ stat.value }}</p>
+            <p class="text-2xl font-heading font-bold text-jazz-espresso">{{ stat.value }}</p>
             <p class="text-xs text-jazz-smoke">{{ stat.label }}</p>
           </div>
         </div>
@@ -105,7 +111,7 @@ function formatDuration(mins: number): string {
         >
           <div class="flex items-center justify-between mb-1">
             <span class="text-sm font-medium text-jazz-espresso">
-              <span class="text-jazz-gold font-bold mr-1">{{ mod.id }}.</span>
+              <span class="text-jazz-gold font-heading font-bold mr-1">{{ mod.id }}.</span>
               {{ mod.title }}
             </span>
             <span class="text-xs px-2 py-0.5 rounded-full bg-jazz-cream-dark text-jazz-smoke">
@@ -125,8 +131,8 @@ function formatDuration(mins: number): string {
           <router-link to="/practice/log" class="text-xs text-jazz-blue hover:underline">View all</router-link>
         </div>
         <div v-if="recentLogs.length === 0" class="text-center py-6 text-jazz-smoke">
-          <p class="text-3xl mb-2">📝</p>
-          <p class="text-sm">No practice sessions yet.</p>
+          <PenLine class="w-10 h-10 mx-auto mb-2 text-jazz-smoke-light" />
+          <p class="text-sm font-heading italic">No practice sessions yet.</p>
           <router-link to="/practice" class="text-sm text-jazz-blue hover:underline mt-1 inline-block">
             Start practicing
           </router-link>
@@ -137,8 +143,8 @@ function formatDuration(mins: number): string {
             :key="log.id"
             class="flex items-center gap-3 text-sm"
           >
-            <div class="w-8 h-8 rounded-full bg-jazz-cream-dark flex items-center justify-center text-xs">
-              {{ '⭐'.repeat(log.rating) }}
+            <div class="w-8 h-8 rounded-full bg-jazz-gold/10 flex items-center justify-center gap-0.5 text-xs font-semibold text-jazz-gold">
+              {{ log.rating }}<Star class="w-3 h-3" />
             </div>
             <div class="flex-1 min-w-0">
               <p class="font-medium text-jazz-espresso truncate">{{ log.topic }}</p>
@@ -155,8 +161,8 @@ function formatDuration(mins: number): string {
           <router-link to="/achievements" class="text-xs text-jazz-blue hover:underline">View all</router-link>
         </div>
         <div v-if="recentAchievements.length === 0" class="text-center py-6 text-jazz-smoke">
-          <p class="text-3xl mb-2">🏆</p>
-          <p class="text-sm">Start practicing to unlock achievements!</p>
+          <Trophy class="w-10 h-10 mx-auto mb-2 text-jazz-smoke-light" />
+          <p class="text-sm font-heading italic">Start practicing to unlock achievements!</p>
         </div>
         <div v-else class="grid grid-cols-2 gap-3">
           <div
@@ -164,7 +170,9 @@ function formatDuration(mins: number): string {
             :key="a.id"
             class="flex items-center gap-2 p-2 rounded-lg bg-jazz-cream/50"
           >
-            <span class="text-2xl">{{ a.icon }}</span>
+            <div class="w-8 h-8 rounded-lg bg-jazz-gold/10 flex items-center justify-center text-jazz-gold shrink-0">
+              <AchievementIcon :name="a.icon" :size="18" />
+            </div>
             <div>
               <p class="text-xs font-semibold text-jazz-espresso">{{ a.title }}</p>
               <p class="text-[10px] text-jazz-smoke">{{ a.description }}</p>

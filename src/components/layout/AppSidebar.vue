@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import { useSyllabusStore } from '@/stores/syllabus'
 import { useProgressStore } from '@/stores/progress'
+import StaffDivider from '@/components/shared/StaffDivider.vue'
+import { ChevronRight } from 'lucide-vue-next'
 
 defineProps<{ open: boolean }>()
 defineEmits<{ close: [] }>()
@@ -33,19 +35,22 @@ const levelColors: Record<string, string> = {
   />
 
   <aside
-    class="fixed top-16 left-0 z-40 h-[calc(100vh-4rem)] w-64 bg-white border-r border-jazz-cream-dark overflow-y-auto transition-transform lg:translate-x-0"
+    class="fixed top-16 left-0 z-40 h-[calc(100vh-4rem)] w-64 bg-jazz-cream/50 border-r border-jazz-cream-dark overflow-y-auto transition-transform lg:translate-x-0 flex flex-col"
     :class="open ? 'translate-x-0' : '-translate-x-full'"
   >
-    <div class="p-4">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-jazz-smoke mb-3">Curriculum</h2>
+    <div class="p-4 flex-1">
+      <div class="flex items-center gap-2 mb-3">
+        <div class="w-4 h-px bg-jazz-gold"></div>
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-jazz-smoke">Curriculum</h2>
+      </div>
 
       <div v-for="mod in syllabus.modules" :key="mod.id" class="mb-1">
         <button
-          class="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm hover:bg-jazz-cream transition-colors"
-          :class="expandedModule === mod.id ? 'bg-jazz-cream' : ''"
+          class="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm hover:bg-jazz-cream-dark transition-colors"
+          :class="expandedModule === mod.id ? 'bg-jazz-cream-dark' : ''"
           @click="toggleModule(mod.id)"
         >
-          <span class="text-xs font-bold text-jazz-gold w-5">{{ mod.id }}</span>
+          <span class="font-heading text-sm font-bold text-jazz-gold w-5">{{ mod.id }}</span>
           <span class="flex-1 truncate font-medium text-jazz-espresso">{{ mod.title }}</span>
           <span
             class="text-[10px] px-1.5 py-0.5 rounded-full font-medium"
@@ -53,16 +58,21 @@ const levelColors: Record<string, string> = {
           >
             {{ progress.moduleProgress(mod.id).percent }}%
           </span>
-          <svg
+          <ChevronRight
             class="w-4 h-4 text-jazz-smoke transition-transform"
             :class="expandedModule === mod.id ? 'rotate-90' : ''"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
+          />
         </button>
 
-        <div v-if="expandedModule === mod.id" class="ml-7 mt-1 space-y-0.5">
+        <!-- Mini progress bar -->
+        <div class="h-0.5 bg-jazz-cream-dark rounded-full mx-3 mt-0.5">
+          <div
+            class="h-full bg-jazz-gold rounded-full transition-all duration-500"
+            :style="{ width: progress.moduleProgress(mod.id).percent + '%' }"
+          ></div>
+        </div>
+
+        <div v-if="expandedModule === mod.id" class="ml-5 mt-1 space-y-0.5 border-l-2 border-jazz-gold/30 pl-3">
           <router-link
             v-for="unit in mod.units"
             :key="unit.id"
@@ -76,9 +86,12 @@ const levelColors: Record<string, string> = {
         </div>
       </div>
 
-      <hr class="my-4 border-jazz-cream-dark">
+      <StaffDivider />
 
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-jazz-smoke mb-3">Practice Guides</h2>
+      <div class="flex items-center gap-2 mb-3">
+        <div class="w-4 h-px bg-jazz-gold"></div>
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-jazz-smoke">Practice Guides</h2>
+      </div>
       <router-link
         v-for="guide in syllabus.practiceGuides"
         :key="guide.slug"
@@ -89,6 +102,14 @@ const levelColors: Record<string, string> = {
         <span class="text-jazz-smoke">{{ String(guide.order).padStart(2, '0') }}</span>
         {{ guide.title }}
       </router-link>
+    </div>
+
+    <!-- Jazz quote -->
+    <div class="p-4 border-t border-jazz-cream-dark">
+      <blockquote class="text-xs italic text-jazz-smoke leading-relaxed font-heading">
+        "There are no wrong notes in jazz, only wrong resolutions."
+        <cite class="block mt-1 not-italic text-jazz-brass text-[10px] font-semibold font-body">-- Joe Pass</cite>
+      </blockquote>
     </div>
   </aside>
 </template>

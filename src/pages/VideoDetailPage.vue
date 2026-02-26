@@ -5,6 +5,7 @@ import { useProgressStore } from '@/stores/progress'
 import { useGamificationStore } from '@/stores/gamification'
 import BaseCard from '@/components/shared/BaseCard.vue'
 import DifficultyBadge from '@/components/shared/DifficultyBadge.vue'
+import { Check } from 'lucide-vue-next'
 
 const props = defineProps<{ videoId: string }>()
 const videosStore = useVideosStore()
@@ -109,7 +110,8 @@ onMounted(() => {
             ? 'bg-jazz-green text-white'
             : 'bg-jazz-cream-dark text-jazz-espresso hover:bg-jazz-gold hover:text-white'"
         >
-          {{ progress.isVideoWatched(video.id) ? '✓ Watched' : 'Mark as Watched' }}
+          <template v-if="progress.isVideoWatched(video.id)"><Check class="w-4 h-4 inline" /> Watched</template>
+          <template v-else>Mark as Watched</template>
         </button>
       </div>
     </BaseCard>

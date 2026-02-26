@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { ref, computed, onUnmounted } from 'vue'
+import { ref, computed, onUnmounted, type Component } from 'vue'
 import { format } from 'date-fns'
 import { usePracticeStore } from '@/stores/practice'
 import { useGamificationStore } from '@/stores/gamification'
 import { useSyllabusStore } from '@/stores/syllabus'
 import { useProgressStore } from '@/stores/progress'
 import BaseCard from '@/components/shared/BaseCard.vue'
+import {
+  Timer, PenLine, ClipboardList, Target, BookMarked,
+  Music, Music2, Ear, Play, CircleCheck, Star,
+} from 'lucide-vue-next'
 
 const practice = usePracticeStore()
 const gamification = useGamificationStore()
@@ -28,6 +32,12 @@ const logSaved = ref(false)
 
 // Active tab
 const activeTab = ref<'timer' | 'log' | 'planner'>('timer')
+
+const tabs: { id: 'timer' | 'log' | 'planner'; label: string; icon: Component }[] = [
+  { id: 'timer', label: 'Timer', icon: Timer },
+  { id: 'log', label: 'Quick Log', icon: PenLine },
+  { id: 'planner', label: 'Daily Plan', icon: ClipboardList },
+]
 
 // Timer computed
 const timerDisplay = computed(() => {
@@ -106,25 +116,33 @@ const currentUnit = computed(() => {
   )
 })
 
-const dailyPlan = computed(() => {
+interface PlanBlock {
+  label: string
+  duration: number
+  description: string
+  icon: Component
+  color: string
+}
+
+const dailyPlan = computed<PlanBlock[]>(() => {
   const unit = currentUnit.value
   if (!unit) return []
 
-  const blocks = [
-    { label: 'Warm-up / Technique', duration: 10, description: 'Scales and arpeggios in the key of the current standard', icon: '🎯' },
+  const blocks: PlanBlock[] = [
+    { label: 'Warm-up / Technique', duration: 10, description: 'Scales and arpeggios in the key of the current standard', icon: Target, color: 'bg-jazz-blue/10 text-jazz-blue' },
   ]
 
   if (unit.exercises.length > 0) {
     const ex = unit.exercises[0]!
-    blocks.push({ label: 'Focused Practice', duration: 15, description: ex.description, icon: '📖' })
+    blocks.push({ label: 'Focused Practice', duration: 15, description: ex.description, icon: BookMarked, color: 'bg-jazz-green/10 text-jazz-green' })
   }
   if (unit.exercises.length > 1) {
     const ex = unit.exercises[1]!
-    blocks.push({ label: 'Application', duration: 15, description: ex.description, icon: '🎵' })
+    blocks.push({ label: 'Application', duration: 15, description: ex.description, icon: Music, color: 'bg-jazz-gold/10 text-jazz-gold' })
   }
 
-  blocks.push({ label: 'Repertoire', duration: 10, description: 'Play through a standard applying concepts from this unit', icon: '🎶' })
-  blocks.push({ label: 'Free Play / Ear Training', duration: 10, description: 'Improvise freely or transcribe a short phrase', icon: '👂' })
+  blocks.push({ label: 'Repertoire', duration: 10, description: 'Play through a standard applying concepts from this unit', icon: Music2, color: 'bg-jazz-red/10 text-jazz-red' })
+  blocks.push({ label: 'Free Play / Ear Training', duration: 10, description: 'Improvise freely or transcribe a short phrase', icon: Ear, color: 'bg-purple-100/80 text-purple-700' })
 
   return blocks
 })
@@ -138,23 +156,20 @@ onUnmounted(() => {
   <div>
     <div class="mb-6">
       <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Practice Session</h1>
-      <p class="text-jazz-smoke mt-1">Timer, planner, and quick log</p>
+      <p class="font-heading italic text-jazz-smoke mt-1">Timer, planner, and quick log</p>
     </div>
 
     <!-- Tabs -->
     <div class="flex gap-1 mb-6 bg-jazz-cream-dark rounded-xl p-1">
       <button
-        v-for="tab in [
-          { id: 'timer' as const, label: 'Timer', icon: '⏱️' },
-          { id: 'log' as const, label: 'Quick Log', icon: '📝' },
-          { id: 'planner' as const, label: 'Daily Plan', icon: '📋' },
-        ]"
+        v-for="tab in tabs"
         :key="tab.id"
         @click="activeTab = tab.id"
-        class="flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors"
+        class="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-sm font-medium transition-colors"
         :class="activeTab === tab.id ? 'bg-white text-jazz-espresso shadow-sm' : 'text-jazz-smoke hover:text-jazz-espresso'"
       >
-        {{ tab.icon }} {{ tab.label }}
+        <component :is="tab.icon" class="w-4 h-4" />
+        {{ tab.label }}
       </button>
     </div>
 
@@ -235,7 +250,7 @@ onUnmounted(() => {
         <h2 class="text-lg font-heading font-bold mb-4">Log a Practice Session</h2>
 
         <div v-if="logSaved" class="text-center py-8">
-          <span class="text-4xl block mb-2">✅</span>
+          <CircleCheck class="w-12 h-12 text-jazz-green mx-auto mb-2" />
           <p class="text-lg font-semibold text-jazz-green">Session logged!</p>
         </div>
 
@@ -270,10 +285,10 @@ onUnmounted(() => {
                 :key="r"
                 type="button"
                 @click="logRating = r"
-                class="w-10 h-10 rounded-lg text-lg transition-colors"
+                class="w-10 h-10 rounded-lg flex items-center justify-center transition-colors"
                 :class="logRating >= r ? 'bg-jazz-gold text-white' : 'bg-jazz-cream-dark text-jazz-smoke'"
               >
-                ★
+                <Star class="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -309,7 +324,7 @@ onUnmounted(() => {
           </span>
         </div>
 
-        <div v-if="currentUnit" class="mb-4 p-3 bg-jazz-cream/50 rounded-lg">
+        <div v-if="currentUnit" class="mb-4 p-3 bg-jazz-cream/50 rounded-lg border-l-4 border-l-jazz-gold">
           <p class="text-xs text-jazz-smoke">Current focus:</p>
           <p class="text-sm font-medium text-jazz-espresso">
             Unit {{ currentUnit.id }}: {{ currentUnit.title }}
@@ -322,7 +337,9 @@ onUnmounted(() => {
             :key="i"
             class="flex items-start gap-3 p-3 rounded-lg bg-white border border-jazz-cream-dark"
           >
-            <span class="text-xl">{{ block.icon }}</span>
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" :class="block.color">
+              <component :is="block.icon" class="w-4 h-4" />
+            </div>
             <div class="flex-1">
               <div class="flex items-center justify-between">
                 <h3 class="text-sm font-semibold text-jazz-espresso">{{ block.label }}</h3>
@@ -334,9 +351,10 @@ onUnmounted(() => {
             </div>
             <button
               @click="timerTopic = block.label; targetMinutes = block.duration; activeTab = 'timer'"
-              class="shrink-0 text-xs px-2 py-1 text-jazz-blue hover:bg-jazz-cream rounded transition-colors"
+              class="shrink-0 w-7 h-7 flex items-center justify-center text-jazz-blue hover:bg-jazz-cream rounded transition-colors"
+              title="Start timer"
             >
-              Start ⏱️
+              <Play class="w-3.5 h-3.5" />
             </button>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { useVideosStore } from '@/stores/videos'
 import { useProgressStore } from '@/stores/progress'
 import BaseCard from '@/components/shared/BaseCard.vue'
 import DifficultyBadge from '@/components/shared/DifficultyBadge.vue'
+import { Check, X } from 'lucide-vue-next'
 
 const videosStore = useVideosStore()
 const progress = useProgressStore()
@@ -160,15 +161,15 @@ function clearSearch() {
         <span class="text-jazz-smoke">Active:</span>
         <span v-if="videosStore.filters.searchQuery" class="px-2 py-0.5 bg-jazz-blue/10 text-jazz-blue rounded-full flex items-center gap-1">
           "{{ videosStore.filters.searchQuery }}"
-          <button @click="clearSearch" class="hover:text-jazz-red">&times;</button>
+          <button @click="clearSearch" class="hover:text-jazz-red"><X class="w-3 h-3" /></button>
         </span>
         <span v-if="videosStore.filters.categoryId" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass rounded-full flex items-center gap-1">
           {{ videosStore.categories.find(c => c.id === videosStore.filters.categoryId)?.name }}
-          <button @click="clearCategory" class="hover:text-jazz-red">&times;</button>
+          <button @click="clearCategory" class="hover:text-jazz-red"><X class="w-3 h-3" /></button>
         </span>
         <span v-if="isDifficultyFiltered" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass rounded-full flex items-center gap-1">
           {{ difficultyLabel }}
-          <button @click="clearDifficulty" class="hover:text-jazz-red">&times;</button>
+          <button @click="clearDifficulty" class="hover:text-jazz-red"><X class="w-3 h-3" /></button>
         </span>
         <span class="text-jazz-smoke">{{ videosStore.filteredVideos.length }} results</span>
       </div>
@@ -196,9 +197,9 @@ function clearSearch() {
             </span>
             <span
               v-if="progress.isVideoWatched(video.id)"
-              class="absolute top-2 right-2 w-6 h-6 bg-jazz-green text-white rounded-full flex items-center justify-center text-xs"
+              class="absolute top-2 right-2 w-6 h-6 bg-jazz-green text-white rounded-full flex items-center justify-center"
             >
-              ✓
+              <Check class="w-3.5 h-3.5" />
             </span>
           </div>
           <div class="p-3">
