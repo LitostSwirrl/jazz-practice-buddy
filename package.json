@@ -6,7 +6,8 @@
   "scripts": {
     "build-data": "tsx scripts/build-data.ts",
     "dev": "npm run build-data && vite",
-    "build": "npm run build-data && run-p type-check \"build-only {@}\" --",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build:full": "npm run build-data && run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build"
