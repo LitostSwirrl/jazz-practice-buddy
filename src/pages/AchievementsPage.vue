@@ -18,10 +18,10 @@ const progress = useProgressStore()
 const totalHours = computed(() => Math.round(practice.totalPracticeMinutes / 60 * 10) / 10)
 
 const statItems = computed(() => [
-  { label: 'Total Hours', value: totalHours.value, icon: Clock, color: 'bg-jazz-blue/10 text-jazz-blue' },
-  { label: 'Current Streak', value: `${gamification.streakData.currentStreak} days`, icon: Flame, color: 'bg-orange-100 text-orange-600' },
-  { label: 'Longest Streak', value: `${gamification.streakData.longestStreak} days`, icon: Trophy, color: 'bg-jazz-gold/10 text-jazz-gold' },
-  { label: 'Videos Watched', value: progress.totalVideosWatched, icon: MonitorPlay, color: 'bg-jazz-green/10 text-jazz-green' },
+  { label: 'Total Hours', value: totalHours.value, icon: Clock },
+  { label: 'Current Streak', value: `${gamification.streakData.currentStreak}d`, icon: Flame },
+  { label: 'Longest Streak', value: `${gamification.streakData.longestStreak}d`, icon: Trophy },
+  { label: 'Videos Watched', value: progress.totalVideosWatched, icon: MonitorPlay },
 ])
 
 // Group achievements by category
@@ -49,8 +49,8 @@ const chartData = computed(() => ({
   datasets: [{
     label: 'Minutes Practiced',
     data: practice.weeklyPracticeData.map(w => w.minutes),
-    backgroundColor: '#D4A843',
-    borderRadius: 4,
+    backgroundColor: '#D64541',
+    borderRadius: 0,
   }],
 }))
 
@@ -59,8 +59,15 @@ const chartOptions = {
   maintainAspectRatio: false,
   plugins: { legend: { display: false } },
   scales: {
-    y: { beginAtZero: true, grid: { color: '#F5EDDA' } },
-    x: { grid: { display: false } },
+    y: {
+      beginAtZero: true,
+      grid: { color: '#E8E0D4' },
+      ticks: { font: { family: 'IBM Plex Mono', size: 10 } },
+    },
+    x: {
+      grid: { display: false },
+      ticks: { font: { family: 'IBM Plex Mono', size: 10 } },
+    },
   },
 }
 
@@ -83,14 +90,15 @@ const streakCalendar = computed(() => {
   return days
 })
 
-const intensityColors = ['bg-jazz-cream-dark', 'bg-green-200', 'bg-green-300', 'bg-green-500', 'bg-green-700']
+const intensityColors = ['bg-jazz-cream-dark', 'bg-jazz-gold/20', 'bg-jazz-gold/40', 'bg-jazz-gold/70', 'bg-jazz-gold']
 </script>
 
 <template>
   <div>
     <div class="mb-8">
-      <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Achievements & Stats</h1>
-      <p class="font-heading italic text-jazz-smoke mt-1">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-heading text-jazz-espresso tracking-tight leading-none">ACHIEVEMENTS</h1>
+      <div class="h-1 w-16 bg-jazz-gold mt-3 mb-2"></div>
+      <p class="text-jazz-smoke font-mono text-sm">
         {{ gamification.unlockedCount }} of {{ gamification.totalAchievements }} unlocked
       </p>
     </div>
@@ -99,37 +107,36 @@ const intensityColors = ['bg-jazz-cream-dark', 'bg-green-200', 'bg-green-300', '
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       <BaseCard v-for="stat in statItems" :key="stat.label">
         <div class="text-center">
-          <div class="w-10 h-10 rounded-xl mx-auto mb-2 flex items-center justify-center" :class="stat.color">
-            <component :is="stat.icon" class="w-5 h-5" />
-          </div>
-          <p class="text-xl font-heading font-bold text-jazz-espresso mt-1">{{ stat.value }}</p>
-          <p class="text-xs text-jazz-smoke">{{ stat.label }}</p>
+          <p class="text-4xl font-heading text-jazz-espresso leading-none">{{ stat.value }}</p>
+          <p class="text-[10px] text-jazz-smoke uppercase tracking-[0.15em] font-mono mt-2">{{ stat.label }}</p>
         </div>
       </BaseCard>
     </div>
 
     <!-- Streak Calendar -->
     <BaseCard class="mb-8">
-      <h2 class="text-lg font-heading font-bold mb-3">Practice Calendar (90 days)</h2>
+      <h2 class="text-xl font-heading text-jazz-espresso mb-1">PRACTICE CALENDAR</h2>
+      <div class="h-px bg-jazz-cream-dark mb-4"></div>
       <div class="flex flex-wrap gap-1">
         <div
           v-for="day in streakCalendar"
           :key="day.date"
-          class="w-3 h-3 rounded-sm"
+          class="w-3 h-3"
           :class="intensityColors[day.intensity]"
           :title="`${day.date}${day.practiced ? ' - Practiced' : ''}`"
         />
       </div>
-      <div class="flex items-center gap-2 mt-2 text-[10px] text-jazz-smoke">
+      <div class="flex items-center gap-1.5 mt-3 text-[10px] text-jazz-smoke font-mono uppercase tracking-wider">
         <span>Less</span>
-        <div v-for="(color, i) in intensityColors" :key="i" class="w-3 h-3 rounded-sm" :class="color" />
+        <div v-for="(color, i) in intensityColors" :key="i" class="w-3 h-3" :class="color" />
         <span>More</span>
       </div>
     </BaseCard>
 
     <!-- Weekly Practice Chart -->
     <BaseCard class="mb-8">
-      <h2 class="text-lg font-heading font-bold mb-3">Weekly Practice Time</h2>
+      <h2 class="text-xl font-heading text-jazz-espresso mb-1">WEEKLY PRACTICE TIME</h2>
+      <div class="h-px bg-jazz-cream-dark mb-4"></div>
       <div class="h-48">
         <Bar :data="chartData" :options="chartOptions" />
       </div>
@@ -138,28 +145,29 @@ const intensityColors = ['bg-jazz-cream-dark', 'bg-green-200', 'bg-green-300', '
     <!-- Achievement Grid by Category -->
     <div class="space-y-8">
       <div v-for="[category, achievements] in achievementsByCategory" :key="category">
-        <h2 class="text-lg font-heading font-bold mb-3">{{ category }}</h2>
+        <h2 class="text-xl font-heading text-jazz-espresso mb-1">{{ category.toUpperCase() }}</h2>
+        <div class="h-px bg-jazz-cream-dark mb-4"></div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           <div
             v-for="a in achievements"
             :key="a.id"
-            class="flex items-center gap-3 p-3 rounded-xl border transition-colors"
+            class="flex items-center gap-3 p-3 border-2 transition-colors"
             :class="gamification.isUnlocked(a.id)
-              ? 'bg-white border-jazz-gold/30 shadow-sm'
-              : 'bg-jazz-cream-dark/50 border-transparent opacity-60'"
+              ? 'bg-white border-jazz-cream-dark'
+              : 'bg-jazz-cream-dark/30 border-jazz-cream-dark opacity-50'"
           >
             <div
-              class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+              class="w-10 h-10 flex items-center justify-center shrink-0"
               :class="gamification.isUnlocked(a.id) ? 'bg-jazz-gold/10 text-jazz-gold' : 'bg-jazz-smoke/10 text-jazz-smoke/30'"
             >
               <AchievementIcon :name="a.icon" :size="22" :locked="!gamification.isUnlocked(a.id)" />
             </div>
             <div>
-              <h3 class="text-sm font-semibold text-jazz-espresso">{{ a.title }}</h3>
+              <h3 class="text-sm font-heading text-jazz-espresso uppercase tracking-wide">{{ a.title }}</h3>
               <p class="text-xs text-jazz-smoke">{{ a.description }}</p>
               <p
                 v-if="gamification.isUnlocked(a.id) && gamification.unlockedAchievements[a.id]"
-                class="text-[10px] text-jazz-green mt-0.5"
+                class="text-[10px] text-jazz-green font-mono mt-0.5"
               >
                 Unlocked {{ new Date(gamification.unlockedAchievements[a.id]!.unlockedAt).toLocaleDateString() }}
               </p>

@@ -63,6 +63,6 @@ const resolvedIcon = computed(() => iconMap[props.name] ?? Award)
   <Lock
     v-else
     :size="size"
-    class="text-jazz-smoke/30"
+    class="text-jazz-smoke/20"
   />
 </template>

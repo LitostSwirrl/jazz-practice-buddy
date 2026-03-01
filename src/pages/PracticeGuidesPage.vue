@@ -11,8 +11,9 @@ const progress = useProgressStore()
 <template>
   <div>
     <div class="mb-8">
-      <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Practice Guides</h1>
-      <p class="text-jazz-smoke mt-1">20 topic-specific guides with structured 6-week routines</p>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-heading text-jazz-espresso tracking-tight leading-none">PRACTICE GUIDES</h1>
+      <div class="h-1 w-16 bg-jazz-gold mt-3 mb-2"></div>
+      <p class="text-jazz-smoke font-mono text-sm">20 topic-specific guides with structured 6-week routines</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -24,15 +25,15 @@ const progress = useProgressStore()
       >
         <BaseCard>
           <div class="flex items-start gap-3">
-            <div class="w-10 h-10 rounded-lg bg-jazz-gold/10 flex items-center justify-center text-jazz-gold font-bold text-sm shrink-0">
+            <span class="font-heading text-3xl text-jazz-espresso/20 w-8 text-center shrink-0 leading-none">
               {{ String(guide.order).padStart(2, '0') }}
-            </div>
+            </span>
             <div class="flex-1 min-w-0">
-              <h3 class="font-heading font-bold text-jazz-espresso group-hover:text-jazz-blue transition-colors">
-                {{ guide.title }}
+              <h3 class="font-heading text-lg text-jazz-espresso group-hover:text-jazz-blue transition-colors tracking-wide">
+                {{ guide.title.toUpperCase() }}
               </h3>
               <p class="text-xs text-jazz-smoke mt-1 line-clamp-2">{{ guide.overview.slice(0, 120) }}...</p>
-              <div class="flex items-center gap-3 mt-2 text-[10px] text-jazz-smoke">
+              <div class="flex items-center gap-3 mt-2 text-[10px] text-jazz-smoke font-mono uppercase tracking-wider">
                 <span v-if="guide.videoReferences.length > 0" class="flex items-center gap-1">
                   <Play class="w-3 h-3" /> {{ guide.videoReferences.length }} videos
                 </span>

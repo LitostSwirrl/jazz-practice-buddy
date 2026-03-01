@@ -1,24 +1,25 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-jazz-gold: #D4A843;
-  --color-jazz-gold-light: #E8C96A;
-  --color-jazz-cream: #FFF8ED;
-  --color-jazz-cream-dark: #F5EDDA;
-  --color-jazz-espresso: #2C1810;
-  --color-jazz-espresso-light: #4A2E22;
-  --color-jazz-midnight: #1A1423;
-  --color-jazz-brass: #B8860B;
-  --color-jazz-blue: #4A6FA5;
-  --color-jazz-blue-light: #6B8DBF;
-  --color-jazz-smoke: #8B8680;
-  --color-jazz-smoke-light: #B5B0AA;
-  --color-jazz-green: #5A8C6F;
-  --color-jazz-red: #C45B4A;
+  /* Reid Miles Editorial palette */
+  --color-jazz-gold: #D64541;
+  --color-jazz-gold-light: #E07068;
+  --color-jazz-cream: #F2EBE0;
+  --color-jazz-cream-dark: #E8E0D4;
+  --color-jazz-espresso: #1A1A1A;
+  --color-jazz-espresso-light: #2D2D2D;
+  --color-jazz-midnight: #0F0F0F;
+  --color-jazz-brass: #B83A32;
+  --color-jazz-blue: #2B5C8A;
+  --color-jazz-blue-light: #4A7AAE;
+  --color-jazz-smoke: #8C8078;
+  --color-jazz-smoke-light: #B5AFA6;
+  --color-jazz-green: #4A7A5E;
+  --color-jazz-red: #D64541;
 
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-heading: 'Bebas Neue', Impact, sans-serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
 }
 
 @layer base {
@@ -32,14 +33,16 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--color-jazz-espresso);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -48,7 +51,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-jazz-smoke-light);
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -56,28 +59,46 @@
 }
 
 /* Markdown content styles */
-.markdown-content h1 { font-size: 1.875rem; margin-bottom: 1rem; margin-top: 2rem; }
-.markdown-content h2 { font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 1.75rem; border-bottom: 1px solid var(--color-jazz-cream-dark); padding-bottom: 0.5rem; }
+.markdown-content h1 { font-size: 2rem; margin-bottom: 1rem; margin-top: 2rem; letter-spacing: 0.05em; }
+.markdown-content h2 { font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 1.75rem; border-bottom: 2px solid var(--color-jazz-espresso); padding-bottom: 0.5rem; }
 .markdown-content h3 { font-size: 1.25rem; margin-bottom: 0.5rem; margin-top: 1.5rem; }
 .markdown-content p { margin-bottom: 0.75rem; line-height: 1.7; }
 .markdown-content ul, .markdown-content ol { margin-bottom: 0.75rem; padding-left: 1.5rem; }
 .markdown-content li { margin-bottom: 0.25rem; line-height: 1.6; }
 .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.875rem; }
-.markdown-content th { background: var(--color-jazz-cream-dark); padding: 0.5rem 0.75rem; text-align: left; font-weight: 600; border: 1px solid #e0d8cc; }
-.markdown-content td { padding: 0.5rem 0.75rem; border: 1px solid #e0d8cc; }
-.markdown-content blockquote { border-left: 3px solid var(--color-jazz-gold); padding-left: 1rem; margin: 1rem 0; color: var(--color-jazz-smoke); font-style: italic; }
-.markdown-content code { background: var(--color-jazz-cream-dark); padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.875rem; font-family: var(--font-mono); }
-.markdown-content pre { background: var(--color-jazz-espresso); color: var(--color-jazz-cream); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1rem; }
+.markdown-content th { background: var(--color-jazz-espresso); color: var(--color-jazz-cream); padding: 0.5rem 0.75rem; text-align: left; font-weight: 600; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid var(--color-jazz-espresso); }
+.markdown-content td { padding: 0.5rem 0.75rem; border: 1px solid var(--color-jazz-cream-dark); }
+.markdown-content blockquote { border-left: 4px solid var(--color-jazz-espresso); padding-left: 1rem; margin: 1rem 0; color: var(--color-jazz-smoke); font-style: italic; }
+.markdown-content code { background: var(--color-jazz-cream-dark); padding: 0.125rem 0.375rem; border-radius: 0; font-size: 0.875rem; font-family: var(--font-mono); }
+.markdown-content pre { background: var(--color-jazz-espresso); color: var(--color-jazz-cream); padding: 1rem; border-radius: 0; overflow-x: auto; margin-bottom: 1rem; }
 .markdown-content pre code { background: none; padding: 0; color: inherit; }
-.markdown-content strong { color: var(--color-jazz-espresso); font-weight: 600; }
-.markdown-content a { color: var(--color-jazz-blue); text-decoration: underline; }
+.markdown-content strong { color: var(--color-jazz-espresso); font-weight: 700; }
+.markdown-content a { color: var(--color-jazz-blue); text-decoration: underline; text-underline-offset: 2px; }
 .markdown-content a:hover { color: var(--color-jazz-blue-light); }
 
-/* Streak glow animation */
+/* Thick rule utility */
+.thick-rule {
+  height: 3px;
+  background-color: var(--color-jazz-espresso);
+  border: none;
+}
+
+/* Streak glow animation — signal red pulse */
 @keyframes streak-glow {
-  from { box-shadow: 0 0 0 0 rgba(212, 168, 67, 0); }
-  to { box-shadow: 0 0 12px 2px rgba(212, 168, 67, 0.15); }
+  from { box-shadow: 0 0 0 0 rgba(214, 69, 65, 0); }
+  to { box-shadow: 0 0 12px 2px rgba(214, 69, 65, 0.2); }
 }
 .streak-glow {
   animation: streak-glow 2s ease-in-out infinite alternate;
+}
+
+/* Shimmer skeleton animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--color-jazz-cream-dark) 25%, var(--color-jazz-cream) 50%, var(--color-jazz-cream-dark) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
 }

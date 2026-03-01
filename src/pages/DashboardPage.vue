@@ -21,10 +21,10 @@ const recentAchievements = computed(() => gamification.recentUnlocks(4))
 const isNewUser = computed(() => practice.logs.length === 0 && progress.completedLessons.length === 0)
 
 const stats = computed(() => [
-  { label: 'Practice Hours', value: totalHours.value, icon: Clock, color: 'bg-jazz-blue/10 text-jazz-blue' },
-  { label: 'Videos Watched', value: progress.totalVideosWatched, icon: MonitorPlay, color: 'bg-jazz-green/10 text-jazz-green' },
-  { label: 'Lessons Done', value: progress.totalLessonsCompleted, icon: CheckCircle2, color: 'bg-jazz-gold/10 text-jazz-gold' },
-  { label: 'Achievements', value: gamification.unlockedCount, icon: Trophy, color: 'bg-jazz-red/10 text-jazz-red' },
+  { label: 'Practice Hours', value: totalHours.value, icon: Clock },
+  { label: 'Videos Watched', value: progress.totalVideosWatched, icon: MonitorPlay },
+  { label: 'Lessons Done', value: progress.totalLessonsCompleted, icon: CheckCircle2 },
+  { label: 'Achievements', value: gamification.unlockedCount, icon: Trophy },
 ])
 
 function formatDuration(mins: number): string {
@@ -34,43 +34,44 @@ function formatDuration(mins: number): string {
 </script>
 
 <template>
-  <div class="space-y-6">
+  <div class="space-y-8">
     <!-- Welcome / Streak -->
     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <div>
-        <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">
-          {{ isNewUser ? 'Welcome to Jazz Practice Buddy' : 'Welcome Back' }}
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading text-jazz-espresso tracking-tight leading-none">
+          {{ isNewUser ? 'WELCOME' : 'WELCOME BACK' }}
         </h1>
-        <p class="font-heading italic text-jazz-smoke text-base mt-1">
+        <p class="text-jazz-smoke mt-2">
           {{ isNewUser ? 'Your personal Jens Larsen curriculum companion.' : `Day ${gamification.streakData.currentStreak} of your jazz journey` }}
         </p>
       </div>
       <div
         v-if="gamification.streakIsActive"
-        class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl border border-orange-200"
+        class="flex items-center gap-3 px-4 py-3 border-2 border-jazz-gold"
       >
-        <Flame class="w-6 h-6 text-orange-500" />
+        <Flame class="w-6 h-6 text-jazz-gold" />
         <div>
-          <p class="text-lg font-heading font-bold text-orange-700">{{ gamification.streakData.currentStreak }}-day streak</p>
-          <p class="text-xs text-orange-500">Best: {{ gamification.streakData.longestStreak }} days</p>
+          <p class="text-2xl font-heading text-jazz-espresso leading-none">{{ gamification.streakData.currentStreak }}-DAY STREAK</p>
+          <p class="text-xs text-jazz-smoke font-mono mt-0.5">Best: {{ gamification.streakData.longestStreak }} days</p>
         </div>
       </div>
     </div>
 
+    <div class="h-1 bg-jazz-espresso"></div>
+
     <!-- New user onboarding -->
     <BaseCard v-if="isNewUser" variant="featured">
-      <div class="text-center py-6">
-        <Guitar class="w-16 h-16 text-jazz-gold mx-auto mb-4" />
-        <h2 class="text-xl font-heading font-bold mb-2">Ready to Learn Jazz Guitar?</h2>
-        <p class="text-jazz-smoke max-w-lg mx-auto mb-6">
+      <div class="py-6">
+        <h2 class="text-3xl font-heading text-jazz-espresso mb-3">READY TO LEARN JAZZ GUITAR?</h2>
+        <p class="text-jazz-smoke max-w-lg mb-6">
           This app organizes Jens Larsen's 1,100+ YouTube lessons into a structured curriculum
           with practice tracking, achievements, and more.
         </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <router-link to="/syllabus" class="px-5 py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass transition-colors">
+        <div class="flex flex-wrap gap-3">
+          <router-link to="/syllabus" class="px-6 py-3 bg-jazz-gold text-white font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-brass transition-colors">
             Start with Module 1
           </router-link>
-          <router-link to="/videos" class="px-5 py-2.5 bg-jazz-cream-dark text-jazz-espresso rounded-lg font-medium hover:bg-jazz-cream transition-colors">
+          <router-link to="/videos" class="px-6 py-3 border-2 border-jazz-espresso text-jazz-espresso font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-espresso hover:text-jazz-cream transition-colors">
             Browse Videos
           </router-link>
         </div>
@@ -80,25 +81,21 @@ function formatDuration(mins: number): string {
     <!-- Stats Grid -->
     <div v-if="!isNewUser" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
       <BaseCard v-for="stat in stats" :key="stat.label">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center" :class="stat.color">
-            <component :is="stat.icon" class="w-6 h-6" />
-          </div>
-          <div>
-            <p class="text-2xl font-heading font-bold text-jazz-espresso">{{ stat.value }}</p>
-            <p class="text-xs text-jazz-smoke">{{ stat.label }}</p>
-          </div>
+        <div class="text-center">
+          <p class="text-4xl font-heading text-jazz-espresso leading-none">{{ stat.value }}</p>
+          <p class="text-xs text-jazz-smoke uppercase tracking-[0.15em] font-mono mt-2">{{ stat.label }}</p>
         </div>
       </BaseCard>
     </div>
 
     <!-- Progress Overview -->
     <BaseCard>
-      <h2 class="text-lg font-heading font-bold mb-4">Curriculum Progress</h2>
-      <div class="mb-4">
+      <h2 class="text-2xl font-heading text-jazz-espresso mb-1">CURRICULUM PROGRESS</h2>
+      <div class="h-px bg-jazz-cream-dark mb-4"></div>
+      <div class="mb-5">
         <BaseProgress :percent="overall.percent" size="lg" show-label>
           <template #label>
-            <span class="text-jazz-espresso font-medium">Overall: {{ overall.completed }}/{{ overall.total }}</span>
+            <span class="text-jazz-espresso font-mono text-xs">Overall: {{ overall.completed }}/{{ overall.total }}</span>
           </template>
         </BaseProgress>
       </div>
@@ -107,14 +104,14 @@ function formatDuration(mins: number): string {
           v-for="mod in syllabus.modules"
           :key="mod.id"
           :to="{ name: 'module', params: { moduleId: mod.id } }"
-          class="block hover:bg-jazz-cream/50 rounded-lg p-2 -mx-2 transition-colors"
+          class="block hover:bg-jazz-cream/50 p-2 -mx-2 transition-colors"
         >
           <div class="flex items-center justify-between mb-1">
-            <span class="text-sm font-medium text-jazz-espresso">
-              <span class="text-jazz-gold font-heading font-bold mr-1">{{ mod.id }}.</span>
+            <span class="text-sm text-jazz-espresso">
+              <span class="text-jazz-gold font-heading text-lg mr-1.5">{{ mod.id }}</span>
               {{ mod.title }}
             </span>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-jazz-cream-dark text-jazz-smoke">
+            <span class="text-[10px] px-2 py-0.5 bg-jazz-cream-dark text-jazz-smoke uppercase tracking-wider font-mono">
               {{ mod.level }}
             </span>
           </div>
@@ -126,13 +123,14 @@ function formatDuration(mins: number): string {
     <div class="grid lg:grid-cols-2 gap-6">
       <!-- Recent Activity -->
       <BaseCard>
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="text-lg font-heading font-bold">Recent Practice</h2>
-          <router-link to="/practice/log" class="text-xs text-jazz-blue hover:underline">View all</router-link>
+        <div class="flex items-center justify-between mb-1">
+          <h2 class="text-2xl font-heading text-jazz-espresso">RECENT PRACTICE</h2>
+          <router-link to="/practice/log" class="text-xs text-jazz-blue hover:underline font-mono uppercase tracking-wider">View all</router-link>
         </div>
-        <div v-if="recentLogs.length === 0" class="text-center py-6 text-jazz-smoke">
+        <div class="h-px bg-jazz-cream-dark mb-4"></div>
+        <div v-if="recentLogs.length === 0" class="text-center py-8 text-jazz-smoke">
           <PenLine class="w-10 h-10 mx-auto mb-2 text-jazz-smoke-light" />
-          <p class="text-sm font-heading italic">No practice sessions yet.</p>
+          <p class="text-sm">No practice sessions yet.</p>
           <router-link to="/practice" class="text-sm text-jazz-blue hover:underline mt-1 inline-block">
             Start practicing
           </router-link>
@@ -141,14 +139,14 @@ function formatDuration(mins: number): string {
           <div
             v-for="log in recentLogs"
             :key="log.id"
-            class="flex items-center gap-3 text-sm"
+            class="flex items-center gap-3 text-sm py-2 border-b border-jazz-cream-dark last:border-0"
           >
-            <div class="w-8 h-8 rounded-full bg-jazz-gold/10 flex items-center justify-center gap-0.5 text-xs font-semibold text-jazz-gold">
+            <div class="w-8 h-8 bg-jazz-gold/10 flex items-center justify-center gap-0.5 text-xs font-mono font-medium text-jazz-gold">
               {{ log.rating }}<Star class="w-3 h-3" />
             </div>
             <div class="flex-1 min-w-0">
               <p class="font-medium text-jazz-espresso truncate">{{ log.topic }}</p>
-              <p class="text-xs text-jazz-smoke">{{ log.date }} &middot; {{ formatDuration(log.duration) }}</p>
+              <p class="text-xs text-jazz-smoke font-mono">{{ log.date }} · {{ formatDuration(log.duration) }}</p>
             </div>
           </div>
         </div>
@@ -156,25 +154,26 @@ function formatDuration(mins: number): string {
 
       <!-- Recent Achievements -->
       <BaseCard>
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="text-lg font-heading font-bold">Achievements</h2>
-          <router-link to="/achievements" class="text-xs text-jazz-blue hover:underline">View all</router-link>
+        <div class="flex items-center justify-between mb-1">
+          <h2 class="text-2xl font-heading text-jazz-espresso">ACHIEVEMENTS</h2>
+          <router-link to="/achievements" class="text-xs text-jazz-blue hover:underline font-mono uppercase tracking-wider">View all</router-link>
         </div>
-        <div v-if="recentAchievements.length === 0" class="text-center py-6 text-jazz-smoke">
+        <div class="h-px bg-jazz-cream-dark mb-4"></div>
+        <div v-if="recentAchievements.length === 0" class="text-center py-8 text-jazz-smoke">
           <Trophy class="w-10 h-10 mx-auto mb-2 text-jazz-smoke-light" />
-          <p class="text-sm font-heading italic">Start practicing to unlock achievements!</p>
+          <p class="text-sm">Start practicing to unlock achievements!</p>
         </div>
         <div v-else class="grid grid-cols-2 gap-3">
           <div
             v-for="a in recentAchievements"
             :key="a.id"
-            class="flex items-center gap-2 p-2 rounded-lg bg-jazz-cream/50"
+            class="flex items-center gap-2 p-3 border-2 border-jazz-cream-dark"
           >
-            <div class="w-8 h-8 rounded-lg bg-jazz-gold/10 flex items-center justify-center text-jazz-gold shrink-0">
+            <div class="w-8 h-8 bg-jazz-gold/10 flex items-center justify-center text-jazz-gold shrink-0">
               <AchievementIcon :name="a.icon" :size="18" />
             </div>
             <div>
-              <p class="text-xs font-semibold text-jazz-espresso">{{ a.title }}</p>
+              <p class="text-xs font-heading text-jazz-espresso uppercase tracking-wide">{{ a.title }}</p>
               <p class="text-[10px] text-jazz-smoke">{{ a.description }}</p>
             </div>
           </div>

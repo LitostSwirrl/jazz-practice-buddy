@@ -8,29 +8,30 @@ const syllabus = useSyllabusStore()
 const progress = useProgressStore()
 
 const levelColors: Record<string, string> = {
-  'Beginner': 'from-green-400 to-emerald-500',
-  'Early Intermediate': 'from-blue-400 to-cyan-500',
-  'Intermediate': 'from-yellow-400 to-amber-500',
-  'Advanced Intermediate': 'from-orange-400 to-red-400',
-  'Advanced': 'from-red-500 to-rose-600',
-  'Ongoing': 'from-purple-400 to-violet-500',
+  'Beginner': 'bg-jazz-blue',
+  'Early Intermediate': 'bg-jazz-blue',
+  'Intermediate': 'bg-jazz-smoke',
+  'Advanced Intermediate': 'bg-jazz-gold',
+  'Advanced': 'bg-jazz-gold',
+  'Ongoing': 'bg-jazz-espresso',
 }
 
 const levelBg: Record<string, string> = {
-  'Beginner': 'bg-green-50 text-green-700 border-green-200',
-  'Early Intermediate': 'bg-blue-50 text-blue-700 border-blue-200',
-  'Intermediate': 'bg-amber-50 text-amber-700 border-amber-200',
-  'Advanced Intermediate': 'bg-orange-50 text-orange-700 border-orange-200',
-  'Advanced': 'bg-red-50 text-red-700 border-red-200',
-  'Ongoing': 'bg-purple-50 text-purple-700 border-purple-200',
+  'Beginner': 'bg-jazz-blue/10 text-jazz-blue',
+  'Early Intermediate': 'bg-jazz-blue/10 text-jazz-blue',
+  'Intermediate': 'bg-jazz-smoke/10 text-jazz-smoke',
+  'Advanced Intermediate': 'bg-jazz-gold/10 text-jazz-gold',
+  'Advanced': 'bg-jazz-gold/10 text-jazz-gold',
+  'Ongoing': 'bg-jazz-espresso/10 text-jazz-espresso',
 }
 </script>
 
 <template>
   <div>
     <div class="mb-8">
-      <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Course Syllabus</h1>
-      <p class="font-heading italic text-jazz-smoke mt-1">6 progressive modules spanning 15-20 months of study</p>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-heading text-jazz-espresso tracking-tight leading-none">SYLLABUS</h1>
+      <div class="h-1 w-16 bg-jazz-gold mt-3 mb-2"></div>
+      <p class="text-jazz-smoke">6 progressive modules spanning 15–20 months of study</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
@@ -42,21 +43,21 @@ const levelBg: Record<string, string> = {
       >
         <BaseCard :padding="false">
           <div
-            class="h-2 rounded-t-xl bg-gradient-to-r"
-            :class="levelColors[mod.level] || 'from-gray-400 to-gray-500'"
+            class="h-2"
+            :class="levelColors[mod.level] || 'bg-gray-400'"
           />
           <div class="p-5 relative">
-            <span class="absolute top-3 right-4 text-5xl font-heading font-bold text-jazz-espresso/5 leading-none select-none">{{ mod.id }}</span>
+            <span class="absolute top-2 right-4 text-7xl font-heading text-jazz-espresso/[0.04] leading-none select-none">{{ mod.id }}</span>
             <div class="flex items-start justify-between mb-2">
               <div>
-                <span class="text-sm text-jazz-gold font-bold">Module {{ mod.id }}</span>
-                <h2 class="text-lg font-heading font-bold text-jazz-espresso group-hover:text-jazz-blue transition-colors">
+                <span class="text-xs text-jazz-gold font-heading tracking-[0.15em] uppercase">Module {{ mod.id }}</span>
+                <h2 class="text-xl font-heading text-jazz-espresso group-hover:text-jazz-blue transition-colors tracking-wide">
                   {{ mod.title }}
                 </h2>
               </div>
               <span
-                class="text-xs px-2 py-1 rounded-full border font-medium"
-                :class="levelBg[mod.level] || 'bg-gray-50 text-gray-600 border-gray-200'"
+                class="text-[10px] px-2 py-1 font-mono uppercase tracking-wider"
+                :class="levelBg[mod.level] || 'bg-gray-100 text-gray-600'"
               >
                 {{ mod.level }}
               </span>
@@ -64,14 +65,14 @@ const levelBg: Record<string, string> = {
 
             <p class="text-sm text-jazz-smoke mb-3 line-clamp-2">{{ mod.description }}</p>
 
-            <div class="flex items-center gap-4 text-xs text-jazz-smoke mb-3">
+            <div class="flex items-center gap-4 text-xs text-jazz-smoke font-mono mb-3">
               <span>{{ mod.duration }}</span>
               <span>{{ mod.units.length }} units</span>
             </div>
 
             <BaseProgress :percent="progress.moduleProgress(mod.id).percent" size="sm" show-label>
               <template #label>
-                <span class="text-jazz-smoke">Progress</span>
+                <span class="text-jazz-smoke font-mono">Progress</span>
               </template>
             </BaseProgress>
           </div>
