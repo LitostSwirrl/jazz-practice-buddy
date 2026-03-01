@@ -18,7 +18,7 @@ const variantClasses: Record<Variant, string> = {
 
 <template>
   <div
-    class="rounded-xl border shadow-sm hover:shadow-md transition-shadow"
+    class="rounded-xl border shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
     :class="[variantClasses[variant], padding ? 'p-5' : '']"
   >
     <slot />

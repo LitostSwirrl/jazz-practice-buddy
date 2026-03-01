@@ -15,9 +15,26 @@ const sidebarOpen = ref(false)
 
       <main class="flex-1 min-w-0 px-4 py-6 lg:px-8 lg:ml-64">
         <div class="max-w-6xl mx-auto">
-          <router-view />
+          <router-view v-slot="{ Component }">
+            <Transition name="page" mode="out-in">
+              <component :is="Component" />
+            </Transition>
+          </router-view>
         </div>
       </main>
     </div>
   </div>
 </template>
+
+<style scoped>
+.page-enter-active {
+  transition: opacity 0.15s ease;
+}
+.page-leave-active {
+  transition: opacity 0.1s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+</style>

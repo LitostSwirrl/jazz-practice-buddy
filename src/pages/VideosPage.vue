@@ -221,7 +221,7 @@ function clearSearch() {
     <div v-if="hasMore" class="text-center mt-8">
       <button
         @click="loadMore"
-        class="px-6 py-2.5 bg-jazz-espresso text-jazz-cream rounded-lg hover:bg-jazz-espresso-light transition-colors text-sm font-medium"
+        class="px-6 py-2.5 bg-jazz-espresso text-jazz-cream rounded-lg hover:bg-jazz-espresso-light active:scale-[0.98] transition-all text-sm font-medium"
       >
         Load More ({{ videosStore.filteredVideos.length - displayCount }} remaining)
       </button>

@@ -26,7 +26,7 @@ withDefaults(defineProps<{
       }"
     >
       <div
-        class="h-full rounded-full transition-all duration-500 ease-out"
+        class="h-full rounded-full transition-all duration-700 ease-out"
         :class="`bg-${color}`"
         :style="{ width: `${Math.min(percent, 100)}%` }"
       />

@@ -67,10 +67,10 @@ function formatDuration(mins: number): string {
           with practice tracking, achievements, and more.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
-          <router-link to="/syllabus" class="px-5 py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass transition-colors">
+          <router-link to="/syllabus" class="px-5 py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass active:scale-[0.98] transition-all">
             Start with Module 1
           </router-link>
-          <router-link to="/videos" class="px-5 py-2.5 bg-jazz-cream-dark text-jazz-espresso rounded-lg font-medium hover:bg-jazz-cream transition-colors">
+          <router-link to="/videos" class="px-5 py-2.5 bg-jazz-cream-dark text-jazz-espresso rounded-lg font-medium hover:bg-jazz-cream active:scale-[0.98] transition-all">
             Browse Videos
           </router-link>
         </div>

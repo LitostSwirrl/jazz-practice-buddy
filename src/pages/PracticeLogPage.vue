@@ -43,7 +43,7 @@ function formatDuration(mins: number): string {
       </div>
       <router-link
         to="/practice"
-        class="px-4 py-2 bg-jazz-gold text-white rounded-lg text-sm font-medium hover:bg-jazz-brass transition-colors"
+        class="px-4 py-2 bg-jazz-gold text-white rounded-lg text-sm font-medium hover:bg-jazz-brass active:scale-[0.98] transition-all"
       >
         + New Session
       </router-link>
@@ -53,7 +53,7 @@ function formatDuration(mins: number): string {
       <PenLine class="w-12 h-12 mx-auto mb-4 text-jazz-smoke-light" />
       <h2 class="text-xl font-heading italic text-jazz-espresso mb-2">No practice sessions yet</h2>
       <p class="text-jazz-smoke mb-4">Start your first session to begin tracking your progress.</p>
-      <router-link to="/practice" class="px-5 py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass transition-colors">
+      <router-link to="/practice" class="px-5 py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass active:scale-[0.98] transition-all">
         Start Practicing
       </router-link>
     </div>

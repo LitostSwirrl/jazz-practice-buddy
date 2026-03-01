@@ -221,21 +221,21 @@ onUnmounted(() => {
             <button
               v-if="!timerRunning"
               @click="startTimer"
-              class="px-8 py-3 bg-jazz-gold text-white rounded-xl font-medium hover:bg-jazz-brass transition-colors"
+              class="px-8 py-3 bg-jazz-gold text-white rounded-xl font-medium hover:bg-jazz-brass active:scale-[0.98] transition-all"
             >
               {{ timerSeconds > 0 ? 'Resume' : 'Start' }}
             </button>
             <button
               v-if="timerRunning"
               @click="pauseTimer"
-              class="px-8 py-3 bg-jazz-smoke text-white rounded-xl font-medium hover:bg-jazz-espresso transition-colors"
+              class="px-8 py-3 bg-jazz-smoke text-white rounded-xl font-medium hover:bg-jazz-espresso active:scale-[0.98] transition-all"
             >
               Pause
             </button>
             <button
               v-if="timerSeconds > 0"
               @click="stopTimer"
-              class="px-6 py-3 bg-jazz-red text-white rounded-xl font-medium hover:opacity-90 transition-opacity"
+              class="px-6 py-3 bg-jazz-red text-white rounded-xl font-medium hover:opacity-90 active:scale-[0.98] transition-all"
             >
               Stop & Log
             </button>
@@ -306,7 +306,7 @@ onUnmounted(() => {
           <button
             type="submit"
             :disabled="!logTopic.trim()"
-            class="w-full py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            class="w-full py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Save Practice Session
           </button>
