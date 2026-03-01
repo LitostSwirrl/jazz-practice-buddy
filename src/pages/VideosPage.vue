@@ -75,14 +75,13 @@ function clearSearch() {
 
 <template>
   <div>
-    <div class="mb-8">
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-heading text-jazz-espresso tracking-tight leading-none">VIDEOS</h1>
-      <div class="h-1 w-16 bg-jazz-gold mt-3 mb-2"></div>
-      <p class="text-jazz-smoke font-mono text-sm">{{ videosStore.videos.length }} lessons from Jens Larsen</p>
+    <div class="mb-6">
+      <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Video Catalog</h1>
+      <p class="text-jazz-smoke mt-1">{{ videosStore.videos.length }} lessons from Jens Larsen</p>
     </div>
 
     <!-- Filters -->
-    <div class="border-2 border-jazz-cream-dark p-4 mb-6 bg-white">
+    <BaseCard class="mb-6">
       <div class="flex flex-wrap gap-3">
         <!-- Search -->
         <div class="flex-1 min-w-[200px]">
@@ -91,7 +90,7 @@ function clearSearch() {
             @input="videosStore.setFilter('searchQuery', ($event.target as HTMLInputElement).value)"
             type="text"
             placeholder="Search videos..."
-            class="w-full px-3 py-2 border-2 border-jazz-cream-dark bg-white text-sm focus:outline-none focus:border-jazz-espresso transition-colors"
+            class="w-full px-3 py-2 rounded-lg border border-jazz-cream-dark bg-white text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50 focus:border-jazz-gold"
           >
         </div>
 
@@ -99,7 +98,7 @@ function clearSearch() {
         <select
           :value="videosStore.filters.categoryId || ''"
           @change="videosStore.setFilter('categoryId', ($event.target as HTMLSelectElement).value || null); videosStore.setFilter('subCategoryId', null)"
-          class="px-3 py-2 border-2 border-jazz-cream-dark bg-white text-sm focus:outline-none focus:border-jazz-espresso"
+          class="px-3 py-2 rounded-lg border border-jazz-cream-dark bg-white text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50"
         >
           <option value="">All Categories</option>
           <option v-for="cat in videosStore.categories" :key="cat.id" :value="cat.id">
@@ -112,7 +111,7 @@ function clearSearch() {
           v-if="videosStore.filters.categoryId"
           :value="videosStore.filters.subCategoryId || ''"
           @change="videosStore.setFilter('subCategoryId', ($event.target as HTMLSelectElement).value || null)"
-          class="px-3 py-2 border-2 border-jazz-cream-dark bg-white text-sm focus:outline-none focus:border-jazz-espresso"
+          class="px-3 py-2 rounded-lg border border-jazz-cream-dark bg-white text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50"
         >
           <option value="">All Subcategories</option>
           <option
@@ -132,7 +131,7 @@ function clearSearch() {
             if (v === 'all') videosStore.setFilter('difficulty', [1, 5]);
             else videosStore.setFilter('difficulty', [parseInt(v), parseInt(v)]);
           "
-          class="px-3 py-2 border-2 border-jazz-cream-dark bg-white text-sm focus:outline-none focus:border-jazz-espresso"
+          class="px-3 py-2 rounded-lg border border-jazz-cream-dark bg-white text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50"
         >
           <option value="all">All Levels</option>
           <option value="1">Beginner (1)</option>
@@ -147,7 +146,7 @@ function clearSearch() {
           :value="videosStore.filters.sortBy"
           :disabled="!!videosStore.filters.searchQuery"
           @change="videosStore.setFilter('sortBy', ($event.target as HTMLSelectElement).value as 'title')"
-          class="px-3 py-2 border-2 border-jazz-cream-dark bg-white text-sm focus:outline-none focus:border-jazz-espresso disabled:opacity-50 disabled:cursor-not-allowed"
+          class="px-3 py-2 rounded-lg border border-jazz-cream-dark bg-white text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50 disabled:opacity-50 disabled:cursor-not-allowed"
           :title="videosStore.filters.searchQuery ? 'Sorted by relevance during search' : ''"
         >
           <option value="title">Sort by Title</option>
@@ -159,22 +158,22 @@ function clearSearch() {
 
       <!-- Active filters -->
       <div v-if="videosStore.filters.searchQuery || videosStore.filters.categoryId || isDifficultyFiltered" class="flex items-center gap-2 mt-3 text-xs flex-wrap">
-        <span class="text-jazz-smoke font-mono uppercase tracking-wider">Active:</span>
-        <span v-if="videosStore.filters.searchQuery" class="px-2 py-0.5 bg-jazz-blue/10 text-jazz-blue flex items-center gap-1 font-mono">
+        <span class="text-jazz-smoke">Active:</span>
+        <span v-if="videosStore.filters.searchQuery" class="px-2 py-0.5 bg-jazz-blue/10 text-jazz-blue rounded-full flex items-center gap-1">
           "{{ videosStore.filters.searchQuery }}"
           <button @click="clearSearch" class="hover:text-jazz-red"><X class="w-3 h-3" /></button>
         </span>
-        <span v-if="videosStore.filters.categoryId" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass flex items-center gap-1 font-mono">
+        <span v-if="videosStore.filters.categoryId" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass rounded-full flex items-center gap-1">
           {{ videosStore.categories.find(c => c.id === videosStore.filters.categoryId)?.name }}
           <button @click="clearCategory" class="hover:text-jazz-red"><X class="w-3 h-3" /></button>
         </span>
-        <span v-if="isDifficultyFiltered" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass flex items-center gap-1 font-mono">
+        <span v-if="isDifficultyFiltered" class="px-2 py-0.5 bg-jazz-gold/10 text-jazz-brass rounded-full flex items-center gap-1">
           {{ difficultyLabel }}
           <button @click="clearDifficulty" class="hover:text-jazz-red"><X class="w-3 h-3" /></button>
         </span>
-        <span class="text-jazz-smoke font-mono">{{ videosStore.filteredVideos.length }} results</span>
+        <span class="text-jazz-smoke">{{ videosStore.filteredVideos.length }} results</span>
       </div>
-    </div>
+    </BaseCard>
 
     <!-- Video Grid -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -190,25 +189,25 @@ function clearSearch() {
             <img
               :src="`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`"
               :alt="video.title"
-              class="w-full aspect-video object-cover"
+              class="w-full aspect-video object-cover rounded-t-xl"
               loading="lazy"
             >
-            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-xs font-mono">
+            <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/75 text-white text-xs rounded">
               {{ formatDuration(video.duration) }}
             </span>
             <span
               v-if="progress.isVideoWatched(video.id)"
-              class="absolute top-2 right-2 w-6 h-6 bg-jazz-green text-white flex items-center justify-center"
+              class="absolute top-2 right-2 w-6 h-6 bg-jazz-green text-white rounded-full flex items-center justify-center"
             >
               <Check class="w-3.5 h-3.5" />
             </span>
           </div>
           <div class="p-3">
-            <h3 class="text-sm text-jazz-espresso group-hover:text-jazz-blue transition-colors line-clamp-2 mb-2">
+            <h3 class="text-sm font-medium text-jazz-espresso group-hover:text-jazz-blue transition-colors line-clamp-2 mb-2">
               {{ video.title }}
             </h3>
             <div class="flex items-center justify-between">
-              <span class="text-[10px] px-1.5 py-0.5 bg-jazz-cream-dark text-jazz-smoke truncate max-w-[60%] font-mono uppercase tracking-wider">
+              <span class="text-[10px] px-1.5 py-0.5 bg-jazz-cream-dark text-jazz-smoke rounded-full truncate max-w-[60%]">
                 {{ video.categoryName }}
               </span>
               <DifficultyBadge :level="video.level" />
@@ -222,7 +221,7 @@ function clearSearch() {
     <div v-if="hasMore" class="text-center mt-8">
       <button
         @click="loadMore"
-        class="px-8 py-3 bg-jazz-espresso text-jazz-cream font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-espresso-light transition-colors"
+        class="px-6 py-2.5 bg-jazz-espresso text-jazz-cream rounded-lg hover:bg-jazz-espresso-light transition-colors text-sm font-medium"
       >
         Load More ({{ videosStore.filteredVideos.length - displayCount }} remaining)
       </button>

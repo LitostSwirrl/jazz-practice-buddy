@@ -13,20 +13,20 @@ withDefaults(defineProps<{
 
 <template>
   <div class="w-full">
-    <div v-if="showLabel" class="flex justify-between text-xs mb-1 font-mono">
+    <div v-if="showLabel" class="flex justify-between text-xs mb-1">
       <slot name="label" />
-      <span class="text-jazz-smoke font-medium tracking-wide">{{ percent }}%</span>
+      <span class="text-jazz-smoke font-medium">{{ percent }}%</span>
     </div>
     <div
-      class="w-full bg-jazz-cream-dark overflow-hidden"
+      class="w-full bg-jazz-cream-dark rounded-full overflow-hidden"
       :class="{
-        'h-1': size === 'sm',
-        'h-2': size === 'md',
-        'h-3': size === 'lg',
+        'h-1.5': size === 'sm',
+        'h-2.5': size === 'md',
+        'h-4': size === 'lg',
       }"
     >
       <div
-        class="h-full transition-all duration-500 ease-out"
+        class="h-full rounded-full transition-all duration-500 ease-out"
         :class="`bg-${color}`"
         :style="{ width: `${Math.min(percent, 100)}%` }"
       />

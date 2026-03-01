@@ -63,36 +63,34 @@ function formatDuration(secs: number): string {
 <template>
   <div v-if="unit && mod">
     <!-- Breadcrumb -->
-    <nav class="text-xs text-jazz-smoke mb-6 font-mono uppercase tracking-wider">
+    <nav class="text-sm text-jazz-smoke mb-4">
       <router-link to="/syllabus" class="hover:text-jazz-blue">Syllabus</router-link>
       <span class="mx-2">/</span>
       <router-link :to="{ name: 'module', params: { moduleId } }" class="hover:text-jazz-blue">Module {{ moduleId }}</router-link>
       <span class="mx-2">/</span>
-      <span class="text-jazz-espresso">{{ unit.id }}</span>
+      <span class="text-jazz-espresso">{{ unit.title }}</span>
     </nav>
 
     <!-- Unit Header -->
     <div class="mb-8">
-      <span class="text-xs text-jazz-gold font-heading tracking-[0.15em] uppercase">Unit {{ unit.id }}</span>
-      <h1 class="text-3xl sm:text-4xl font-heading text-jazz-espresso mt-1 tracking-tight leading-none">{{ unit.title.toUpperCase() }}</h1>
-      <div class="h-1 w-12 bg-jazz-gold mt-3 mb-2"></div>
-      <p class="text-xs text-jazz-smoke font-mono">Estimated time: {{ unit.estimatedTime }}</p>
+      <span class="text-sm text-jazz-gold font-bold">Unit {{ unit.id }}</span>
+      <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso mt-1">{{ unit.title }}</h1>
+      <p class="text-sm text-jazz-smoke mt-2">Estimated time: {{ unit.estimatedTime }}</p>
     </div>
 
     <!-- Learning Objectives -->
-    <div class="mb-8">
-      <h2 class="text-2xl font-heading text-jazz-espresso mb-1">LEARNING OBJECTIVES</h2>
-      <div class="h-px bg-jazz-cream-dark mb-4"></div>
+    <BaseCard class="mb-6">
+      <h2 class="text-lg font-heading font-bold mb-3">Learning Objectives</h2>
       <div class="space-y-2">
         <label
           v-for="(obj, i) in unit.learningObjectives"
           :key="i"
-          class="flex items-start gap-3 cursor-pointer group py-1"
+          class="flex items-start gap-3 cursor-pointer group"
         >
           <input
             type="checkbox"
             :checked="progress.isLessonCompleted(`${unit.id}.obj.${i}`)"
-            class="mt-0.5 w-4 h-4 border-2 border-jazz-espresso text-jazz-gold focus:ring-jazz-gold accent-jazz-gold"
+            class="mt-0.5 w-4 h-4 rounded border-jazz-smoke-light text-jazz-gold focus:ring-jazz-gold"
             @change="progress.toggleLessonComplete(`${unit.id}.obj.${i}`)"
           >
           <span
@@ -103,73 +101,70 @@ function formatDuration(secs: number): string {
           </span>
         </label>
       </div>
-    </div>
+    </BaseCard>
 
     <!-- Core Concepts -->
-    <div v-if="unit.coreConcepts.length > 0" class="mb-8">
-      <h2 class="text-2xl font-heading text-jazz-espresso mb-1">CORE CONCEPTS</h2>
-      <div class="h-px bg-jazz-cream-dark mb-4"></div>
-      <div class="space-y-4">
-        <div v-for="concept in unit.coreConcepts" :key="concept.term" class="border-l-4 border-jazz-espresso pl-4">
-          <h3 class="font-heading text-lg text-jazz-espresso tracking-wide">{{ concept.term.toUpperCase() }}</h3>
+    <BaseCard v-if="unit.coreConcepts.length > 0" class="mb-6">
+      <h2 class="text-lg font-heading font-bold mb-3">Core Concepts</h2>
+      <div class="space-y-3">
+        <div v-for="concept in unit.coreConcepts" :key="concept.term" class="border-l-2 border-jazz-gold pl-3">
+          <h3 class="font-semibold text-sm text-jazz-espresso">{{ concept.term }}</h3>
           <p class="text-sm text-jazz-smoke mt-0.5">{{ concept.description }}</p>
         </div>
       </div>
-    </div>
+    </BaseCard>
 
     <!-- Recommended Videos -->
-    <div v-if="relatedVideos.length > 0" class="mb-8">
-      <h2 class="text-2xl font-heading text-jazz-espresso mb-1">RECOMMENDED VIDEOS</h2>
-      <div class="h-px bg-jazz-cream-dark mb-4"></div>
+    <BaseCard v-if="relatedVideos.length > 0" class="mb-6">
+      <h2 class="text-lg font-heading font-bold mb-3">Recommended Videos</h2>
       <div class="grid sm:grid-cols-2 gap-2">
         <router-link
           v-for="v in relatedVideos"
           :key="v.id"
           :to="{ name: 'video-detail', params: { videoId: v.id } }"
-          class="flex items-center gap-2 p-2 hover:bg-jazz-cream transition-colors"
+          class="flex items-center gap-2 p-2 rounded-lg hover:bg-jazz-cream transition-colors"
         >
           <img
             :src="`https://img.youtube.com/vi/${v.id}/default.jpg`"
             :alt="v.title"
-            class="w-16 h-12 object-cover"
+            class="w-16 h-12 object-cover rounded"
             loading="lazy"
           >
           <div class="flex-1 min-w-0">
             <p class="text-xs font-medium text-jazz-espresso truncate">{{ v.title }}</p>
-            <p class="text-[10px] text-jazz-smoke font-mono">{{ formatDuration(v.duration) }}</p>
+            <p class="text-[10px] text-jazz-smoke">{{ formatDuration(v.duration) }}</p>
           </div>
         </router-link>
       </div>
-    </div>
+    </BaseCard>
 
     <!-- Practice Guide Link -->
-    <BaseCard v-if="unit.relatedGuideSlug" variant="warm" class="mb-8">
+    <BaseCard v-if="unit.relatedGuideSlug" variant="warm" class="mb-6">
       <router-link
         :to="{ name: 'guide-detail', params: { slug: unit.relatedGuideSlug } }"
         class="flex items-center gap-3 hover:opacity-80 transition-opacity"
       >
         <BookOpen class="w-6 h-6 text-jazz-blue shrink-0" />
         <div>
-          <p class="text-sm font-heading text-jazz-espresso uppercase tracking-wide">Practice Guide Available</p>
+          <p class="text-sm font-semibold text-jazz-blue">Practice Guide Available</p>
           <p class="text-xs text-jazz-smoke">Detailed exercises and 6-week practice routine</p>
         </div>
       </router-link>
     </BaseCard>
 
     <!-- Practice Exercises -->
-    <div class="mb-8">
-      <h2 class="text-2xl font-heading text-jazz-espresso mb-1">PRACTICE EXERCISES</h2>
-      <div class="h-px bg-jazz-cream-dark mb-4"></div>
-      <div class="space-y-0">
+    <BaseCard class="mb-6">
+      <h2 class="text-lg font-heading font-bold mb-3">Practice Exercises</h2>
+      <div class="space-y-2">
         <label
           v-for="(ex, i) in unit.exercises"
           :key="i"
-          class="flex items-start gap-3 cursor-pointer py-3 border-b border-jazz-cream-dark last:border-0 hover:bg-jazz-cream/30 transition-colors px-2 -mx-2"
+          class="flex items-start gap-3 cursor-pointer p-2 rounded-lg hover:bg-jazz-cream/50 transition-colors"
         >
           <input
             type="checkbox"
             :checked="progress.isLessonCompleted(`${unit.id}.ex.${i}`)"
-            class="mt-0.5 w-4 h-4 border-2 border-jazz-espresso text-jazz-gold focus:ring-jazz-gold accent-jazz-gold"
+            class="mt-0.5 w-4 h-4 rounded border-jazz-smoke-light text-jazz-gold focus:ring-jazz-gold"
             @change="progress.toggleLessonComplete(`${unit.id}.ex.${i}`)"
           >
           <div class="flex-1">
@@ -180,51 +175,49 @@ function formatDuration(secs: number): string {
               {{ ex.description }}
             </span>
           </div>
-          <span class="text-[10px] text-jazz-smoke bg-jazz-cream-dark px-2 py-0.5 font-mono shrink-0">
+          <span class="text-xs text-jazz-smoke bg-jazz-cream-dark px-2 py-0.5 rounded-full shrink-0">
             {{ ex.dailyTime }}
           </span>
         </label>
       </div>
-    </div>
+    </BaseCard>
 
     <!-- Assessment -->
-    <div v-if="unit.assessment.length > 0" class="mb-8">
-      <h2 class="text-2xl font-heading text-jazz-espresso mb-1">ASSESSMENT</h2>
-      <div class="h-px bg-jazz-cream-dark mb-4"></div>
+    <BaseCard v-if="unit.assessment.length > 0" class="mb-6">
+      <h2 class="text-lg font-heading font-bold mb-3">Assessment</h2>
       <ul class="space-y-2">
-        <li v-for="item in unit.assessment" :key="item" class="flex items-start gap-3 text-sm text-jazz-espresso">
-          <span class="text-jazz-gold font-heading text-lg leading-none mt-0.5">→</span>
+        <li v-for="item in unit.assessment" :key="item" class="flex items-start gap-2 text-sm text-jazz-espresso">
+          <span class="text-jazz-gold mt-0.5">&#9654;</span>
           {{ item }}
         </li>
       </ul>
-    </div>
+    </BaseCard>
 
     <!-- Unit Navigation -->
-    <div class="h-[3px] bg-jazz-espresso mb-6"></div>
     <div class="flex justify-between">
       <router-link
         v-if="prevUnit"
         :to="{ name: 'unit', params: { moduleId: prevUnit.moduleId, unitId: prevUnit.unitId } }"
-        class="px-4 py-2 text-sm text-jazz-blue hover:bg-jazz-cream-dark transition-colors font-heading tracking-wider uppercase"
+        class="px-4 py-2 text-sm text-jazz-blue hover:bg-jazz-cream-dark rounded-lg transition-colors"
       >
-        ← {{ prevUnit.unitId }}
+        &larr; {{ prevUnit.unitId }}: {{ prevUnit.title }}
       </router-link>
       <div v-else />
       <router-link
         v-if="nextUnit"
         :to="{ name: 'unit', params: { moduleId: nextUnit.moduleId, unitId: nextUnit.unitId } }"
-        class="px-4 py-2 text-sm text-jazz-blue hover:bg-jazz-cream-dark transition-colors font-heading tracking-wider uppercase"
+        class="px-4 py-2 text-sm text-jazz-blue hover:bg-jazz-cream-dark rounded-lg transition-colors"
       >
-        {{ nextUnit.unitId }} →
+        {{ nextUnit.unitId }}: {{ nextUnit.title }} &rarr;
       </router-link>
     </div>
   </div>
 
   <!-- Not Found -->
   <div v-else class="text-center py-16">
-    <p class="text-4xl font-heading text-jazz-espresso mb-4">UNIT NOT FOUND</p>
+    <p class="text-2xl font-heading font-bold text-jazz-espresso mb-2">Unit not found</p>
     <p class="text-jazz-smoke mb-6">The unit you're looking for doesn't exist.</p>
-    <router-link :to="{ name: 'module', params: { moduleId } }" class="px-6 py-3 bg-jazz-espresso text-jazz-cream font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-espresso-light transition-colors">
+    <router-link :to="{ name: 'module', params: { moduleId } }" class="px-4 py-2 bg-jazz-blue text-white rounded-lg hover:bg-jazz-blue/90 transition-colors">
       Back to Module
     </router-link>
   </div>

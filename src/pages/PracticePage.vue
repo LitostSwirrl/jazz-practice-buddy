@@ -141,8 +141,8 @@ const dailyPlan = computed<PlanBlock[]>(() => {
     blocks.push({ label: 'Application', duration: 15, description: ex.description, icon: Music, color: 'bg-jazz-gold/10 text-jazz-gold' })
   }
 
-  blocks.push({ label: 'Repertoire', duration: 10, description: 'Play through a standard applying concepts from this unit', icon: Music2, color: 'bg-jazz-gold/10 text-jazz-espresso' })
-  blocks.push({ label: 'Free Play / Ear Training', duration: 10, description: 'Improvise freely or transcribe a short phrase', icon: Ear, color: 'bg-jazz-smoke/10 text-jazz-smoke' })
+  blocks.push({ label: 'Repertoire', duration: 10, description: 'Play through a standard applying concepts from this unit', icon: Music2, color: 'bg-jazz-red/10 text-jazz-red' })
+  blocks.push({ label: 'Free Play / Ear Training', duration: 10, description: 'Improvise freely or transcribe a short phrase', icon: Ear, color: 'bg-purple-100/80 text-purple-700' })
 
   return blocks
 })
@@ -155,19 +155,18 @@ onUnmounted(() => {
 <template>
   <div>
     <div class="mb-6">
-      <h1 class="text-4xl sm:text-5xl font-heading text-jazz-espresso tracking-tight leading-none">PRACTICE SESSION</h1>
-      <div class="h-1 w-12 bg-jazz-gold mt-3 mb-2"></div>
-      <p class="text-jazz-smoke text-sm">Timer, planner, and quick log</p>
+      <h1 class="text-2xl lg:text-3xl font-heading font-bold text-jazz-espresso">Practice Session</h1>
+      <p class="font-heading italic text-jazz-smoke mt-1">Timer, planner, and quick log</p>
     </div>
 
     <!-- Tabs -->
-    <div class="flex mb-6 border-b-2 border-jazz-cream-dark">
+    <div class="flex gap-1 mb-6 bg-jazz-cream-dark rounded-xl p-1">
       <button
         v-for="tab in tabs"
         :key="tab.id"
         @click="activeTab = tab.id"
-        class="flex items-center gap-1.5 py-3 px-5 text-sm font-heading tracking-[0.12em] uppercase transition-colors border-b-2 -mb-[2px]"
-        :class="activeTab === tab.id ? 'border-jazz-gold text-jazz-espresso' : 'border-transparent text-jazz-smoke hover:text-jazz-espresso'"
+        class="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-sm font-medium transition-colors"
+        :class="activeTab === tab.id ? 'bg-white text-jazz-espresso shadow-sm' : 'text-jazz-smoke hover:text-jazz-espresso'"
       >
         <component :is="tab.icon" class="w-4 h-4" />
         {{ tab.label }}
@@ -184,10 +183,10 @@ onUnmounted(() => {
               v-for="mins in [15, 30, 45, 60]"
               :key="mins"
               @click="targetMinutes = mins"
-              class="px-5 py-2 text-sm font-heading tracking-wider transition-colors"
-              :class="targetMinutes === mins ? 'bg-jazz-espresso text-jazz-cream' : 'bg-jazz-cream-dark text-jazz-espresso hover:bg-jazz-cream'"
+              class="px-4 py-1.5 rounded-full text-sm transition-colors"
+              :class="targetMinutes === mins ? 'bg-jazz-gold text-white' : 'bg-jazz-cream-dark text-jazz-espresso hover:bg-jazz-cream'"
             >
-              {{ mins }}M
+              {{ mins }}m
             </button>
           </div>
 
@@ -196,24 +195,24 @@ onUnmounted(() => {
             v-model="timerTopic"
             type="text"
             placeholder="What are you practicing?"
-            class="w-full max-w-sm mx-auto px-4 py-2 border-2 border-jazz-cream-dark text-center text-sm focus:outline-none focus:border-jazz-espresso mb-6 block transition-colors"
+            class="w-full max-w-sm mx-auto px-4 py-2 rounded-lg border border-jazz-cream-dark text-center text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50 mb-6 block"
           >
 
           <!-- Circular Timer -->
           <div class="relative w-56 h-56 mx-auto mb-6">
             <svg class="w-full h-full -rotate-90" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" :r="circleRadius" fill="none" stroke="#E8E0D4" stroke-width="8" />
+              <circle cx="100" cy="100" :r="circleRadius" fill="none" stroke="#F5EDDA" stroke-width="8" />
               <circle
                 cx="100" cy="100" :r="circleRadius" fill="none"
-                stroke="#D64541" stroke-width="8" stroke-linecap="butt"
+                stroke="#D4A843" stroke-width="8" stroke-linecap="round"
                 :stroke-dasharray="circumference"
                 :stroke-dashoffset="strokeDashoffset"
                 class="transition-all duration-1000"
               />
             </svg>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <span class="text-4xl font-mono font-bold text-jazz-espresso tracking-wider">{{ timerDisplay }}</span>
-              <span class="text-xs text-jazz-smoke font-mono mt-1">/ {{ targetMinutes }}:00</span>
+              <span class="text-4xl font-mono font-bold text-jazz-espresso">{{ timerDisplay }}</span>
+              <span class="text-xs text-jazz-smoke mt-1">/ {{ targetMinutes }}:00</span>
             </div>
           </div>
 
@@ -222,21 +221,21 @@ onUnmounted(() => {
             <button
               v-if="!timerRunning"
               @click="startTimer"
-              class="px-8 py-3 bg-jazz-espresso text-jazz-cream font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-espresso-light transition-colors"
+              class="px-8 py-3 bg-jazz-gold text-white rounded-xl font-medium hover:bg-jazz-brass transition-colors"
             >
               {{ timerSeconds > 0 ? 'Resume' : 'Start' }}
             </button>
             <button
               v-if="timerRunning"
               @click="pauseTimer"
-              class="px-8 py-3 bg-jazz-smoke text-white font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-espresso transition-colors"
+              class="px-8 py-3 bg-jazz-smoke text-white rounded-xl font-medium hover:bg-jazz-espresso transition-colors"
             >
               Pause
             </button>
             <button
               v-if="timerSeconds > 0"
               @click="stopTimer"
-              class="px-6 py-3 bg-jazz-gold text-white font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-brass transition-colors"
+              class="px-6 py-3 bg-jazz-red text-white rounded-xl font-medium hover:opacity-90 transition-opacity"
             >
               Stop & Log
             </button>
@@ -248,47 +247,46 @@ onUnmounted(() => {
     <!-- Quick Log Tab -->
     <div v-if="activeTab === 'log'">
       <BaseCard>
-        <h2 class="text-xl font-heading text-jazz-espresso mb-1">LOG A PRACTICE SESSION</h2>
-        <div class="h-px bg-jazz-cream-dark mb-4"></div>
+        <h2 class="text-lg font-heading font-bold mb-4">Log a Practice Session</h2>
 
         <div v-if="logSaved" class="text-center py-8">
           <CircleCheck class="w-12 h-12 text-jazz-green mx-auto mb-2" />
-          <p class="text-lg font-heading text-jazz-green uppercase tracking-wider">Session Logged</p>
+          <p class="text-lg font-semibold text-jazz-green">Session logged!</p>
         </div>
 
-        <form v-else @submit.prevent="saveLog" class="space-y-5">
+        <form v-else @submit.prevent="saveLog" class="space-y-4">
           <div>
-            <label class="block text-xs font-heading text-jazz-espresso mb-1.5 uppercase tracking-[0.15em]">What did you practice?</label>
+            <label class="block text-sm font-medium text-jazz-espresso mb-1">What did you practice?</label>
             <input
               v-model="logTopic"
               type="text"
               required
               placeholder="e.g., Shell voicings over Autumn Leaves"
-              class="w-full px-3 py-2 border-2 border-jazz-cream-dark text-sm focus:outline-none focus:border-jazz-espresso transition-colors"
+              class="w-full px-3 py-2 rounded-lg border border-jazz-cream-dark text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50"
             >
           </div>
 
           <div>
-            <label class="block text-xs font-heading text-jazz-espresso mb-1.5 uppercase tracking-[0.15em]">Duration (minutes)</label>
+            <label class="block text-sm font-medium text-jazz-espresso mb-1">Duration (minutes)</label>
             <input
               v-model.number="logDuration"
               type="number"
               min="1"
               max="480"
-              class="w-full px-3 py-2 border-2 border-jazz-cream-dark text-sm focus:outline-none focus:border-jazz-espresso transition-colors"
+              class="w-full px-3 py-2 rounded-lg border border-jazz-cream-dark text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50"
             >
           </div>
 
           <div>
-            <label class="block text-xs font-heading text-jazz-espresso mb-1.5 uppercase tracking-[0.15em]">How did it go?</label>
-            <div class="flex gap-1">
+            <label class="block text-sm font-medium text-jazz-espresso mb-1">How did it go?</label>
+            <div class="flex gap-2">
               <button
                 v-for="r in ([1, 2, 3, 4, 5] as const)"
                 :key="r"
                 type="button"
                 @click="logRating = r"
-                class="w-10 h-10 flex items-center justify-center transition-colors"
-                :class="logRating >= r ? 'bg-jazz-gold text-white' : 'bg-jazz-cream-dark text-jazz-smoke hover:bg-jazz-cream'"
+                class="w-10 h-10 rounded-lg flex items-center justify-center transition-colors"
+                :class="logRating >= r ? 'bg-jazz-gold text-white' : 'bg-jazz-cream-dark text-jazz-smoke'"
               >
                 <Star class="w-5 h-5" />
               </button>
@@ -296,19 +294,19 @@ onUnmounted(() => {
           </div>
 
           <div>
-            <label class="block text-xs font-heading text-jazz-espresso mb-1.5 uppercase tracking-[0.15em]">Notes (optional)</label>
+            <label class="block text-sm font-medium text-jazz-espresso mb-1">Notes (optional)</label>
             <textarea
               v-model="logNotes"
               rows="3"
               placeholder="Anything you want to remember..."
-              class="w-full px-3 py-2 border-2 border-jazz-cream-dark text-sm focus:outline-none focus:border-jazz-espresso resize-none transition-colors"
+              class="w-full px-3 py-2 rounded-lg border border-jazz-cream-dark text-sm focus:outline-none focus:ring-2 focus:ring-jazz-gold/50 resize-none"
             />
           </div>
 
           <button
             type="submit"
             :disabled="!logTopic.trim()"
-            class="w-full py-3 bg-jazz-espresso text-jazz-cream font-heading tracking-[0.15em] text-sm uppercase hover:bg-jazz-espresso-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            class="w-full py-2.5 bg-jazz-gold text-white rounded-lg font-medium hover:bg-jazz-brass transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Save Practice Session
           </button>
@@ -319,34 +317,33 @@ onUnmounted(() => {
     <!-- Daily Planner Tab -->
     <div v-if="activeTab === 'planner'">
       <BaseCard>
-        <div class="flex items-center justify-between mb-1">
-          <h2 class="text-xl font-heading text-jazz-espresso">TODAY'S PRACTICE PLAN</h2>
-          <span class="text-xs text-jazz-smoke font-mono">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-lg font-heading font-bold">Today's Practice Plan</h2>
+          <span class="text-sm text-jazz-smoke">
             {{ dailyPlan.reduce((s, b) => s + b.duration, 0) }} min total
           </span>
         </div>
-        <div class="h-px bg-jazz-cream-dark mb-4"></div>
 
-        <div v-if="currentUnit" class="mb-4 p-3 border-l-4 border-l-jazz-espresso bg-jazz-cream/30">
-          <p class="text-[10px] text-jazz-smoke font-mono uppercase tracking-wider">Current focus</p>
-          <p class="text-sm text-jazz-espresso mt-0.5">
+        <div v-if="currentUnit" class="mb-4 p-3 bg-jazz-cream/50 rounded-lg border-l-4 border-l-jazz-gold">
+          <p class="text-xs text-jazz-smoke">Current focus:</p>
+          <p class="text-sm font-medium text-jazz-espresso">
             Unit {{ currentUnit.id }}: {{ currentUnit.title }}
           </p>
         </div>
 
-        <div class="space-y-0">
+        <div class="space-y-3">
           <div
             v-for="(block, i) in dailyPlan"
             :key="i"
-            class="flex items-start gap-3 py-4 border-b border-jazz-cream-dark last:border-0"
+            class="flex items-start gap-3 p-3 rounded-lg bg-white border border-jazz-cream-dark"
           >
-            <div class="w-8 h-8 flex items-center justify-center shrink-0" :class="block.color">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" :class="block.color">
               <component :is="block.icon" class="w-4 h-4" />
             </div>
             <div class="flex-1">
               <div class="flex items-center justify-between">
-                <h3 class="text-sm font-heading text-jazz-espresso uppercase tracking-wide">{{ block.label }}</h3>
-                <span class="text-[10px] text-jazz-smoke font-mono">
+                <h3 class="text-sm font-semibold text-jazz-espresso">{{ block.label }}</h3>
+                <span class="text-xs text-jazz-smoke bg-jazz-cream-dark px-2 py-0.5 rounded-full">
                   {{ block.duration }} min
                 </span>
               </div>
@@ -354,7 +351,7 @@ onUnmounted(() => {
             </div>
             <button
               @click="timerTopic = block.label; targetMinutes = block.duration; activeTab = 'timer'"
-              class="shrink-0 w-7 h-7 flex items-center justify-center text-jazz-blue hover:bg-jazz-cream transition-colors"
+              class="shrink-0 w-7 h-7 flex items-center justify-center text-jazz-blue hover:bg-jazz-cream rounded transition-colors"
               title="Start timer"
             >
               <Play class="w-3.5 h-3.5" />
@@ -365,8 +362,8 @@ onUnmounted(() => {
 
       <!-- Quick link to full log -->
       <div class="mt-4 text-center">
-        <router-link to="/practice/log" class="text-sm text-jazz-blue hover:underline font-mono uppercase tracking-wider">
-          View full practice history →
+        <router-link to="/practice/log" class="text-sm text-jazz-blue hover:underline">
+          View full practice history &rarr;
         </router-link>
       </div>
     </div>

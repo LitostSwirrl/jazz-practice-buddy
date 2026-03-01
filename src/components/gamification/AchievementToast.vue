@@ -36,19 +36,19 @@ watch(() => gamification.pendingToast, (achievementId) => {
   >
     <div
       v-if="toastAchievement"
-      class="fixed bottom-6 right-6 z-50 max-w-sm bg-white text-jazz-espresso border-2 border-jazz-espresso shadow-[4px_4px_0_0_#1A1A1A] p-4 cursor-pointer"
+      class="fixed bottom-6 right-6 z-50 max-w-sm bg-jazz-espresso text-jazz-cream rounded-xl shadow-2xl p-4 cursor-pointer border border-jazz-gold/30"
       @click="gamification.dismissToast()"
     >
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-jazz-gold/10 flex items-center justify-center text-jazz-gold shrink-0">
+        <div class="w-10 h-10 rounded-lg bg-jazz-gold/20 flex items-center justify-center text-jazz-gold shrink-0">
           <AchievementIcon :name="toastAchievement.icon" :size="22" />
         </div>
         <div>
-          <p class="text-xs text-jazz-gold font-heading uppercase tracking-widest">Achievement Unlocked</p>
-          <p class="font-heading text-lg uppercase tracking-wide">
+          <p class="text-xs text-jazz-gold font-semibold uppercase tracking-wider">Achievement Unlocked!</p>
+          <p class="font-heading font-bold">
             {{ toastAchievement.title }}
           </p>
-          <p class="text-xs text-jazz-smoke">
+          <p class="text-xs text-jazz-smoke-light">
             {{ toastAchievement.description }}
           </p>
         </div>
